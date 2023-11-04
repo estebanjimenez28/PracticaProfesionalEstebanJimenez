@@ -31,10 +31,10 @@ namespace PracticaProfesionalEstebanJimenez
         #region "Mis Metodos"
         private void Formato_ca()
         {
-            DgvPrincipal.Columns[0].Width = 100;
-            DgvPrincipal.Columns[0].HeaderText = "Código";
-            DgvPrincipal.Columns[1].Width = 300;
-            DgvPrincipal.Columns[1].HeaderText = "Categoria";
+            DgvPrincipal.Columns[0].Width = 250;
+            DgvPrincipal.Columns[0].HeaderText = "CÓDIGO";
+            DgvPrincipal.Columns[1].Width = 650;
+            DgvPrincipal.Columns[1].HeaderText = "CATEGORÍA";
         }
 
         private void Listado_ca(string cTexto)
@@ -224,6 +224,9 @@ namespace PracticaProfesionalEstebanJimenez
 
         }
 
- 
+        private void BtnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

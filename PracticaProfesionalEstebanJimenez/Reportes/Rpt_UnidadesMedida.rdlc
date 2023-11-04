@@ -6,13 +6,13 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.9445cm</Width>
+              <Width>5.12467cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.175cm</Width>
+              <Width>6.07483cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.62913cm</Width>
+              <Width>6.75187cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -28,13 +28,17 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Codigo</Value>
+                              <Value>Código</Value>
                               <Style>
                                 <FontSize>12pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox3</rd:DefaultName>
@@ -43,7 +47,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>Teal</BackgroundColor>
+                        <BackgroundColor>DimGray</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -64,10 +68,14 @@
                               <Value>Abreviatura</Value>
                               <Style>
                                 <FontSize>12pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox5</rd:DefaultName>
@@ -76,7 +84,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>Teal</BackgroundColor>
+                        <BackgroundColor>DimGray</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -94,13 +102,17 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Descripcion</Value>
+                              <Value>Descripción</Value>
                               <Style>
                                 <FontSize>12pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox7</rd:DefaultName>
@@ -109,7 +121,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>Teal</BackgroundColor>
+                        <BackgroundColor>DimGray</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -235,10 +247,10 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>0.92287cm</Top>
-        <Left>4.77287cm</Left>
+        <Top>1.43087cm</Top>
+        <Left>12.58204cm</Left>
         <Height>1.2cm</Height>
-        <Width>9.74863cm</Width>
+        <Width>17.95137cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -249,13 +261,25 @@
     <Height>1.85in</Height>
     <Style />
   </Body>
-  <Width>8.23333in</Width>
+  <Width>15.87937in</Width>
   <Page>
     <PageHeader>
-      <Height>4.0005cm</Height>
+      <Height>6.5927cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
+        <Image Name="Image1">
+          <Source>Embedded</Source>
+          <Value>LogoDistricarnes</Value>
+          <Sizing>FitProportional</Sizing>
+          <Height>6.5927cm</Height>
+          <Width>11.23684cm</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </Image>
         <Textbox Name="Textbox1">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
@@ -263,30 +287,24 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>      REPORTE</Value>
+                  <Value>REPORTE UNIDADES MEDIDA</Value>
                   <Style>
-                    <FontSize>12pt</FontSize>
-                  </Style>
-                </TextRun>
-                <TextRun>
-                  <Value xml:space="preserve"> </Value>
-                  <Style />
-                </TextRun>
-                <TextRun>
-                  <Value>DE UNIDADES </Value>
-                  <Style>
-                    <FontSize>12pt</FontSize>
+                    <FontSize>20pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
                   </Style>
                 </TextRun>
               </TextRuns>
-              <Style />
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Top>1.08233cm</Top>
-          <Left>10.1727cm</Left>
-          <Height>0.6cm</Height>
-          <Width>6.1195cm</Width>
+          <Top>4.19227cm</Top>
+          <Left>14.29625cm</Left>
+          <Height>1.12917cm</Height>
+          <Width>16.23717cm</Width>
+          <ZIndex>1</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -297,21 +315,6 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
-        <Image Name="Image1">
-          <Source>Embedded</Source>
-          <Value>LogoDistricarnes</Value>
-          <Sizing>FitProportional</Sizing>
-          <Top>0.09596cm</Top>
-          <Left>0.635cm</Left>
-          <Height>3.86926cm</Height>
-          <Width>6.072cm</Width>
-          <ZIndex>1</ZIndex>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-          </Style>
-        </Image>
       </ReportItems>
       <Style>
         <Border>
@@ -320,7 +323,7 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>3.8735cm</Height>
+      <Height>6.94267cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -341,8 +344,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox2</rd:DefaultName>
-          <Top>1.50975cm</Top>
-          <Left>6.39117cm</Left>
+          <Top>1.82725cm</Top>
+          <Left>18.64534cm</Left>
           <Height>0.854cm</Height>
           <Width>8.13033cm</Width>
           <Style>

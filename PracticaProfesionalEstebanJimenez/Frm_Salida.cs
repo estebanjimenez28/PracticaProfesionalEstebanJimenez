@@ -9,11 +9,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+
 
 namespace PracticaProfesionalEstebanJimenez
 {
     public partial class Frm_Salida : Form
     {
+        
         public Frm_Salida()
         {
             InitializeComponent();
@@ -30,19 +33,19 @@ namespace PracticaProfesionalEstebanJimenez
         #region "Mis Métodos"
         private void Formato_sp()
         {
-            Dgv_principal.Columns[0].Width = 85;
-            Dgv_principal.Columns[0].HeaderText = "CÓDIGO_SALIDA";
-            Dgv_principal.Columns[1].Width = 70;
-            Dgv_principal.Columns[1].HeaderText = "TIPO VENTA";
-            Dgv_principal.Columns[2].Width = 110;
+            Dgv_principal.Columns[0].Width = 100;
+            Dgv_principal.Columns[0].HeaderText = "CÓDIGO";
+            Dgv_principal.Columns[1].Width = 100;
+            Dgv_principal.Columns[1].HeaderText = "VENTA";
+            Dgv_principal.Columns[2].Width = 200;
             Dgv_principal.Columns[2].HeaderText = "NRO DOC";
-            Dgv_principal.Columns[3].Width = 140;
+            Dgv_principal.Columns[3].Width = 180;
             Dgv_principal.Columns[3].HeaderText = "FECHA VENTA";
             Dgv_principal.Columns[4].Width = 270;
             Dgv_principal.Columns[4].HeaderText = "NRO.DOC.CLI";
-            Dgv_principal.Columns[5].Width = 170;
+            Dgv_principal.Columns[5].Width = 270;
             Dgv_principal.Columns[5].HeaderText = "CLIENTE";
-            Dgv_principal.Columns[6].Width = 140;
+            Dgv_principal.Columns[6].Width = 190;
             Dgv_principal.Columns[6].HeaderText = "TOTAL";
             Dgv_principal.Columns[7].Visible = false;
             Dgv_principal.Columns[8].Visible = false;
@@ -80,8 +83,6 @@ namespace PracticaProfesionalEstebanJimenez
 
             this.BtnAgregar.Visible = lEstado;
             this.BtnDeshacer.Visible = lEstado;
-
-            this.btn_lupa1.Visible = lEstado;
             this.Btn_lupa2.Visible = lEstado;
         }
 
@@ -96,7 +97,7 @@ namespace PracticaProfesionalEstebanJimenez
                 this.Codigo_Salida = Convert.ToInt32(Dgv_principal.CurrentRow.Cells["Codigo_Salida"].Value);
                 this.Codigo_TipoVenta = Convert.ToInt32(Dgv_principal.CurrentRow.Cells["Codigo_TipoVenta"].Value);
                 this.Codigo_Cliente = Convert.ToInt32(Dgv_principal.CurrentRow.Cells["Codigo_Cliente"].Value);
-                TxtDescripcionTipoVenta.Text = Dgv_principal.CurrentRow.Cells["DescripcionVenta"].Value.ToString();
+                TxtTipoVenta.Text =Dgv_principal.CurrentRow.Cells["DescripcionVenta"].Value.ToString();
                 TxtNumeroDocumento.Text = Dgv_principal.CurrentRow.Cells["NumeroDocumento"].Value.ToString();
                 Dtp_fecha.Value = Convert.ToDateTime(Dgv_principal.CurrentRow.Cells["Fecha_Salida"].Value);
                 TxtCliente.Text = Dgv_principal.CurrentRow.Cells["RazonSocial_Cliente"].Value.ToString();
@@ -151,17 +152,17 @@ namespace PracticaProfesionalEstebanJimenez
 
         private void Formato_detalle()
         {
-            Dgv_Detalle.Columns[0].Width = 270;
+            Dgv_Detalle.Columns[0].Width = 250;
             Dgv_Detalle.Columns[0].HeaderText = "PRODUCTO";
-            Dgv_Detalle.Columns[1].Width = 160;
+            Dgv_Detalle.Columns[1].Width = 210;
             Dgv_Detalle.Columns[1].HeaderText = "MARCA";
-            Dgv_Detalle.Columns[2].Width = 80;
+            Dgv_Detalle.Columns[2].Width = 180;
             Dgv_Detalle.Columns[2].HeaderText = "U.MEDIDA";
-            Dgv_Detalle.Columns[3].Width = 90;
+            Dgv_Detalle.Columns[3].Width = 170;
             Dgv_Detalle.Columns[3].HeaderText = "CANTIDAD";
-            Dgv_Detalle.Columns[4].Width = 110;
+            Dgv_Detalle.Columns[4].Width = 160;
             Dgv_Detalle.Columns[4].HeaderText = "PU VENTA";
-            Dgv_Detalle.Columns[5].Width = 90;
+            Dgv_Detalle.Columns[5].Width = 100;
             Dgv_Detalle.Columns[5].HeaderText = "TOTAL";
             Dgv_Detalle.Columns[6].Visible = false;
             Dgv_Detalle.Columns[0].ReadOnly = true;
@@ -172,39 +173,7 @@ namespace PracticaProfesionalEstebanJimenez
             Dgv_Detalle.Columns[5].ReadOnly = true;
         }
 
-        private void Formato_TipoVenta()
-        {
-            DgvTipoVenta.Columns[0].Width = 200;
-            DgvTipoVenta.Columns[0].HeaderText = "TIPO VENTA";
-            DgvTipoVenta.Columns[1].Visible = false;
-
-        }
-        private void Listado_TipoVenta()
-        {
-            try
-            {
-                DgvTipoVenta.DataSource = N_SalidaProductos.Listado_TipoVenta();
-                this.Formato_TipoVenta();
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.Message + ex.StackTrace);
-            }
-        }
-
-        private void Selecciona_item_tde()
-        {
-            if (string.IsNullOrEmpty(Convert.ToString(DgvTipoVenta.CurrentRow.Cells["Codigo_TipoVenta"].Value)))
-            {
-                MessageBox.Show("No se tiene información para Visualizar", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                this.Codigo_TipoVenta = Convert.ToInt32(DgvTipoVenta.CurrentRow.Cells["Codigo_TipoVenta"].Value);
-                TxtDescripcionTipoVenta.Text = Convert.ToString(DgvTipoVenta.CurrentRow.Cells["DescripcionVenta"].Value);
-            }
-        }
+        
 
 
 
@@ -213,11 +182,11 @@ namespace PracticaProfesionalEstebanJimenez
 
         private void Formato_cl()
         {
-            DgvClientes.Columns[0].Width = 220;
+            DgvClientes.Columns[0].Width = 240;
             DgvClientes.Columns[0].HeaderText = "CLIENTE";
-            DgvClientes.Columns[1].Width = 220;
+            DgvClientes.Columns[1].Width = 240;
             DgvClientes.Columns[1].HeaderText = "TIPO.";
-            DgvClientes.Columns[2].Width = 220;
+            DgvClientes.Columns[2].Width = 240;
             DgvClientes.Columns[2].HeaderText = "NRO. DOC.";
             DgvClientes.Columns[3].Visible = false;
 
@@ -262,19 +231,56 @@ namespace PracticaProfesionalEstebanJimenez
             }
         }
 
+        private void Formato_TipoVenta()
+        {
+            DgvTipoVenta.Columns[0].Width = 400;
+            DgvTipoVenta.Columns[0].HeaderText = "Seleccione una Opción";
+            DgvTipoVenta.Columns[1].Visible = false;
+
+        }
+
+        private void Listado_TipoVenta()
+        {
+            try
+            {
+                DgvTipoVenta.DataSource = N_SalidaProductos.Listado_TipoVenta();
+                this.Formato_TipoVenta();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
+
+        private void Selecciona_TipoVenta()
+        {
+            if (string.IsNullOrEmpty(Convert.ToString(DgvTipoVenta.CurrentRow.Cells["Codigo_TipoVenta"].Value)))
+            {
+                MessageBox.Show("No se tiene información para Visualizar", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                this.Codigo_TipoVenta = Convert.ToInt32(DgvTipoVenta.CurrentRow.Cells["Codigo_TipoVenta"].Value);
+                TxtTipoVenta.Text = Convert.ToString(DgvTipoVenta.CurrentRow.Cells["DescripcionVenta"].Value);
+            }
+        }
+
+
+
         private void Formato_pr()
         {
             DgvProductos.Columns[0].Width = 220;
             DgvProductos.Columns[0].HeaderText = "PRODUCTO";
             DgvProductos.Columns[1].Width = 160;
             DgvProductos.Columns[1].HeaderText = "MARCA.";
-            DgvProductos.Columns[2].Width = 90;
+            DgvProductos.Columns[2].Width = 120;
             DgvProductos.Columns[2].HeaderText = "U.MEDIDA";
-            DgvProductos.Columns[3].Width = 160;
+            DgvProductos.Columns[3].Width = 170;
             DgvProductos.Columns[3].HeaderText = "CATEGORÍA";
-            DgvProductos.Columns[4].Width = 100;
+            DgvProductos.Columns[4].Width = 200;
             DgvProductos.Columns[4].HeaderText = "STOCK ACTUAL";
-            DgvProductos.Columns[5].Width = 100;
+            DgvProductos.Columns[5].Width = 200;
             DgvProductos.Columns[5].HeaderText = "PU VENTA";
             DgvProductos.Columns[6].Visible = false;
 
@@ -396,14 +402,22 @@ namespace PracticaProfesionalEstebanJimenez
 
         private void Frm_Salida_Load(object sender, EventArgs e)
         {
-            this.Listado_TipoVenta();
+      
+
+
+
+  
             this.Listado_cl("%");
             this.Listado_sp("%");
+            this.Listado_TipoVenta();
         }
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
-            if (TxtDescripcionTipoVenta.Text == String.Empty ||
+       
+
+
+            if (
                TxtNumeroDocumento.Text == string.Empty ||
                TxtCliente.Text == String.Empty ||
                Dgv_Detalle.Rows.Count == 0)
@@ -544,24 +558,11 @@ namespace PracticaProfesionalEstebanJimenez
             this.Close();
         }
 
-        private void btn_lupa1_Click(object sender, EventArgs e)
-        {
-            this.PnlTipoVenta.Location = btn_lupa1.Location;
-            this.PnlTipoVenta.Visible = true;
-        }
+  
 
-        private void DgvTipoVenta_DoubleClick(object sender, EventArgs e)
-        {
-            this.Selecciona_item_tde();
-            PnlTipoVenta.Visible = false;
-            TxtNumeroDocumento.Focus();
-        }
+     
 
-        private void Btn_lupa2_Click(object sender, EventArgs e)
-        {
-            this.PnlClientes.Location = btn_lupa1.Location;
-            this.PnlClientes.Visible = true;
-        }
+      
 
         private void BtnBuscar3_Click(object sender, EventArgs e)
         {
@@ -586,7 +587,7 @@ namespace PracticaProfesionalEstebanJimenez
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
-            PnlProducto.Location = TxtNumeroDocumento.Location;
+            PnlProducto.Location = TxtTipoVenta.Location;
             PnlProducto.Visible = true;
             TxtBuscar5.Focus();
         }
@@ -630,5 +631,44 @@ namespace PracticaProfesionalEstebanJimenez
         {
             TbpPrincipal.SelectedIndex = 0;
         }
+
+       
+     
+
+   
+
+        private void Btn_lupa2_Click_1(object sender, EventArgs e)
+        {
+            this.PnlClientes.Location = btn_lupa1.Location;
+            this.PnlClientes.Visible = true;
+        }
+
+        private void btn_lupa1_Click(object sender, EventArgs e)
+        {
+            this.PnlTipoVenta.Location = TxtTipoVenta.Location;
+            this.PnlTipoVenta.Visible = true;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            PnlTipoVenta.Visible = false;
+        }
+
+        private void DgvTipoVenta_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            this.Selecciona_TipoVenta();
+            PnlTipoVenta.Visible = false;
+        }
+
+        private void Dgv_Detalle_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
     }
+
 }

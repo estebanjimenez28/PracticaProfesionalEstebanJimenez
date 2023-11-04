@@ -32,12 +32,12 @@ namespace PracticaProfesionalEstebanJimenez
         #region "Mis Metodos"
         private void Formato_um ()
         {
-            DgvPrincipal.Columns[0].Width = 100;
-            DgvPrincipal.Columns[0].HeaderText = "Código";
-            DgvPrincipal.Columns[1].Width = 100;
-            DgvPrincipal.Columns[1].HeaderText = " Medida";
-            DgvPrincipal.Columns[2].Width = 300;
-            DgvPrincipal.Columns[2].HeaderText = "Abreviatura";
+            DgvPrincipal.Columns[0].Width = 150;
+            DgvPrincipal.Columns[0].HeaderText = "CÓDIGO";
+            DgvPrincipal.Columns[1].Width = 400;
+            DgvPrincipal.Columns[1].HeaderText = " U.MEDIDA";
+            DgvPrincipal.Columns[2].Width = 350;
+            DgvPrincipal.Columns[2].HeaderText = "ABREVIATURA";
         }
 
         private void Listado_um(string cTexto)

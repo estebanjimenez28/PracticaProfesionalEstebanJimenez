@@ -28,10 +28,10 @@ namespace PracticaProfesional.Negocio
             return Datos.Eliminar_us(Codigo_Usuario);
         }
 
-        public static DataTable Listado_rl_us(string cTexto)
+        public static DataTable Login_us(string cLogin, string cContrasennia)
         {
             D_Usuarios Datos = new D_Usuarios();
-            return Datos.Listado_rl_us(cTexto);
+            return Datos.Login_us(cLogin, cContrasennia);
         }
 
 

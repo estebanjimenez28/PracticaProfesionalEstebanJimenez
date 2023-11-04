@@ -6,10 +6,10 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.91275cm</Width>
+              <Width>9.231cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>5.70675cm</Width>
+              <Width>8.17266cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -25,14 +25,16 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>CODIGO</Value>
+                              <Value>Codigo Categoría</Value>
                               <Style>
-                                <FontStyle>Normal</FontStyle>
-                                <FontSize>12pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox3</rd:DefaultName>
@@ -41,7 +43,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>Teal</BackgroundColor>
+                        <BackgroundColor>DimGray</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -59,14 +61,16 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>CATEGORIA</Value>
+                              <Value>Descripción</Value>
                               <Style>
-                                <FontStyle>Normal</FontStyle>
-                                <FontSize>12pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox5</rd:DefaultName>
@@ -75,7 +79,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>Teal</BackgroundColor>
+                        <BackgroundColor>DimGray</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -102,7 +106,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Codigo_Categoria</rd:DefaultName>
@@ -132,7 +138,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Descripcion</rd:DefaultName>
@@ -170,10 +178,10 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>0.60256cm</Top>
-        <Left>4.13787cm</Left>
+        <Top>1.25872cm</Top>
+        <Left>10.97703cm</Left>
         <Height>1.2cm</Height>
-        <Width>8.6195cm</Width>
+        <Width>17.40366cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -184,13 +192,25 @@
     <Height>1.08333in</Height>
     <Style />
   </Body>
-  <Width>6.5in</Width>
+  <Width>13.10684in</Width>
   <Page>
     <PageHeader>
-      <Height>3.93981cm</Height>
+      <Height>6.5927cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
+        <Image Name="Image1">
+          <Source>Embedded</Source>
+          <Value>LogoDistricarnes</Value>
+          <Sizing>FitProportional</Sizing>
+          <Height>6.5927cm</Height>
+          <Width>11.23684cm</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </Image>
         <Textbox Name="Textbox1">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
@@ -198,30 +218,24 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>REPORTE</Value>
+                  <Value>REPORTE CATEGORÍAS</Value>
                   <Style>
-                    <FontSize>12pt</FontSize>
-                  </Style>
-                </TextRun>
-                <TextRun>
-                  <Value xml:space="preserve"> </Value>
-                  <Style />
-                </TextRun>
-                <TextRun>
-                  <Value>DE CATEGORIAS</Value>
-                  <Style>
-                    <FontSize>12pt</FontSize>
+                    <FontSize>20pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
                   </Style>
                 </TextRun>
               </TextRuns>
-              <Style />
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Top>1.11337cm</Top>
-          <Left>6.63787cm</Left>
-          <Height>0.6cm</Height>
-          <Width>6.1195cm</Width>
+          <Top>4.38277cm</Top>
+          <Left>12.9267cm</Left>
+          <Height>1.12917cm</Height>
+          <Width>16.23717cm</Width>
+          <ZIndex>1</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -232,20 +246,6 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
-        <Image Name="Image1">
-          <Source>Embedded</Source>
-          <Value>LogoDistricarnes</Value>
-          <Sizing>FitProportional</Sizing>
-          <Top>0.24694cm</Top>
-          <Height>3.51648cm</Height>
-          <Width>6.072cm</Width>
-          <ZIndex>1</ZIndex>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-          </Style>
-        </Image>
       </ReportItems>
       <Style>
         <Border>
@@ -254,7 +254,7 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>2.54cm</Height>
+      <Height>5.18583cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -275,8 +275,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox2</rd:DefaultName>
-          <Top>0.81422cm</Top>
-          <Left>4.98687cm</Left>
+          <Top>1.06822cm</Top>
+          <Left>17.07303cm</Left>
           <Height>0.854cm</Height>
           <Width>8.13033cm</Width>
           <Style>

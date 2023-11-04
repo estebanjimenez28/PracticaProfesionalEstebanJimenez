@@ -68,8 +68,10 @@ namespace PracticaProfesional.Datos
             }
         }
 
+
         public string Guardar_Salida(E_SalidaProductos oSp, DataTable dTabla)
             {
+
                 string Rpta = "";
                 SqlConnection SqlCon = new SqlConnection();
                 try
@@ -77,8 +79,8 @@ namespace PracticaProfesional.Datos
                     SqlCon = Conexion.getInstancia().CrearConexion();
                     SqlCommand Comando = new SqlCommand("USP_Guardar_Salida", SqlCon);
                     Comando.CommandType = CommandType.StoredProcedure;
-                    Comando.Parameters.Add("@nCodigo_TipoVenta", SqlDbType.Int).Value = oSp.Codigo_TipoVenta;
-                    Comando.Parameters.Add("@cNumeroDocumento", SqlDbType.VarChar).Value = oSp.NumeroDocumento;
+                Comando.Parameters.Add("@nCodigo_TipoVenta", SqlDbType.Int).Value = oSp.Codigo_TipoVenta;
+                Comando.Parameters.Add("@cNumeroDocumento", SqlDbType.VarChar).Value = oSp.NumeroDocumento;
                     Comando.Parameters.Add("@nCodigo_Cliente", SqlDbType.Int).Value = oSp.Codigo_Ciente;
                     Comando.Parameters.Add("@cNrodocumento_Cliente", SqlDbType.VarChar).Value = oSp.nDocumentoCliente;
                     Comando.Parameters.Add("@cRazon_social_Cliente", SqlDbType.VarChar).Value = oSp.RazonSocial_Cliente;
@@ -135,34 +137,37 @@ namespace PracticaProfesional.Datos
                 return Rpta;
             }
 
-            public DataTable Listado_TipoVenta()
+        public DataTable Listado_TipoVenta()
+        {
+            SqlDataReader Resultado;
+            DataTable Tabla = new DataTable();
+            SqlConnection SQLCon = new SqlConnection();
+
+            try
             {
-                SqlDataReader Resultado;
-                DataTable Tabla = new DataTable();
-                SqlConnection SQLCon = new SqlConnection();
-
-                try
-                {
-                    SQLCon = Conexion.getInstancia().CrearConexion();
-                    SqlCommand Comando = new SqlCommand("USP_Listado_TipoVenta", SQLCon);
-                    Comando.CommandType = CommandType.StoredProcedure;
-                    SQLCon.Open();
-                    Resultado = Comando.ExecuteReader();
-                    Tabla.Load(Resultado);
-                    return Tabla;
-                }
-                catch (Exception ex)
-                {
-
-                    throw ex;
-                }
-                finally
-                {
-                    if (SQLCon.State == ConnectionState.Open) SQLCon.Close();
-                }
+                SQLCon = Conexion.getInstancia().CrearConexion();
+                SqlCommand Comando = new SqlCommand("USP_Listado_TipoVenta", SQLCon);
+                Comando.CommandType = CommandType.StoredProcedure;
+                SQLCon.Open();
+                Resultado = Comando.ExecuteReader();
+                Tabla.Load(Resultado);
+                return Tabla;
             }
+            catch (Exception ex)
+            {
 
-            public DataTable Listado_cl_sp(string cTexto)
+                throw ex;
+            }
+            finally
+            {
+                if (SQLCon.State == ConnectionState.Open) SQLCon.Close();
+            }
+        }
+
+
+
+
+        public DataTable Listado_cl_sp(string cTexto)
             {
                 SqlDataReader Resultado;
                 DataTable Tabla = new DataTable();

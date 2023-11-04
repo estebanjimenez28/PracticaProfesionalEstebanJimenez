@@ -195,7 +195,7 @@ namespace PracticaProfesional.Datos
             try
             {
                 SQLCon = Conexion.getInstancia().CrearConexion();
-                SqlCommand Comando = new SqlCommand("USP_Listado_us_tm", SQLCon);
+                SqlCommand Comando = new SqlCommand("USP_Listado_us", SQLCon);
                 Comando.CommandType = CommandType.StoredProcedure;
                 Comando.Parameters.Add("@cTexto", SqlDbType.VarChar).Value = cTexto;
                 SQLCon.Open();

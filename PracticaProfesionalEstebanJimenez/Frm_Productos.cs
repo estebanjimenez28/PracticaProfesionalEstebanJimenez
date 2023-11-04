@@ -37,20 +37,20 @@ namespace PracticaProfesionalEstebanJimenez
         #region "Mis Metodos"
         private void Formato_pr()
         {
-            DgvPrincipal.Columns[0].Width = 90;
-            DgvPrincipal.Columns[0].HeaderText = "Código";
-            DgvPrincipal.Columns[1].Width = 200;
-            DgvPrincipal.Columns[1].HeaderText = "Producto";
-            DgvPrincipal.Columns[2].Width = 170;
-            DgvPrincipal.Columns[2].HeaderText = "Marca";
-            DgvPrincipal.Columns[3].Width = 150;
-            DgvPrincipal.Columns[3].HeaderText = "Medida";
-            DgvPrincipal.Columns[4].Width = 170;
-            DgvPrincipal.Columns[4].HeaderText = "Categoria";
-            DgvPrincipal.Columns[5].Width = 90;
-            DgvPrincipal.Columns[5].HeaderText = "Stock Min";
-            DgvPrincipal.Columns[6].Width = 90;
-            DgvPrincipal.Columns[6].HeaderText = "Stock Max";
+            DgvPrincipal.Columns[0].Width = 100;
+            DgvPrincipal.Columns[0].HeaderText = "CÓDIGO";
+            DgvPrincipal.Columns[1].Width = 250;
+            DgvPrincipal.Columns[1].HeaderText = "PRODUCTO";
+            DgvPrincipal.Columns[2].Width = 230;
+            DgvPrincipal.Columns[2].HeaderText = "MARCA";
+            DgvPrincipal.Columns[3].Width = 220;
+            DgvPrincipal.Columns[3].HeaderText = "MEDIDA";
+            DgvPrincipal.Columns[4].Width = 220;
+            DgvPrincipal.Columns[4].HeaderText = "CATEGORIA";
+            DgvPrincipal.Columns[5].Width = 150;
+            DgvPrincipal.Columns[5].HeaderText = "STOCK MIN";
+            DgvPrincipal.Columns[6].Width = 150;
+            DgvPrincipal.Columns[6].HeaderText = "STOCK MAX";
             DgvPrincipal.Columns[7].Visible = false;
             DgvPrincipal.Columns[8].Visible = false;
             DgvPrincipal.Columns[9].Visible = false;
@@ -116,8 +116,8 @@ namespace PracticaProfesionalEstebanJimenez
 
         private void Formato_ma_pr()
         {
-           DgvMarcas.Columns[0].Width = 300;
-            DgvMarcas.Columns[0].HeaderText = "Marca";
+           DgvMarcas.Columns[0].Width = 450;
+            DgvMarcas.Columns[0].HeaderText = "Seleccione una Opción";
             DgvMarcas.Columns[1].Visible = false;
 
         }
@@ -154,8 +154,8 @@ namespace PracticaProfesionalEstebanJimenez
 
         private void Formato_um_pr()
         {
-            DgvMedidas.Columns[0].Width = 300;
-            DgvMedidas.Columns[0].HeaderText = "Medidas";
+            DgvMedidas.Columns[0].Width = 500;
+            DgvMedidas.Columns[0].HeaderText = "Seleccione una Opción";
             DgvMedidas.Columns[1].Visible = false;
 
         }
@@ -190,8 +190,8 @@ namespace PracticaProfesionalEstebanJimenez
         }
         private void Formato_ca_pr()
         {
-            DgvCategorias.Columns[0].Width = 300;
-            DgvCategorias.Columns[0].HeaderText = "Categorias";
+            DgvCategorias.Columns[0].Width = 450;
+            DgvCategorias.Columns[0].HeaderText = "Seleccione una Opción";
             DgvCategorias.Columns[1].Visible = false;
 
         }
@@ -227,12 +227,12 @@ namespace PracticaProfesionalEstebanJimenez
 
         private void Formato_stock_actual()
         {
-            DgvStockActual.Columns[0].Width = 200;
-            DgvStockActual.Columns[0].HeaderText = "Bodega";
-            DgvStockActual.Columns[1].Width = 100;
-            DgvStockActual.Columns[1].HeaderText = "Stock Actual";
-            DgvStockActual.Columns[2].Width = 100;
-            DgvStockActual.Columns[2].HeaderText = "Precio Compra";
+            DgvStockActual.Columns[0].Width = 240;
+            DgvStockActual.Columns[0].HeaderText = "BODEGA";
+            DgvStockActual.Columns[1].Width = 240;
+            DgvStockActual.Columns[1].HeaderText = "STOCK ACTUAL";
+            DgvStockActual.Columns[2].Width = 240;
+            DgvStockActual.Columns[2].HeaderText = "PRECIO COMPRA";
 
 
         }
@@ -473,7 +473,7 @@ namespace PracticaProfesionalEstebanJimenez
 
         private void btn_lupa3_Click(object sender, EventArgs e)
         {
-            this.PnlCategorias.Location = BtnBuscar2.Location;
+            this.PnlCategorias.Location = BtnMarca.Location;
             this.PnlCategorias.Visible = true;
         }
 
@@ -495,13 +495,13 @@ namespace PracticaProfesionalEstebanJimenez
 
         private void BtnMarca_Click(object sender, EventArgs e)
         {
-            this.PnlMarcas.Location = BtnBuscar2.Location;
+            this.PnlMarcas.Location = BtnMarca.Location;
             this.PnlMarcas.Visible = true;
         }
 
         private void Btn_lupa2_Click(object sender, EventArgs e)
         {
-            this.PnlMedidas.Location = BtnBuscar2.Location;
+            this.PnlMedidas.Location = BtnMarca.Location;
             this.PnlMedidas.Visible = true;
         }
 

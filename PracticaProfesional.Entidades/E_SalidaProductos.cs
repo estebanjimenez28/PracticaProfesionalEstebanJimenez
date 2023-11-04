@@ -20,4 +20,5 @@ namespace PracticaProfesional.Entidades
         public decimal Iva { get; set; }
         public decimal Total { get; set; }
     }
+
 }

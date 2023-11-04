@@ -28,17 +28,17 @@ namespace PracticaProfesionalEstebanJimenez
         #region "Mis Métodos"
         private void Formato_pv()
         {
-            DgvPrincipal.Columns[0].Width = 85;
+            DgvPrincipal.Columns[0].Width = 130;
             DgvPrincipal.Columns[0].HeaderText = "CÓDIGO";
-            DgvPrincipal.Columns[1].Width = 110;
+            DgvPrincipal.Columns[1].Width = 210;
             DgvPrincipal.Columns[1].HeaderText = "CEDULA";
-            DgvPrincipal.Columns[2].Width = 270;
+            DgvPrincipal.Columns[2].Width = 320;
             DgvPrincipal.Columns[2].HeaderText = "RAZON SOCIAL";
-            DgvPrincipal.Columns[3].Width = 150;
+            DgvPrincipal.Columns[3].Width = 280;
             DgvPrincipal.Columns[3].HeaderText = "NOMBRE";
-            DgvPrincipal.Columns[4].Width = 150;
+            DgvPrincipal.Columns[4].Width = 220;
             DgvPrincipal.Columns[4].HeaderText = "APELLIDOS";
-            DgvPrincipal.Columns[5].Width = 200;
+            DgvPrincipal.Columns[5].Width = 220;
             DgvPrincipal.Columns[5].HeaderText = "PRODUCTO";
             DgvPrincipal.Columns[6].Visible = false;
             DgvPrincipal.Columns[7].Visible = false;
@@ -108,7 +108,7 @@ namespace PracticaProfesionalEstebanJimenez
 
         private void Formato_pr_pv()
         {
-            DgvProductoProveedor.Columns[0].Width = 300;
+            DgvProductoProveedor.Columns[0].Width = 620;
             DgvProductoProveedor.Columns[0].HeaderText = "PRODUCTOS";
             DgvProductoProveedor.Columns[1].Visible = false;
 
@@ -324,7 +324,7 @@ namespace PracticaProfesionalEstebanJimenez
 
         private void Btn_lupa2_Click_1(object sender, EventArgs e)
         {
-            this.PnlProductos.Location = Btn_lupa2.Location;
+            this.PnlProductos.Location = TxtCedula.Location;
             this.PnlProductos.Visible = true;
         }
 
@@ -342,6 +342,11 @@ namespace PracticaProfesionalEstebanJimenez
         {
             this.Selecciona_pr_pv();
             PnlProductos.Visible = false;
+        }
+
+        private void DgvProductoProveedor_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

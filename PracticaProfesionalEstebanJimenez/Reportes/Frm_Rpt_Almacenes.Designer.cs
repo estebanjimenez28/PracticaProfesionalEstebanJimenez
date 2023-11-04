@@ -30,14 +30,24 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.dataSet_Carniceria = new PracticaProfesionalEstebanJimenez.Reportes.DataSet_Carniceria();
             this.uSPListadoalBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet_Carniceria = new PracticaProfesionalEstebanJimenez.Reportes.DataSet_Carniceria();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.uSP_Listado_alTableAdapter = new PracticaProfesionalEstebanJimenez.Reportes.DataSet_CarniceriaTableAdapters.USP_Listado_alTableAdapter();
             this.txt_p1 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Carniceria)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uSPListadoalBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Carniceria)).BeginInit();
             this.SuspendLayout();
+            // 
+            // uSPListadoalBindingSource
+            // 
+            this.uSPListadoalBindingSource.DataMember = "USP_Listado_al";
+            this.uSPListadoalBindingSource.DataSource = this.dataSet_Carniceria;
+            // 
+            // dataSet_Carniceria
+            // 
+            this.dataSet_Carniceria.DataSetName = "DataSet_Carniceria";
+            this.dataSet_Carniceria.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -49,19 +59,9 @@
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1007, 612);
+            this.reportViewer1.Size = new System.Drawing.Size(1007, 805);
             this.reportViewer1.TabIndex = 0;
             this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
-            // 
-            // dataSet_Carniceria
-            // 
-            this.dataSet_Carniceria.DataSetName = "DataSet_Carniceria";
-            this.dataSet_Carniceria.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // uSPListadoalBindingSource
-            // 
-            this.uSPListadoalBindingSource.DataMember = "USP_Listado_al";
-            this.uSPListadoalBindingSource.DataSource = this.dataSet_Carniceria;
             // 
             // uSP_Listado_alTableAdapter
             // 
@@ -79,14 +79,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1007, 612);
+            this.ClientSize = new System.Drawing.Size(1007, 805);
             this.Controls.Add(this.txt_p1);
             this.Controls.Add(this.reportViewer1);
             this.Name = "Frm_Rpt_Almacenes";
-            this.Text = "Frm_Rpt_Almacenes";
+            this.Text = "REPORTE ALMACENES";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Frm_Rpt_Almacenes_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Carniceria)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uSPListadoalBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Carniceria)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

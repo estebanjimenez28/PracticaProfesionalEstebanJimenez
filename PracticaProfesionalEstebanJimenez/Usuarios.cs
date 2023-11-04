@@ -21,26 +21,21 @@ namespace PracticaProfesionalEstebanJimenez
 
         #region "Mis Variables"
         int Codigo_Usuario = 0;
-        int Codigo_Rol = 0;
         int Estadoguarda = 0; //Sin ninguna acción
         #endregion
 
         #region "Mis Métodos"
         private void Formato_us()
         {
-            DgvPrincipal.Columns[0].Width = 85;
+            DgvPrincipal.Columns[0].Width = 125;
             DgvPrincipal.Columns[0].HeaderText = "CÓDIGO";
-            DgvPrincipal.Columns[1].Width = 110;
-            DgvPrincipal.Columns[1].HeaderText = "CEDULA";
-            DgvPrincipal.Columns[2].Width = 270;
-            DgvPrincipal.Columns[2].HeaderText = "USUARIO";
-            DgvPrincipal.Columns[3].Width = 150;
-            DgvPrincipal.Columns[3].HeaderText = "NOMBRE";
-            DgvPrincipal.Columns[4].Width = 150;
-            DgvPrincipal.Columns[4].HeaderText = "ROL";
-            DgvPrincipal.Columns[5].Width = 200;
-            DgvPrincipal.Columns[5].HeaderText = "CONTRASEÑA";
-            DgvPrincipal.Columns[6].Visible = false;
+            DgvPrincipal.Columns[1].Width = 310;
+            DgvPrincipal.Columns[1].HeaderText = "USUARIO";
+            DgvPrincipal.Columns[2].Width = 370;
+            DgvPrincipal.Columns[2].HeaderText = "NOMBRE";
+            DgvPrincipal.Columns[3].Width = 250;
+            DgvPrincipal.Columns[3].HeaderText = "CARGO";
+            DgvPrincipal.Columns[4].Visible = false;
 
         }
 
@@ -63,7 +58,6 @@ namespace PracticaProfesionalEstebanJimenez
             this.BtnNuevo.Enabled = lEstado;
             this.BtnActualizar.Enabled = lEstado;
             this.BtnEliminar.Enabled = lEstado;
-            this.BtnReporte.Enabled = lEstado;
             this.BtnSalir.Enabled = lEstado;
         }
 
@@ -85,72 +79,35 @@ namespace PracticaProfesionalEstebanJimenez
 
                 this.Codigo_Usuario = Convert.ToInt32(DgvPrincipal.CurrentRow.Cells["Codigo_Usuario"].Value);
                 TxtUsuario.Text = Convert.ToString(DgvPrincipal.CurrentRow.Cells["Usuario"].Value);
-                TxtContrasennia.Text = Convert.ToString(DgvPrincipal.CurrentRow.Cells["Contrasennia"].Value);
                 TxtNombre.Text = Convert.ToString(DgvPrincipal.CurrentRow.Cells["NombreCompleto"].Value);
-                TxtCedula.Text = Convert.ToString(DgvPrincipal.CurrentRow.Cells["Cedula"].Value);
-                TxtTelefono.Text = Convert.ToString(DgvPrincipal.CurrentRow.Cells["Telefono"].Value);
-                TxtDireccion.Text = Convert.ToString(DgvPrincipal.CurrentRow.Cells["Direccion"].Value);
-                TxtRol.Text = Convert.ToString(DgvPrincipal.CurrentRow.Cells["Descripcion"].Value);
+                TxtCargo.Text = Convert.ToString(DgvPrincipal.CurrentRow.Cells["Cargo_Usuario"].Value);
+                Chk_admin.Checked =Convert.ToBoolean(DgvPrincipal.CurrentRow.Cells["Administrador"].Value);
+              
             }
 
         }
 
 
 
-        private void Formato_rl_us()
-        {
-            DgvRolUsuario.Columns[0].Width = 300;
-            DgvRolUsuario.Columns[0].HeaderText = "ROL USUARIO";
-            DgvRolUsuario.Columns[1].Visible = false;
-
-        }
-
-        private void Listado_rl_us(string cTexto)
-        {
-            try
-            {
-                DgvRolUsuario.DataSource = N_Usuarios.Listado_rl_us(cTexto);
-                this.Formato_rl_us();
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.Message + ex.StackTrace);
-            }
-        }
-
-        private void Selecciona_rl_us()
-        {
-            if (string.IsNullOrEmpty(Convert.ToString(DgvRolUsuario.CurrentRow.Cells["Codigo_Rol"].Value)))
-            {
-                MessageBox.Show("No se tiene información para Visualizar", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                this.Codigo_Rol = Convert.ToInt32(DgvRolUsuario.CurrentRow.Cells["Codigo_Rol"].Value);
-                TxtRol.Text = Convert.ToString(DgvRolUsuario.CurrentRow.Cells["Descripcion"].Value);
-            }
-        }
+      
 
 
         private void Estado_texto(bool lestado)
         {
-            TxtCedula.ReadOnly = !lestado;
+           
             TxtUsuario.ReadOnly = !lestado;
             TxtNombre.ReadOnly = !lestado;
             TxtContrasennia.ReadOnly = !lestado;
-            TxtTelefono.ReadOnly = !lestado;
-            TxtDireccion.ReadOnly = !lestado;
+            TxtCargo.ReadOnly = !lestado;
+
         }
 
         private void Limpia_texto()
         {
-            TxtCedula.Text = "";
             TxtUsuario.Text = "";
             TxtNombre.Text = "";
             TxtContrasennia.Text = "";
-            TxtTelefono.Text = "";
-            TxtDireccion.Text = "";
+            TxtCargo.Text = "";
             
         }
 
@@ -160,50 +117,61 @@ namespace PracticaProfesionalEstebanJimenez
         private void Usuarios_Load(object sender, EventArgs e)
         {
             this.Listado_us("%");
-            this.Listado_rl_us("%");
         }
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
-            if (TxtCedula.Text == String.Empty ||
-               TxtRol.Text == String.Empty ||
-               TxtUsuario.Text == String.Empty ||
-               TxtDireccion.Text == String.Empty)
+            if (TxtContrasennia.Text == String.Empty && this.Estadoguarda == 1)
             {
-                MessageBox.Show("Falta ingresa datos requeridos (*)", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Falta ingresa datos requeridos (*)",
+                                "Aviso del Sistema",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else //Se procedería a registrar la información
+            else
             {
-
-                string Rpta = "";
-                E_Usuarios oUs = new E_Usuarios();
-                oUs.Codigo_Usuario = this.Codigo_Usuario;
-                oUs.Cedula = TxtCedula.Text.Trim();
-                oUs.Usuario = TxtUsuario.Text.Trim();
-                oUs.Nombre_Completo = TxtNombre.Text.Trim();
-                oUs.Contrasennia = TxtContrasennia.Text.Trim();
-                oUs.Codigo_Rol = this.Codigo_Rol;
-                oUs.Telefono = TxtTelefono.Text.Trim();
-                oUs.Direccion = TxtDireccion.Text.Trim();
-
-
-                Rpta = N_Usuarios.Guadar_us(Estadoguarda, oUs);
-                if (Rpta.Equals("OK"))
+                if (TxtUsuario.Text == String.Empty ||
+                        TxtNombre.Text == String.Empty)
                 {
-                    this.Listado_us("%");
-                    MessageBox.Show("Los datos han sido guardados correctamente", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Estadoguarda = 0; //Sin nunguna acción
-                    this.Estado_Botonesprincipales(true);
-                    this.Estado_Botonesprocesos(false);
-                    this.Estado_texto(false);
-                    TbpPrincipal.SelectedIndex = 0;
-                    this.Codigo_Usuario = 0;
-                    this.Codigo_Rol = 0;
-
+                    MessageBox.Show("Falta ingresa datos requeridos (*)", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else
+                else //Se procedería a registrar la información
                 {
-                    MessageBox.Show(Rpta, "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    E_Usuarios oUs = new E_Usuarios();
+                    string Rpta = "";
+                    oUs.Codigo_Usuario = this.Codigo_Usuario;
+                    oUs.Usuario = TxtUsuario.Text.Trim();
+                    oUs.Contrasennia = TxtContrasennia.Text.Trim();
+                    oUs.Nombre_Completo = TxtNombre.Text.Trim();
+                    oUs.Cargo_Usuario = TxtCargo.Text.Trim();
+                    oUs.Admin = Chk_admin.Checked;
+
+                    Rpta = N_Usuarios.Guadar_us(Estadoguarda, oUs);
+                    if (Rpta == "OK")
+                    {
+                        this.Listado_us("%");
+                        MessageBox.Show("Los datos han sido guardados correctamente", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Estadoguarda = 0; //Sin nunguna acción
+                        this.Estado_Botonesprincipales(true);
+                        this.Estado_Botonesprocesos(false);
+                        TxtUsuario.Text = "";
+                        TxtContrasennia.Text = "";
+                        TxtNombre.Text = "";
+                        TxtCargo.Text = "";
+                        Chk_admin.Checked = false;
+
+                        TxtUsuario.ReadOnly = true;
+                        TxtContrasennia.ReadOnly = true;
+                        TxtNombre.ReadOnly = true;
+                        TxtCargo.ReadOnly = true;
+                        Chk_admin.Enabled = false;
+                        TbpPrincipal.SelectedIndex = 0;
+                        this.Codigo_Usuario = 0;
+
+                    }
+                    else
+                    {
+                        MessageBox.Show(Rpta, "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
         }
@@ -217,9 +185,21 @@ namespace PracticaProfesionalEstebanJimenez
         private void BtnCancelar_Click(object sender, EventArgs e)
         {
             this.Codigo_Usuario = 0;
-            this.Codigo_Rol = 0;
-            this.Estado_texto(false);
-            this.Limpia_texto();
+
+            TxtUsuario.Text = "";
+            TxtContrasennia.Text = "";
+            TxtNombre.Text = "";
+            TxtCargo.Text = "";
+            Chk_admin.Checked = false;
+
+            TxtUsuario.ReadOnly = true;
+            TxtContrasennia.ReadOnly = true;
+            TxtNombre.ReadOnly = true;
+            TxtCargo.ReadOnly = true;
+            Chk_admin.Enabled = false;
+            TbpPrincipal.SelectedIndex = 0;
+            this.Codigo_Usuario = 0;
+
             this.Estado_Botonesprincipales(true);
             this.Estado_Botonesprocesos(false);
             TbpPrincipal.SelectedIndex = 0;
@@ -230,10 +210,19 @@ namespace PracticaProfesionalEstebanJimenez
             Estadoguarda = 1; //Nuevo Registro           
             this.Estado_Botonesprincipales(false);
             this.Estado_Botonesprocesos(true);
-            this.Limpia_texto();
-            this.Estado_texto(true);
+            TxtUsuario.Text = "";
+            TxtContrasennia.Text = "";
+            TxtNombre.Text = "";
+            TxtCargo.Text = "";
+            Chk_admin.Checked = false;
+
+            TxtUsuario.ReadOnly = false;
+            TxtContrasennia.ReadOnly = false;
+            TxtNombre.ReadOnly = false;
+            TxtCargo.ReadOnly = false;
+            Chk_admin.Enabled = true;
             TbpPrincipal.SelectedIndex = 1;
-            TxtCedula.Focus();
+            TxtUsuario.Focus(); 
         }
 
         private void BtnActualizar_Click(object sender, EventArgs e)
@@ -241,9 +230,15 @@ namespace PracticaProfesionalEstebanJimenez
             Estadoguarda = 2; //Actualizar Registro           
             this.Estado_Botonesprincipales(false);
             this.Estado_Botonesprocesos(true);
-            this.Estado_texto(true);
-            TbpPrincipal.SelectedIndex = 1;
-            TxtCedula.Focus();
+           TbpPrincipal.SelectedIndex = 1;
+
+           
+            TxtContrasennia.ReadOnly = false;   
+            TxtNombre.ReadOnly= false;  
+            TxtCargo.ReadOnly= false;   
+            Chk_admin.Enabled = true;   
+
+            TxtContrasennia.Focus();    
         }
 
         private void BtnEliminar_Click(object sender, EventArgs e)
@@ -275,13 +270,7 @@ namespace PracticaProfesionalEstebanJimenez
             }
         }
 
-        private void BtnReporte_Click(object sender, EventArgs e)
-        {
-
-            Reportes.Frm_Rpt_Usuarios oRpt_us = new Reportes.Frm_Rpt_Usuarios();
-            oRpt_us.txt_p1.Text = TxtBuscar.Text;
-            oRpt_us.ShowDialog();
-        }
+    
 
         private void BtnSalir_Click(object sender, EventArgs e)
         {
@@ -300,21 +289,6 @@ namespace PracticaProfesionalEstebanJimenez
             TbpPrincipal.SelectedIndex = 1;
         }
 
-        private void BtnBuscarRol_Click(object sender, EventArgs e)
-        {
-            this.PnlRol.Location = BtnBuscarRol.Location;
-            this.PnlRol.Visible = true;
-        }
-
-        private void BtnRetornar3_Click(object sender, EventArgs e)
-        {
-            PnlRol.Visible = false;
-        }
-
-        private void DgvRolUsuario_DoubleClick(object sender, EventArgs e)
-        {
-            this.Selecciona_rl_us();
-            PnlRol.Visible = false;
-        }
+      
     }
 }

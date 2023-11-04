@@ -51,14 +51,15 @@
             // 
             // reportViewer1
             // 
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource1.Name = "DataSet1";
             reportDataSource1.Value = this.uSPListadomaBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "PracticaProfesionalEstebanJimenez.Reportes.RptMarcas.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(44, 42);
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(914, 532);
+            this.reportViewer1.Size = new System.Drawing.Size(1033, 626);
             this.reportViewer1.TabIndex = 0;
             this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
@@ -82,7 +83,8 @@
             this.Controls.Add(this.txt_p1);
             this.Controls.Add(this.reportViewer1);
             this.Name = "Frm_Rpt_Marcas";
-            this.Text = "Reporte Marcas";
+            this.Text = "REPORTE MARCAS";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Frm_Rpt_Marcas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.uSPListadomaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet_Carniceria)).EndInit();

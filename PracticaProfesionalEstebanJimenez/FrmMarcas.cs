@@ -31,10 +31,10 @@ namespace PracticaProfesionalEstebanJimenez
         #region "Mis Metodos"
         private void Formato_ma()
         {
-            DgvPrincipal.Columns[0].Width = 100;
-            DgvPrincipal.Columns[0].HeaderText = "Código";
-            DgvPrincipal.Columns[1].Width = 300;
-            DgvPrincipal.Columns[1].HeaderText = "Marca";
+            DgvPrincipal.Columns[0].Width = 300;
+            DgvPrincipal.Columns[0].HeaderText = "CÓDIGO";
+            DgvPrincipal.Columns[1].Width = 650;
+            DgvPrincipal.Columns[1].HeaderText = "MARCA";
         }
 
         private void Listado_ma(string cTexto)

@@ -53,10 +53,9 @@ namespace PracticaProfesional.Datos
                 Comando.Parameters.Add("@cUsuario", SqlDbType.VarChar).Value = oUs.Usuario;
                 Comando.Parameters.Add("@cContrasennia", SqlDbType.VarChar).Value = oUs.Contrasennia;
                 Comando.Parameters.Add("@cNombreCompleto", SqlDbType.VarChar).Value = oUs.Nombre_Completo;
-                Comando.Parameters.Add("@cCedula", SqlDbType.VarChar).Value = oUs.Cedula;
-                Comando.Parameters.Add("@cTelefono", SqlDbType.VarChar).Value = oUs.Telefono;
-                Comando.Parameters.Add("@cDireccion", SqlDbType.Text).Value = oUs.Direccion;
-                Comando.Parameters.Add("@nCodigo_Rol", SqlDbType.Int).Value = oUs.Codigo_Rol;
+                Comando.Parameters.Add("@cCargo_Usuario", SqlDbType.VarChar).Value = oUs.Cargo_Usuario;
+                Comando.Parameters.Add("@bAdmin", SqlDbType.Bit).Value = oUs.Admin;
+
                 SqlCon.Open();
 
                 Rpta = Comando.ExecuteNonQuery() >= 1 ? "OK" : "No se pudo registrar los datos";
@@ -98,8 +97,7 @@ namespace PracticaProfesional.Datos
             }
             return Rpta;
         }
-
-        public DataTable Listado_rl_us(string cTexto)
+        public DataTable Login_us(string cLogin, string cContrasennia)
         {
             SqlDataReader Resultado;
             DataTable Tabla = new DataTable();
@@ -108,9 +106,10 @@ namespace PracticaProfesional.Datos
             try
             {
                 SQLCon = Conexion.getInstancia().CrearConexion();
-                SqlCommand Comando = new SqlCommand("USP_Listado_rl_us", SQLCon);
+                SqlCommand Comando = new SqlCommand("USP_Login_us", SQLCon);
                 Comando.CommandType = CommandType.StoredProcedure;
-                Comando.Parameters.Add("@cTexto", SqlDbType.VarChar).Value = cTexto;
+                Comando.Parameters.Add("@cLogin_us", SqlDbType.VarChar).Value = cLogin;
+                Comando.Parameters.Add("@cContrasennia", SqlDbType.VarChar).Value = cContrasennia;
                 SQLCon.Open();
                 Resultado = Comando.ExecuteReader();
                 Tabla.Load(Resultado);
@@ -127,6 +126,8 @@ namespace PracticaProfesional.Datos
                 if (SQLCon.State == ConnectionState.Open) SQLCon.Close();
             }
         }
+
+
 
 
     }

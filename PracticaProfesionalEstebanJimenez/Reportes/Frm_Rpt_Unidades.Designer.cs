@@ -29,38 +29,38 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.dataSet_Carniceria = new PracticaProfesionalEstebanJimenez.Reportes.DataSet_Carniceria();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.uSPListadoumBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet_Carniceria = new PracticaProfesionalEstebanJimenez.Reportes.DataSet_Carniceria();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.uSP_Listado_umTableAdapter = new PracticaProfesionalEstebanJimenez.Reportes.DataSet_CarniceriaTableAdapters.USP_Listado_umTableAdapter();
             this.txt_p1 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Carniceria)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uSPListadoumBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Carniceria)).BeginInit();
             this.SuspendLayout();
             // 
-            // reportViewer1
+            // uSPListadoumBindingSource
             // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource2.Name = "DataSet1";
-            reportDataSource2.Value = this.uSPListadoumBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "PracticaProfesionalEstebanJimenez.Reportes.Rpt_UnidadesMedida.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1059, 631);
-            this.reportViewer1.TabIndex = 0;
+            this.uSPListadoumBindingSource.DataMember = "USP_Listado_um";
+            this.uSPListadoumBindingSource.DataSource = this.dataSet_Carniceria;
             // 
             // dataSet_Carniceria
             // 
             this.dataSet_Carniceria.DataSetName = "DataSet_Carniceria";
             this.dataSet_Carniceria.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // uSPListadoumBindingSource
+            // reportViewer1
             // 
-            this.uSPListadoumBindingSource.DataMember = "USP_Listado_um";
-            this.uSPListadoumBindingSource.DataSource = this.dataSet_Carniceria;
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.uSPListadoumBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "PracticaProfesionalEstebanJimenez.Reportes.Rpt_UnidadesMedida.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(1059, 631);
+            this.reportViewer1.TabIndex = 0;
             // 
             // uSP_Listado_umTableAdapter
             // 
@@ -82,10 +82,11 @@
             this.Controls.Add(this.txt_p1);
             this.Controls.Add(this.reportViewer1);
             this.Name = "Frm_Rpt_Unidades";
-            this.Text = "Frm_Rpt_Unidades";
+            this.Text = "REPORTE UNIDADES DE MEDIDA";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Frm_Rpt_Unidades_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Carniceria)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uSPListadoumBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Carniceria)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -30,17 +30,17 @@ namespace PracticaProfesionalEstebanJimenez
         #region "Mis Métodos"
         private void Formato_ep()
         {
-            Dgv_principal.Columns[0].Width = 85;
+            Dgv_principal.Columns[0].Width = 150;
             Dgv_principal.Columns[0].HeaderText = "CÓDIGO";
-            Dgv_principal.Columns[1].Width = 70;
+            Dgv_principal.Columns[1].Width = 150;
             Dgv_principal.Columns[1].HeaderText = "FACTURA";
-            Dgv_principal.Columns[2].Width = 110;
+            Dgv_principal.Columns[2].Width = 150;
             Dgv_principal.Columns[2].HeaderText = "FECHA";
-            Dgv_principal.Columns[3].Width = 140;
+            Dgv_principal.Columns[3].Width = 220;
             Dgv_principal.Columns[3].HeaderText = "USUARIO";
-            Dgv_principal.Columns[4].Width = 270;
+            Dgv_principal.Columns[4].Width = 310;
             Dgv_principal.Columns[4].HeaderText = "ALMACEN";
-            Dgv_principal.Columns[5].Width = 170;
+            Dgv_principal.Columns[5].Width = 310;
             Dgv_principal.Columns[5].HeaderText = "PROVEEDOR";
             Dgv_principal.Columns[6].Width = 140;
             Dgv_principal.Columns[6].HeaderText = "TOTAL";
@@ -156,17 +156,17 @@ namespace PracticaProfesionalEstebanJimenez
 
         private void Formato_detalle()
         {
-            Dgv_Detalle.Columns[0].Width = 270;
+            Dgv_Detalle.Columns[0].Width = 300;
             Dgv_Detalle.Columns[0].HeaderText = "PRODUCTO";
-            Dgv_Detalle.Columns[1].Width = 160;
+            Dgv_Detalle.Columns[1].Width = 300;
             Dgv_Detalle.Columns[1].HeaderText = "MARCA";
-            Dgv_Detalle.Columns[2].Width = 80;
+            Dgv_Detalle.Columns[2].Width = 100;
             Dgv_Detalle.Columns[2].HeaderText = "U.MEDIDA";
-            Dgv_Detalle.Columns[3].Width = 90;
+            Dgv_Detalle.Columns[3].Width = 100;
             Dgv_Detalle.Columns[3].HeaderText = "CANTIDAD";
-            Dgv_Detalle.Columns[4].Width = 110;
+            Dgv_Detalle.Columns[4].Width = 190;
             Dgv_Detalle.Columns[4].HeaderText = "PRECIO UNITARIO";
-            Dgv_Detalle.Columns[5].Width = 90;
+            Dgv_Detalle.Columns[5].Width = 130;
             Dgv_Detalle.Columns[5].HeaderText = "TOTAL";
             Dgv_Detalle.Columns[6].Visible = false;
             Dgv_Detalle.Columns[0].ReadOnly = true;
@@ -181,8 +181,8 @@ namespace PracticaProfesionalEstebanJimenez
 
         private void Formato_al()
         {
-            DgvAlmacen.Columns[0].Width = 220;
-            DgvAlmacen.Columns[0].HeaderText = "ALMACÉN";
+            DgvAlmacen.Columns[0].Width = 320;
+            DgvAlmacen.Columns[0].HeaderText = "SELECCIONE UNA OPCIÓN";
             DgvAlmacen.Columns[1].Visible = false;
 
         }
@@ -216,9 +216,9 @@ namespace PracticaProfesionalEstebanJimenez
 
         private void Formato_pv()
         {
-            DgvProveedores.Columns[0].Width = 220;
+            DgvProveedores.Columns[0].Width = 320;
             DgvProveedores.Columns[0].HeaderText = "NOMBRE";
-            DgvProveedores.Columns[1].Width = 220;
+            DgvProveedores.Columns[1].Width = 320;
             DgvProveedores.Columns[1].HeaderText = "APELLIDOS.";
             DgvProveedores.Columns[2].Width = 220;
             DgvProveedores.Columns[2].HeaderText = "RAZON SOCIAL.";
@@ -255,12 +255,12 @@ namespace PracticaProfesionalEstebanJimenez
 
         private void Formato_us()
         {
-            DgvUsuarios.Columns[0].Width = 220;
-            DgvUsuarios.Columns[0].HeaderText = "NOMBRE";
-            DgvUsuarios.Columns[1].Width = 220;
-            DgvUsuarios.Columns[1].HeaderText = "CEDULA.";
+            DgvUsuarios.Columns[0].Width = 320;
+            DgvUsuarios.Columns[0].HeaderText = "USUARIO";
+            DgvUsuarios.Columns[1].Width = 300;
+            DgvUsuarios.Columns[1].HeaderText = "NOMBRE.";
             DgvUsuarios.Columns[2].Width = 220;
-            DgvUsuarios.Columns[2].HeaderText = "TELEFONO.";
+            DgvUsuarios.Columns[2].HeaderText = "CARGO.";
             DgvUsuarios.Columns[3].Visible = false;
 
         }
@@ -294,13 +294,13 @@ namespace PracticaProfesionalEstebanJimenez
 
         private void Formato_pr()
         {
-            DgvProductos.Columns[0].Width = 220;
+            DgvProductos.Columns[0].Width = 250;
             DgvProductos.Columns[0].HeaderText = "PRODUCTO";
-            DgvProductos.Columns[1].Width = 160;
+            DgvProductos.Columns[1].Width = 250;
             DgvProductos.Columns[1].HeaderText = "MARCA.";
-            DgvProductos.Columns[2].Width = 90;
+            DgvProductos.Columns[2].Width = 140;
             DgvProductos.Columns[2].HeaderText = "U.MEDIDA";
-            DgvProductos.Columns[3].Width = 160;
+            DgvProductos.Columns[3].Width = 230;
             DgvProductos.Columns[3].HeaderText = "CATEGORÍA";
             DgvProductos.Columns[4].Visible = false;
 
@@ -572,35 +572,23 @@ namespace PracticaProfesionalEstebanJimenez
 
         private void Btn_lupa1_Click(object sender, EventArgs e)
         {
-            this.PnlProveedor.Location = BtnDeshacer.Location;
+            this.PnlProveedor.Location = Dtp_fecha.Location;
             this.PnlProveedor.Visible = true;
         }
 
-        private void DgvProveedores_DoubleClick(object sender, EventArgs e)
-        {
-            this.Selecciona_pv();
-            PnlProveedor.Visible = false;
-        }
+      
 
         private void Btn_lupa2_Click(object sender, EventArgs e)
         {
-            this.PnlUs.Location = BtnDeshacer.Location;
+            this.PnlUs.Location = TxtNumeroDocumento.Location;
             this.PnlUs.Visible = true;
         }
 
-        private void BtnBuscar3_Click(object sender, EventArgs e)
-        {
-            this.Listado_pv(TxtBuscar3.Text);
-        }
-
-        private void BtnRetornar3_Click(object sender, EventArgs e)
-        {
-            PnlProveedor.Visible = false;
-        }
+   
 
         private void Btn_Lupa3_Click(object sender, EventArgs e)
         {
-            this.PnlAlmacen.Location = Btn_Lupa3.Location;
+            this.PnlAlmacen.Location = TxtAlmacen.Location;
             this.PnlAlmacen.Visible = true;
         }
 
@@ -626,12 +614,7 @@ namespace PracticaProfesionalEstebanJimenez
             this.Listado_us(TxtBuscar6.Text);
         }
 
-        private void BtnAgregar_Click(object sender, EventArgs e)
-        {
-            PnlProducto.Location = BtnDeshacer.Location;
-            PnlProducto.Visible = true;
-            TxtBuscar5.Focus();
-        }
+      
 
         private void DgvProductos_DoubleClick(object sender, EventArgs e)
         {
@@ -652,7 +635,46 @@ namespace PracticaProfesionalEstebanJimenez
             }
         }
 
-        private void BtnDeshacer_Click(object sender, EventArgs e)
+      
+
+        private void BtnBuscar5_Click(object sender, EventArgs e)
+        {
+            this.Listado_pr(TxtBuscar5.Text);
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Dgv_principal_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void TxtBuscar3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            PnlAlmacen.Visible = false;
+        }
+
+        private void BtnRetornar5_Click(object sender, EventArgs e)
+        {
+            PnlProducto.Visible = false;
+        }
+
+        private void BtnAgregar_Click_1(object sender, EventArgs e)
+        {
+            PnlProducto.Location = TxtObservacion.Location;
+            PnlProducto.Visible = true;
+            TxtBuscar5.Focus();
+        }
+
+        private void BtnDeshacer_Click_1(object sender, EventArgs e)
         {
             if (Dgv_Detalle.Rows.Count > 0)
             {
@@ -663,14 +685,25 @@ namespace PracticaProfesionalEstebanJimenez
             }
         }
 
-        private void BtnBuscar5_Click(object sender, EventArgs e)
+        private void PnlUs_Paint(object sender, PaintEventArgs e)
         {
-            this.Listado_pr(TxtBuscar5.Text);
+
         }
 
-        private void tabPage1_Click(object sender, EventArgs e)
+        private void DgvProveedores_DoubleClick_1(object sender, EventArgs e)
         {
+            this.Selecciona_pv();
+            PnlProveedor.Visible = false;
+        }
 
+        private void BtnBuscar3_Click_1(object sender, EventArgs e)
+        {
+            this.Listado_pv(TxtBuscar3.Text);
+        }
+
+        private void BtnRetornar3_Click_1(object sender, EventArgs e)
+        {
+            PnlProveedor.Visible = false;
         }
     }
 }

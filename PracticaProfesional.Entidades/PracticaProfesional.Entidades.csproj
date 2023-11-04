@@ -49,6 +49,7 @@
     <Compile Include="E_Productos.cs" />
     <Compile Include="E_Proveedores.cs" />
     <Compile Include="E_SalidaProductos.cs" />
+    <Compile Include="E_TipoVenta.cs" />
     <Compile Include="E_UnidadesMedida.cs" />
     <Compile Include="E_Usuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

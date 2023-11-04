@@ -83,7 +83,8 @@
             this.Controls.Add(this.txt_p1);
             this.Controls.Add(this.reportViewer1);
             this.Name = "Frm_Rpt_Productos";
-            this.Text = "Frm_Rpt_Productos";
+            this.Text = "REPORTE PRODUCTOS";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Frm_Rpt_Productos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.uSPListadoprBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet_Carniceria)).EndInit();
