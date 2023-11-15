@@ -29,38 +29,39 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.dataSet_Carniceria = new PracticaProfesionalEstebanJimenez.Reportes.DataSet_Carniceria();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Rpt_Imprimir_VentaGeneral));
             this.uSPImprimirVentaGeneradaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet_Carniceria = new PracticaProfesionalEstebanJimenez.Reportes.DataSet_Carniceria();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.uSP_Imprimir_Venta_GeneradaTableAdapter = new PracticaProfesionalEstebanJimenez.Reportes.DataSet_CarniceriaTableAdapters.USP_Imprimir_Venta_GeneradaTableAdapter();
             this.txt_p1 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Carniceria)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uSPImprimirVentaGeneradaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Carniceria)).BeginInit();
             this.SuspendLayout();
             // 
-            // reportViewer1
+            // uSPImprimirVentaGeneradaBindingSource
             // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource2.Name = "DataSet1";
-            reportDataSource2.Value = this.uSPImprimirVentaGeneradaBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "PracticaProfesionalEstebanJimenez.Reportes.Rpt_Imprimir_Venta_Generada.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(572, 727);
-            this.reportViewer1.TabIndex = 0;
+            this.uSPImprimirVentaGeneradaBindingSource.DataMember = "USP_Imprimir_Venta_Generada";
+            this.uSPImprimirVentaGeneradaBindingSource.DataSource = this.dataSet_Carniceria;
             // 
             // dataSet_Carniceria
             // 
             this.dataSet_Carniceria.DataSetName = "DataSet_Carniceria";
             this.dataSet_Carniceria.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // uSPImprimirVentaGeneradaBindingSource
+            // reportViewer1
             // 
-            this.uSPImprimirVentaGeneradaBindingSource.DataMember = "USP_Imprimir_Venta_Generada";
-            this.uSPImprimirVentaGeneradaBindingSource.DataSource = this.dataSet_Carniceria;
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.uSPImprimirVentaGeneradaBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "PracticaProfesionalEstebanJimenez.Reportes.Rpt_Imprimir_Venta_Generada.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(598, 838);
+            this.reportViewer1.TabIndex = 0;
             // 
             // uSP_Imprimir_Venta_GeneradaTableAdapter
             // 
@@ -78,14 +79,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(572, 727);
+            this.ClientSize = new System.Drawing.Size(598, 838);
             this.Controls.Add(this.txt_p1);
             this.Controls.Add(this.reportViewer1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Frm_Rpt_Imprimir_VentaGeneral";
-            this.Text = "Frm_Rpt_Imprimir_VentaGeneral";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Frm_Rpt_Imprimir_VentaGeneral_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Carniceria)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uSPImprimirVentaGeneradaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Carniceria)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

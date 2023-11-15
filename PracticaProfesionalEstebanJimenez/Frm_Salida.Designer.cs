@@ -120,15 +120,15 @@
             // 
             // BtnSalir
             // 
-            this.BtnSalir.BackColor = System.Drawing.Color.Maroon;
+            this.BtnSalir.BackColor = System.Drawing.Color.Gray;
             this.BtnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSalir.ForeColor = System.Drawing.Color.White;
             this.BtnSalir.ImageKey = "Cierre.png";
             this.BtnSalir.ImageList = this.imageList1;
-            this.BtnSalir.Location = new System.Drawing.Point(1266, 622);
+            this.BtnSalir.Location = new System.Drawing.Point(462, 626);
             this.BtnSalir.Name = "BtnSalir";
-            this.BtnSalir.Size = new System.Drawing.Size(149, 114);
+            this.BtnSalir.Size = new System.Drawing.Size(129, 113);
             this.BtnSalir.TabIndex = 59;
             this.BtnSalir.Text = "Salir";
             this.BtnSalir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -147,15 +147,15 @@
             // 
             // BtnReporte
             // 
-            this.BtnReporte.BackColor = System.Drawing.Color.Maroon;
+            this.BtnReporte.BackColor = System.Drawing.Color.Gray;
             this.BtnReporte.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnReporte.ForeColor = System.Drawing.Color.White;
             this.BtnReporte.ImageKey = "Reporte.png";
             this.BtnReporte.ImageList = this.imageList1;
-            this.BtnReporte.Location = new System.Drawing.Point(1093, 622);
+            this.BtnReporte.Location = new System.Drawing.Point(314, 626);
             this.BtnReporte.Name = "BtnReporte";
-            this.BtnReporte.Size = new System.Drawing.Size(144, 114);
+            this.BtnReporte.Size = new System.Drawing.Size(129, 113);
             this.BtnReporte.TabIndex = 58;
             this.BtnReporte.Text = "Reporte";
             this.BtnReporte.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -164,15 +164,15 @@
             // 
             // BtnEliminar
             // 
-            this.BtnEliminar.BackColor = System.Drawing.Color.Maroon;
+            this.BtnEliminar.BackColor = System.Drawing.Color.Gray;
             this.BtnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEliminar.ForeColor = System.Drawing.Color.White;
             this.BtnEliminar.ImageKey = "Eliminar.png";
             this.BtnEliminar.ImageList = this.imageList1;
-            this.BtnEliminar.Location = new System.Drawing.Point(925, 622);
+            this.BtnEliminar.Location = new System.Drawing.Point(167, 626);
             this.BtnEliminar.Name = "BtnEliminar";
-            this.BtnEliminar.Size = new System.Drawing.Size(144, 114);
+            this.BtnEliminar.Size = new System.Drawing.Size(129, 113);
             this.BtnEliminar.TabIndex = 57;
             this.BtnEliminar.Text = "Anular";
             this.BtnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -181,15 +181,15 @@
             // 
             // BtnNuevo
             // 
-            this.BtnNuevo.BackColor = System.Drawing.Color.Maroon;
+            this.BtnNuevo.BackColor = System.Drawing.Color.Gray;
             this.BtnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnNuevo.ForeColor = System.Drawing.Color.White;
             this.BtnNuevo.ImageKey = "nuevo.png";
             this.BtnNuevo.ImageList = this.imageList1;
-            this.BtnNuevo.Location = new System.Drawing.Point(755, 622);
+            this.BtnNuevo.Location = new System.Drawing.Point(14, 626);
             this.BtnNuevo.Name = "BtnNuevo";
-            this.BtnNuevo.Size = new System.Drawing.Size(144, 114);
+            this.BtnNuevo.Size = new System.Drawing.Size(129, 113);
             this.BtnNuevo.TabIndex = 56;
             this.BtnNuevo.Text = "Nuevo";
             this.BtnNuevo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;

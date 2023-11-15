@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Rpt_IngresosxProductos));
             this.uSPReporteIngresosComprasxProductosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet_ReportesConsolidados = new PracticaProfesionalEstebanJimenez.Reportes_Consolidados.DataSet_ReportesConsolidados();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
@@ -92,8 +93,10 @@
             this.Controls.Add(this.txt_p2);
             this.Controls.Add(this.txt_p1);
             this.Controls.Add(this.reportViewer1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Frm_Rpt_IngresosxProductos";
-            this.Text = "Frm_Rpt_IngresosxProductos";
+            this.Text = "Reporte de Ingresos";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Frm_Rpt_IngresosxProductos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.uSPReporteIngresosComprasxProductosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet_ReportesConsolidados)).EndInit();

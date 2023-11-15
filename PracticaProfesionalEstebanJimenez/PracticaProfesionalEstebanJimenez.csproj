@@ -49,7 +49,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>logo2.ico</ApplicationIcon>
+    <ApplicationIcon>cart_market_store_ecommerce_icon_178867.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>F2A19B7401633F71E2BDA6830B323F210687CD87</ManifestCertificateThumbprint>
@@ -455,6 +455,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="cart_market_store_ecommerce_icon_178867.ico" />
     <Content Include="logo2.ico" />
     <Content Include="LogoDistricarnes.ico.ico" />
     <Content Include="SqlServerTypes\readme.htm" />

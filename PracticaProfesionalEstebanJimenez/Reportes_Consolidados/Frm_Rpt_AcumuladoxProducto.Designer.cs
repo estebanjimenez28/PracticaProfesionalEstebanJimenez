@@ -29,23 +29,34 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.dataSet_ReportesConsolidados = new PracticaProfesionalEstebanJimenez.Reportes_Consolidados.DataSet_ReportesConsolidados();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Rpt_AcumuladoxProducto));
             this.uSPReporteIngresoAcumuladoxProductoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet_ReportesConsolidados = new PracticaProfesionalEstebanJimenez.Reportes_Consolidados.DataSet_ReportesConsolidados();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.uSP_Reporte_Ingreso_AcumuladoxProductoTableAdapter = new PracticaProfesionalEstebanJimenez.Reportes_Consolidados.DataSet_ReportesConsolidadosTableAdapters.USP_Reporte_Ingreso_AcumuladoxProductoTableAdapter();
             this.txt_p2 = new System.Windows.Forms.TextBox();
             this.txt_p1 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet_ReportesConsolidados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uSPReporteIngresoAcumuladoxProductoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet_ReportesConsolidados)).BeginInit();
             this.SuspendLayout();
+            // 
+            // uSPReporteIngresoAcumuladoxProductoBindingSource
+            // 
+            this.uSPReporteIngresoAcumuladoxProductoBindingSource.DataMember = "USP_Reporte_Ingreso_AcumuladoxProducto";
+            this.uSPReporteIngresoAcumuladoxProductoBindingSource.DataSource = this.dataSet_ReportesConsolidados;
+            // 
+            // dataSet_ReportesConsolidados
+            // 
+            this.dataSet_ReportesConsolidados.DataSetName = "DataSet_ReportesConsolidados";
+            this.dataSet_ReportesConsolidados.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource2.Name = "DataSet1";
-            reportDataSource2.Value = this.uSPReporteIngresoAcumuladoxProductoBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.uSPReporteIngresoAcumuladoxProductoBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "PracticaProfesionalEstebanJimenez.Reportes_Consolidados.Rpt_Ingreso_AcumuladoxPro" +
     "ductos.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
@@ -53,16 +64,6 @@
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(1171, 599);
             this.reportViewer1.TabIndex = 0;
-            // 
-            // dataSet_ReportesConsolidados
-            // 
-            this.dataSet_ReportesConsolidados.DataSetName = "DataSet_ReportesConsolidados";
-            this.dataSet_ReportesConsolidados.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // uSPReporteIngresoAcumuladoxProductoBindingSource
-            // 
-            this.uSPReporteIngresoAcumuladoxProductoBindingSource.DataMember = "USP_Reporte_Ingreso_AcumuladoxProducto";
-            this.uSPReporteIngresoAcumuladoxProductoBindingSource.DataSource = this.dataSet_ReportesConsolidados;
             // 
             // uSP_Reporte_Ingreso_AcumuladoxProductoTableAdapter
             // 
@@ -92,11 +93,13 @@
             this.Controls.Add(this.txt_p2);
             this.Controls.Add(this.txt_p1);
             this.Controls.Add(this.reportViewer1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Frm_Rpt_AcumuladoxProducto";
-            this.Text = "Frm_Rpt_AcumuladoxProducto";
+            this.Text = "Reporte Acumulado de Compras";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Frm_Rpt_AcumuladoxProducto_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet_ReportesConsolidados)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uSPReporteIngresoAcumuladoxProductoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet_ReportesConsolidados)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

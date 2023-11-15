@@ -43,9 +43,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(148, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(-39, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(233, 222);
+            this.pictureBox1.Size = new System.Drawing.Size(499, 237);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -53,18 +53,18 @@
             // TxtUsuario
             // 
             this.TxtUsuario.Font = new System.Drawing.Font("Yu Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtUsuario.Location = new System.Drawing.Point(69, 308);
+            this.TxtUsuario.Location = new System.Drawing.Point(79, 352);
             this.TxtUsuario.Name = "TxtUsuario";
-            this.TxtUsuario.Size = new System.Drawing.Size(340, 28);
+            this.TxtUsuario.Size = new System.Drawing.Size(286, 28);
             this.TxtUsuario.TabIndex = 2;
             this.TxtUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtContrasennia
             // 
             this.TxtContrasennia.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtContrasennia.Location = new System.Drawing.Point(69, 431);
+            this.TxtContrasennia.Location = new System.Drawing.Point(79, 477);
             this.TxtContrasennia.Name = "TxtContrasennia";
-            this.TxtContrasennia.Size = new System.Drawing.Size(340, 32);
+            this.TxtContrasennia.Size = new System.Drawing.Size(286, 32);
             this.TxtContrasennia.TabIndex = 3;
             this.TxtContrasennia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.TxtContrasennia.UseSystemPasswordChar = true;
@@ -79,11 +79,11 @@
             this.BtnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnIngresar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnIngresar.ForeColor = System.Drawing.Color.White;
-            this.BtnIngresar.Location = new System.Drawing.Point(66, 569);
+            this.BtnIngresar.Location = new System.Drawing.Point(64, 570);
             this.BtnIngresar.Name = "BtnIngresar";
             this.BtnIngresar.Size = new System.Drawing.Size(173, 51);
             this.BtnIngresar.TabIndex = 5;
-            this.BtnIngresar.Text = "Ingresar";
+            this.BtnIngresar.Text = "INGRESAR";
             this.BtnIngresar.UseVisualStyleBackColor = false;
             this.BtnIngresar.Click += new System.EventHandler(this.BtnIngresar_Click);
             // 
@@ -97,11 +97,11 @@
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.ForeColor = System.Drawing.Color.White;
-            this.btnSalir.Location = new System.Drawing.Point(255, 569);
+            this.btnSalir.Location = new System.Drawing.Point(253, 570);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(173, 51);
             this.btnSalir.TabIndex = 6;
-            this.btnSalir.Text = "Salir";
+            this.btnSalir.Text = "SALIR";
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
@@ -109,27 +109,27 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(167, 270);
+            this.label1.Location = new System.Drawing.Point(197, 316);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(157, 22);
+            this.label1.Size = new System.Drawing.Size(76, 22);
             this.label1.TabIndex = 7;
-            this.label1.Text = "Ingrese su Usuario";
+            this.label1.Text = " Usuario";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(153, 397);
+            this.label2.Location = new System.Drawing.Point(183, 438);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(186, 22);
+            this.label2.Size = new System.Drawing.Size(100, 22);
             this.label2.TabIndex = 8;
-            this.label2.Text = "Ingrese su Contraseña";
+            this.label2.Text = "Contraseña";
             // 
             // BtnMostrar
             // 
             this.BtnMostrar.BackColor = System.Drawing.Color.White;
             this.BtnMostrar.Image = ((System.Drawing.Image)(resources.GetObject("BtnMostrar.Image")));
-            this.BtnMostrar.Location = new System.Drawing.Point(429, 431);
+            this.BtnMostrar.Location = new System.Drawing.Point(371, 477);
             this.BtnMostrar.Name = "BtnMostrar";
             this.BtnMostrar.Size = new System.Drawing.Size(51, 35);
             this.BtnMostrar.TabIndex = 9;
@@ -142,7 +142,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(511, 665);
+            this.ClientSize = new System.Drawing.Size(466, 665);
             this.ControlBox = false;
             this.Controls.Add(this.BtnMostrar);
             this.Controls.Add(this.label2);

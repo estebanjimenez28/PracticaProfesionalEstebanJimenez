@@ -54,7 +54,7 @@ namespace PracticaProfesional.Datos
                 Comando.Parameters.Add("@cNumeroDocumento", SqlDbType.VarChar).Value = oCl.NumeroDocumento;
                 Comando.Parameters.Add("@cNombre", SqlDbType.VarChar).Value = oCl.Nombre;
                 Comando.Parameters.Add("@cApellidos", SqlDbType.VarChar).Value = oCl.Apellidos;
-                Comando.Parameters.Add("@cRazonSocialCliente", SqlDbType.VarChar).Value = oCl.Apellidos;
+                Comando.Parameters.Add("@cRazonSocialCliente", SqlDbType.VarChar).Value = oCl.RazonSocial_Cliente;
                 Comando.Parameters.Add("@cCorreo", SqlDbType.VarChar).Value = oCl.Correo;
                 Comando.Parameters.Add("@cTelefono", SqlDbType.VarChar).Value = oCl.Telefono;
                 Comando.Parameters.Add("@cDireccion", SqlDbType.VarChar).Value = oCl.Direccion;

@@ -69,15 +69,15 @@
             // 
             // BtnSalir
             // 
-            this.BtnSalir.BackColor = System.Drawing.Color.DarkRed;
+            this.BtnSalir.BackColor = System.Drawing.Color.Gray;
             this.BtnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSalir.ForeColor = System.Drawing.Color.White;
             this.BtnSalir.ImageKey = "Cierre.png";
             this.BtnSalir.ImageList = this.imageList1;
-            this.BtnSalir.Location = new System.Drawing.Point(1076, 584);
+            this.BtnSalir.Location = new System.Drawing.Point(735, 598);
             this.BtnSalir.Name = "BtnSalir";
-            this.BtnSalir.Size = new System.Drawing.Size(135, 99);
+            this.BtnSalir.Size = new System.Drawing.Size(129, 113);
             this.BtnSalir.TabIndex = 34;
             this.BtnSalir.Text = "Salir";
             this.BtnSalir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -96,15 +96,15 @@
             // 
             // BtnActualizar
             // 
-            this.BtnActualizar.BackColor = System.Drawing.Color.DarkRed;
+            this.BtnActualizar.BackColor = System.Drawing.Color.Gray;
             this.BtnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnActualizar.ForeColor = System.Drawing.Color.White;
             this.BtnActualizar.ImageKey = "Actualizar.png";
             this.BtnActualizar.ImageList = this.imageList1;
-            this.BtnActualizar.Location = new System.Drawing.Point(752, 584);
+            this.BtnActualizar.Location = new System.Drawing.Point(423, 598);
             this.BtnActualizar.Name = "BtnActualizar";
-            this.BtnActualizar.Size = new System.Drawing.Size(135, 99);
+            this.BtnActualizar.Size = new System.Drawing.Size(129, 113);
             this.BtnActualizar.TabIndex = 32;
             this.BtnActualizar.Text = "Actualizar";
             this.BtnActualizar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -113,15 +113,15 @@
             // 
             // BtnEliminar
             // 
-            this.BtnEliminar.BackColor = System.Drawing.Color.DarkRed;
+            this.BtnEliminar.BackColor = System.Drawing.Color.Gray;
             this.BtnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEliminar.ForeColor = System.Drawing.Color.White;
             this.BtnEliminar.ImageKey = "Eliminar.png";
             this.BtnEliminar.ImageList = this.imageList1;
-            this.BtnEliminar.Location = new System.Drawing.Point(914, 584);
+            this.BtnEliminar.Location = new System.Drawing.Point(579, 598);
             this.BtnEliminar.Name = "BtnEliminar";
-            this.BtnEliminar.Size = new System.Drawing.Size(135, 99);
+            this.BtnEliminar.Size = new System.Drawing.Size(129, 113);
             this.BtnEliminar.TabIndex = 31;
             this.BtnEliminar.Text = "Eliminar";
             this.BtnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -130,15 +130,15 @@
             // 
             // BtnNuevo
             // 
-            this.BtnNuevo.BackColor = System.Drawing.Color.DarkRed;
+            this.BtnNuevo.BackColor = System.Drawing.Color.Gray;
             this.BtnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnNuevo.ForeColor = System.Drawing.Color.White;
             this.BtnNuevo.ImageKey = "nuevo.png";
             this.BtnNuevo.ImageList = this.imageList1;
-            this.BtnNuevo.Location = new System.Drawing.Point(584, 584);
+            this.BtnNuevo.Location = new System.Drawing.Point(272, 598);
             this.BtnNuevo.Name = "BtnNuevo";
-            this.BtnNuevo.Size = new System.Drawing.Size(135, 99);
+            this.BtnNuevo.Size = new System.Drawing.Size(129, 113);
             this.BtnNuevo.TabIndex = 30;
             this.BtnNuevo.Text = "Nuevo";
             this.BtnNuevo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -211,7 +211,7 @@
             this.DgvPrincipal.RowHeadersWidth = 51;
             this.DgvPrincipal.RowTemplate.Height = 24;
             this.DgvPrincipal.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.DgvPrincipal.Size = new System.Drawing.Size(1432, 380);
+            this.DgvPrincipal.Size = new System.Drawing.Size(1261, 380);
             this.DgvPrincipal.TabIndex = 3;
             this.DgvPrincipal.DoubleClick += new System.EventHandler(this.DgvPrincipal_DoubleClick);
             // 

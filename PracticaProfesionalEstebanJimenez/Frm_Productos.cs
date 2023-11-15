@@ -51,10 +51,12 @@ namespace PracticaProfesionalEstebanJimenez
             DgvPrincipal.Columns[5].HeaderText = "STOCK MIN";
             DgvPrincipal.Columns[6].Width = 150;
             DgvPrincipal.Columns[6].HeaderText = "STOCK MAX";
-            DgvPrincipal.Columns[7].Visible = false;
+            DgvPrincipal.Columns[7].Width = 150;
+            DgvPrincipal.Columns[7].HeaderText = "P.VENTA";
             DgvPrincipal.Columns[8].Visible = false;
             DgvPrincipal.Columns[9].Visible = false;
             DgvPrincipal.Columns[10].Visible = false;
+            
 
         }
 

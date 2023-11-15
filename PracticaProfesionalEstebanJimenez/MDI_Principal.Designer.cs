@@ -72,16 +72,18 @@
             this.lblcargo = new System.Windows.Forms.Label();
             this.lblnombreusuario = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.MiMenu.SuspendLayout();
             this.MiBarra.SuspendLayout();
             this.Pnl_barra.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // MiMenu
             // 
-            this.MiMenu.BackColor = System.Drawing.Color.White;
+            this.MiMenu.BackColor = System.Drawing.Color.WhiteSmoke;
             this.MiMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.MiMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.BtnGestiones,
@@ -91,7 +93,7 @@
             this.salirToolStripMenuItem});
             this.MiMenu.Location = new System.Drawing.Point(0, 0);
             this.MiMenu.Name = "MiMenu";
-            this.MiMenu.Size = new System.Drawing.Size(1396, 30);
+            this.MiMenu.Size = new System.Drawing.Size(1396, 28);
             this.MiMenu.TabIndex = 1;
             this.MiMenu.Text = "menuStrip1";
             // 
@@ -104,7 +106,7 @@
             this.proveedoresToolStripMenuItem});
             this.BtnGestiones.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnGestiones.Name = "BtnGestiones";
-            this.BtnGestiones.Size = new System.Drawing.Size(107, 26);
+            this.BtnGestiones.Size = new System.Drawing.Size(107, 24);
             this.BtnGestiones.Text = "Gestiones";
             // 
             // productosToolStripMenuItem
@@ -116,7 +118,7 @@
             this.categoriasToolStripMenuItem});
             this.productosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("productosToolStripMenuItem.Image")));
             this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
-            this.productosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.productosToolStripMenuItem.Size = new System.Drawing.Size(196, 26);
             this.productosToolStripMenuItem.Text = "Productos";
             // 
             // productosToolStripMenuItem1
@@ -155,7 +157,7 @@
             // 
             this.toolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem1.Image")));
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(196, 26);
             this.toolStripMenuItem1.Text = "Almacenes";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
@@ -163,7 +165,7 @@
             // 
             this.clientesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("clientesToolStripMenuItem.Image")));
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(196, 26);
             this.clientesToolStripMenuItem.Text = "Clientes";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
@@ -171,7 +173,7 @@
             // 
             this.proveedoresToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("proveedoresToolStripMenuItem.Image")));
             this.proveedoresToolStripMenuItem.Name = "proveedoresToolStripMenuItem";
-            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(196, 26);
             this.proveedoresToolStripMenuItem.Text = "Proveedores";
             this.proveedoresToolStripMenuItem.Click += new System.EventHandler(this.proveedoresToolStripMenuItem_Click);
             // 
@@ -182,7 +184,7 @@
             this.salidaDeProductosVentasToolStripMenuItem});
             this.BtnProcesos.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnProcesos.Name = "BtnProcesos";
-            this.BtnProcesos.Size = new System.Drawing.Size(97, 26);
+            this.BtnProcesos.Size = new System.Drawing.Size(97, 24);
             this.BtnProcesos.Text = "Procesos";
             // 
             // entradasDeProductosComprasToolStripMenuItem
@@ -208,7 +210,7 @@
             this.salidasToolStripMenuItem});
             this.BtnReportes.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnReportes.Name = "BtnReportes";
-            this.BtnReportes.Size = new System.Drawing.Size(99, 26);
+            this.BtnReportes.Size = new System.Drawing.Size(99, 24);
             this.BtnReportes.Text = "Reportes";
             // 
             // ingresosToolStripMenuItem
@@ -263,7 +265,7 @@
             this.usuariosToolStripMenuItem});
             this.BtnSistemas.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSistemas.Name = "BtnSistemas";
-            this.BtnSistemas.Size = new System.Drawing.Size(102, 26);
+            this.BtnSistemas.Size = new System.Drawing.Size(102, 24);
             this.BtnSistemas.Text = "Sistemas";
             // 
             // usuariosToolStripMenuItem
@@ -279,7 +281,7 @@
             this.salirDelSistemaToolStripMenuItem});
             this.salirToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(62, 26);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(62, 24);
             this.salirToolStripMenuItem.Text = "Salir";
             // 
             // salirDelSistemaToolStripMenuItem
@@ -293,7 +295,7 @@
             // MiBarra
             // 
             this.MiBarra.AutoSize = false;
-            this.MiBarra.BackColor = System.Drawing.Color.White;
+            this.MiBarra.BackColor = System.Drawing.Color.WhiteSmoke;
             this.MiBarra.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MiBarra.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.MiBarra.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -304,7 +306,7 @@
             this.Tbar_Entrada,
             this.Tbar_Salida,
             this.toolStripSeparator2});
-            this.MiBarra.Location = new System.Drawing.Point(0, 30);
+            this.MiBarra.Location = new System.Drawing.Point(0, 28);
             this.MiBarra.Name = "MiBarra";
             this.MiBarra.Size = new System.Drawing.Size(1396, 60);
             this.MiBarra.TabIndex = 3;
@@ -382,6 +384,7 @@
             // Pnl_barra
             // 
             this.Pnl_barra.BackColor = System.Drawing.Color.White;
+            this.Pnl_barra.Controls.Add(this.pictureBox1);
             this.Pnl_barra.Controls.Add(this.lbl_hora);
             this.Pnl_barra.Controls.Add(this.lbl_fecha);
             this.Pnl_barra.Controls.Add(this.label4);
@@ -489,6 +492,16 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(201, 118);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 24;
+            this.pictureBox1.TabStop = false;
+            // 
             // MDI_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -519,6 +532,7 @@
             this.Pnl_barra.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -568,5 +582,6 @@
         private System.Windows.Forms.Label lbl_hora;
         private System.Windows.Forms.Label lbl_fecha;
         private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
