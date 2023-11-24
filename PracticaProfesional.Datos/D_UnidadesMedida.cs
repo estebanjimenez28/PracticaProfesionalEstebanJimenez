@@ -11,6 +11,9 @@ namespace PracticaProfesional.Datos
 {
     public class D_UnidadesMedida
     {
+        //En la clase datos se procede a llamar los diferentes procedimientos almacenados
+        //que se encargaran de realizar las funciones dentro de los formularios, como por ejemplo,
+        //listar, guardar y eliminar
         public DataTable Listado_um(string cTexto)
         {
             SqlDataReader Resultado;
@@ -39,6 +42,8 @@ namespace PracticaProfesional.Datos
                 if (SQLCon.State == ConnectionState.Open) SQLCon.Close();
             }
         }
+
+        //Se procede a llamar a el procedimiento almacenado y sus variables
         public string Guardar_um(int nOpcion, E_UnidadesMedida oUm)
         {
             string Rpta = "";
@@ -68,6 +73,8 @@ namespace PracticaProfesional.Datos
             }
             return Rpta;
         }
+        //Se ejecuta el comando (Comando.ExecuteNonQuery()) y se verifica si al menos una fila fue afectada en la base de datos. Si es así, se establece Rpta como "OK";
+        //de lo contrario, se establece como "No se pudo registrar los datos".
 
         public string Eliminar_um(int Codigo_Unidad)
         {

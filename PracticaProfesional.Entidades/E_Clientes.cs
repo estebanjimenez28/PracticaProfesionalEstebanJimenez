@@ -8,6 +8,7 @@ namespace PracticaProfesional.Entidades
 {
     public class E_Clientes
     {
+        //Se definen las propiedades simples
         public int Codigo_Cliente { get; set; }
         public int Codigo_TipoIdentificacion { get; set; }
         public string NumeroDocumento { get; set; }

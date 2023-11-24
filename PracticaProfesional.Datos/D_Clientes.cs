@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 
 namespace PracticaProfesional.Datos
 {
+    //En la clase datos se procede a llamar los diferentes procedimientos almacenados
+    //que se encargaran de realizar las funciones dentro de los formularios, como por ejemplo,
+    //listar, guardar y eliminar
     public class D_Clientes
     {
         public DataTable Listado_cl(string cTexto)

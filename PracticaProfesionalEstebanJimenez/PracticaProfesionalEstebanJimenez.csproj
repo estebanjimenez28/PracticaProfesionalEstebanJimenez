@@ -295,6 +295,7 @@
       <DependentUpon>Frm_Rpt_Unidades.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Validaciones.cs" />
     <EmbeddedResource Include="FrmAlmacenes.resx">
       <DependentUpon>FrmAlmacenes.cs</DependentUpon>
     </EmbeddedResource>

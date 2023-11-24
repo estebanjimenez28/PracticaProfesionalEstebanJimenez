@@ -60,7 +60,7 @@
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(598, 838);
+            this.reportViewer1.Size = new System.Drawing.Size(676, 838);
             this.reportViewer1.TabIndex = 0;
             // 
             // uSP_Imprimir_Venta_GeneradaTableAdapter
@@ -79,7 +79,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(598, 838);
+            this.ClientSize = new System.Drawing.Size(676, 838);
             this.Controls.Add(this.txt_p1);
             this.Controls.Add(this.reportViewer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

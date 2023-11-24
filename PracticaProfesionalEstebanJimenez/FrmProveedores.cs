@@ -32,13 +32,13 @@ namespace PracticaProfesionalEstebanJimenez
             DgvPrincipal.Columns[0].HeaderText = "CÓDIGO";
             DgvPrincipal.Columns[1].Width = 210;
             DgvPrincipal.Columns[1].HeaderText = "CEDULA";
-            DgvPrincipal.Columns[2].Width = 320;
+            DgvPrincipal.Columns[2].Width = 300;
             DgvPrincipal.Columns[2].HeaderText = "RAZON SOCIAL";
-            DgvPrincipal.Columns[3].Width = 280;
+            DgvPrincipal.Columns[3].Width = 250;
             DgvPrincipal.Columns[3].HeaderText = "NOMBRE";
-            DgvPrincipal.Columns[4].Width = 220;
+            DgvPrincipal.Columns[4].Width = 230;
             DgvPrincipal.Columns[4].HeaderText = "APELLIDOS";
-            DgvPrincipal.Columns[5].Width = 220;
+            DgvPrincipal.Columns[5].Width = 230;
             DgvPrincipal.Columns[5].HeaderText = "PRODUCTO";
             DgvPrincipal.Columns[6].Visible = false;
             DgvPrincipal.Columns[7].Visible = false;
@@ -345,6 +345,21 @@ namespace PracticaProfesionalEstebanJimenez
         }
 
         private void DgvProductoProveedor_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void TxtCedula_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtRazonSocial_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtNombre_TextChanged(object sender, EventArgs e)
         {
 
         }

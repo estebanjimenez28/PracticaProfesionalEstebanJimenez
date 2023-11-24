@@ -9,6 +9,9 @@ using PracticaProfesional.Entidades;
 
 namespace PracticaProfesional.Datos
 {
+    //En la clase datos se procede a llamar los diferentes procedimientos almacenados
+    //que se encargaran de realizar las funciones dentro de los formularios, como por ejemplo,
+    //listar, guardar y eliminar
     public class D_Categorias
     {
         public DataTable Listado_ca(string cTexto)

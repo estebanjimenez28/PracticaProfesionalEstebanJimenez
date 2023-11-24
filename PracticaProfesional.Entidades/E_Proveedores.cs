@@ -8,6 +8,7 @@ namespace PracticaProfesional.Entidades
 {
     public class E_Proveedores
     {
+        //Se definen las propiedades simples
         public int Codigo_Proveedor { get; set; }
         public string Cedula { get; set; }
         public string RazonSocial { get; set; }

@@ -175,7 +175,7 @@ namespace PracticaProfesionalEstebanJimenez
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            lbl_fecha.Text = DateTime.Now.ToLongDateString();
+            label1.Text = DateTime.Now.ToLongDateString();
             lbl_hora.Text = DateTime.Now.ToLongTimeString();
         }
 

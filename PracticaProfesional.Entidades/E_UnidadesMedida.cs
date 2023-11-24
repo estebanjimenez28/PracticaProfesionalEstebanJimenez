@@ -8,8 +8,8 @@ namespace PracticaProfesional.Entidades
 {
     public class E_UnidadesMedida
     {
+        //Se definen las propiedades simples
         public int Codigo_Unidad { get; set; }
-
         public string Abreviatura { get; set; }
         public string Descripcion { get; set; }
 

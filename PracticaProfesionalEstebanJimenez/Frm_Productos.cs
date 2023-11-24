@@ -41,15 +41,15 @@ namespace PracticaProfesionalEstebanJimenez
             DgvPrincipal.Columns[0].HeaderText = "CÓDIGO";
             DgvPrincipal.Columns[1].Width = 250;
             DgvPrincipal.Columns[1].HeaderText = "PRODUCTO";
-            DgvPrincipal.Columns[2].Width = 230;
+            DgvPrincipal.Columns[2].Width = 210;
             DgvPrincipal.Columns[2].HeaderText = "MARCA";
             DgvPrincipal.Columns[3].Width = 220;
             DgvPrincipal.Columns[3].HeaderText = "MEDIDA";
-            DgvPrincipal.Columns[4].Width = 220;
+            DgvPrincipal.Columns[4].Width = 200;
             DgvPrincipal.Columns[4].HeaderText = "CATEGORIA";
-            DgvPrincipal.Columns[5].Width = 150;
+            DgvPrincipal.Columns[5].Width = 120;
             DgvPrincipal.Columns[5].HeaderText = "STOCK MIN";
-            DgvPrincipal.Columns[6].Width = 150;
+            DgvPrincipal.Columns[6].Width = 120;
             DgvPrincipal.Columns[6].HeaderText = "STOCK MAX";
             DgvPrincipal.Columns[7].Width = 150;
             DgvPrincipal.Columns[7].HeaderText = "P.VENTA";
@@ -118,7 +118,7 @@ namespace PracticaProfesionalEstebanJimenez
 
         private void Formato_ma_pr()
         {
-           DgvMarcas.Columns[0].Width = 450;
+           DgvMarcas.Columns[0].Width = 650;
             DgvMarcas.Columns[0].HeaderText = "Seleccione una Opción";
             DgvMarcas.Columns[1].Visible = false;
 
@@ -156,7 +156,7 @@ namespace PracticaProfesionalEstebanJimenez
 
         private void Formato_um_pr()
         {
-            DgvMedidas.Columns[0].Width = 500;
+            DgvMedidas.Columns[0].Width = 600;
             DgvMedidas.Columns[0].HeaderText = "Seleccione una Opción";
             DgvMedidas.Columns[1].Visible = false;
 
@@ -192,7 +192,7 @@ namespace PracticaProfesionalEstebanJimenez
         }
         private void Formato_ca_pr()
         {
-            DgvCategorias.Columns[0].Width = 450;
+            DgvCategorias.Columns[0].Width = 650;
             DgvCategorias.Columns[0].HeaderText = "Seleccione una Opción";
             DgvCategorias.Columns[1].Visible = false;
 
@@ -521,6 +521,16 @@ namespace PracticaProfesionalEstebanJimenez
         private void button2_Click(object sender, EventArgs e)
         {
             PnlMarcas.Visible = false;
+        }
+
+        private void PnlCategorias_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

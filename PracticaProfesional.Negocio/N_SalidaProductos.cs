@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 
 namespace PracticaProfesional.Negocio
 {
+    // la capa de negocio actúa como un intermediario entre la capa de presentación y la capa de datos,
+    // facilitando el manejo de la lógica de negocio
     public class N_SalidaProductos
     {
         public static DataTable Listado_Salida(string cTexto)

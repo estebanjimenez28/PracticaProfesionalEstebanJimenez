@@ -22,6 +22,7 @@ namespace PracticaProfesionalEstebanJimenez
             InitializeComponent();
         }
         #region "Mis Variables"
+        //Se declara e inicializa las variables del DataTable
         int Codigo_Salida = 0;
         int Codigo_TipoVenta = 0;
         int Codigo_Cliente = 0;
@@ -33,20 +34,23 @@ namespace PracticaProfesionalEstebanJimenez
         #region "Mis Métodos"
         private void Formato_sp()
         {
+            //Este metodo se crea para aplicar un formato expecifico sobre
+            //la informacion que debe llevar el DataGridview Principal.
             Dgv_principal.Columns[0].Width = 100;
             Dgv_principal.Columns[0].HeaderText = "CÓDIGO";
-            Dgv_principal.Columns[1].Width = 100;
+            Dgv_principal.Columns[1].Width = 130;
             Dgv_principal.Columns[1].HeaderText = "VENTA";
             Dgv_principal.Columns[2].Width = 200;
             Dgv_principal.Columns[2].HeaderText = "NRO DOC";
-            Dgv_principal.Columns[3].Width = 180;
+            Dgv_principal.Columns[3].Width = 200;
             Dgv_principal.Columns[3].HeaderText = "FECHA VENTA";
             Dgv_principal.Columns[4].Width = 270;
             Dgv_principal.Columns[4].HeaderText = "NRO.DOC.CLI";
             Dgv_principal.Columns[5].Width = 270;
             Dgv_principal.Columns[5].HeaderText = "CLIENTE";
-            Dgv_principal.Columns[6].Width = 190;
+            Dgv_principal.Columns[6].Width = 200;
             Dgv_principal.Columns[6].HeaderText = "TOTAL";
+            //Se procede a ocultar datos que no se desea que se presenten en el DataGridview
             Dgv_principal.Columns[7].Visible = false;
             Dgv_principal.Columns[8].Visible = false;
             Dgv_principal.Columns[9].Visible = false;
@@ -56,6 +60,7 @@ namespace PracticaProfesionalEstebanJimenez
 
         private void Listado_sp(string cTexto)
         {
+            //Este metodo se crea para cargar y mostrar los datos en el DataGridview
             try
             {
                 Dgv_principal.DataSource = N_SalidaProductos.Listado_Salida(cTexto);
@@ -68,6 +73,8 @@ namespace PracticaProfesionalEstebanJimenez
             }
         }
 
+        //Se procede a habilitar los botones en la Interfaz Grafica
+
         private void Estado_Botonesprincipales(bool lEstado)
         {
             this.BtnNuevo.Enabled = lEstado;
@@ -78,6 +85,7 @@ namespace PracticaProfesionalEstebanJimenez
 
         private void Estado_Botonesprocesos(bool lEstado)
         {
+            //Este proceso nos ayuda a controlar la visibilidad de los botones en un momento determinado
             this.BtnCancelar.Visible = lEstado;
             this.BtnGuardar.Visible = lEstado;
 
@@ -88,6 +96,8 @@ namespace PracticaProfesionalEstebanJimenez
 
         private void Selecciona_item()
         {
+            //Este método se utiliza para seleccionar un elemento en el DataGridView (Dgv_principal)
+            //y mostrar la información asociada en los textBox correspondientes de la interfaz de usuario
             if (string.IsNullOrEmpty(Convert.ToString(Dgv_principal.CurrentRow.Cells["Codigo_Salida"].Value)))
             {
                 MessageBox.Show("No se tiene información para Visualizar", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -115,6 +125,7 @@ namespace PracticaProfesionalEstebanJimenez
 
         private void Crear_TablaDetalle()
         {
+            //Se procede a inicializar una tabla de datos "DataTable"
             this.TablaDetalle = new DataTable("TablaDetalle");
             this.TablaDetalle.Columns.Add("Descripcion_Producto", System.Type.GetType("System.String"));
             this.TablaDetalle.Columns.Add("Descripcion_Marca", System.Type.GetType("System.String"));
@@ -129,6 +140,10 @@ namespace PracticaProfesionalEstebanJimenez
             this.Formato_detalle();
 
         }
+
+
+        //Se define un método llamado Agregar_item que se encarga
+        //de agregar un nuevo elemento (fila) a una tabla de datos (TablaDetalle).
 
         private void Agregar_item(string cDescripcion_pr,
                                   string cDescripcion_ma,
@@ -152,15 +167,16 @@ namespace PracticaProfesionalEstebanJimenez
 
         private void Formato_detalle()
         {
-            Dgv_Detalle.Columns[0].Width = 250;
+            //Se define las variables que se colocaran en el datagridview de la tabla de detalle
+            Dgv_Detalle.Columns[0].Width = 220;
             Dgv_Detalle.Columns[0].HeaderText = "PRODUCTO";
-            Dgv_Detalle.Columns[1].Width = 210;
+            Dgv_Detalle.Columns[1].Width = 180;
             Dgv_Detalle.Columns[1].HeaderText = "MARCA";
             Dgv_Detalle.Columns[2].Width = 180;
             Dgv_Detalle.Columns[2].HeaderText = "U.MEDIDA";
-            Dgv_Detalle.Columns[3].Width = 170;
+            Dgv_Detalle.Columns[3].Width = 150;
             Dgv_Detalle.Columns[3].HeaderText = "CANTIDAD";
-            Dgv_Detalle.Columns[4].Width = 160;
+            Dgv_Detalle.Columns[4].Width = 150;
             Dgv_Detalle.Columns[4].HeaderText = "PU VENTA";
             Dgv_Detalle.Columns[5].Width = 100;
             Dgv_Detalle.Columns[5].HeaderText = "TOTAL";
@@ -182,6 +198,7 @@ namespace PracticaProfesionalEstebanJimenez
 
         private void Formato_cl()
         {
+            //Se aplica un formato al datagridview de clientes
             DgvClientes.Columns[0].Width = 240;
             DgvClientes.Columns[0].HeaderText = "CLIENTE";
             DgvClientes.Columns[1].Width = 240;
@@ -194,6 +211,7 @@ namespace PracticaProfesionalEstebanJimenez
 
         private void Listado_cl(string cTexto)
         {
+            //Se procede a cargar y listar la informacion en el datagridview
             try
             {
                 DgvClientes.DataSource = N_SalidaProductos.Listado_cl_sp(cTexto);
@@ -208,6 +226,7 @@ namespace PracticaProfesionalEstebanJimenez
 
         private void Selecciona_cl()
         {
+            //Este metodo funcina para seleccionar la informacion del datagriview y mostrarla en los textbox correspondientes
             if (string.IsNullOrEmpty(Convert.ToString(DgvClientes.CurrentRow.Cells["Codigo_Cliente"].Value)))
             {
                 MessageBox.Show("No se tiene información para Visualizar", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -217,7 +236,7 @@ namespace PracticaProfesionalEstebanJimenez
                 this.Codigo_Cliente = Convert.ToInt32(DgvClientes.CurrentRow.Cells["Codigo_Cliente"].Value);
                 TxtDocumentoCliente.Text = Convert.ToString(DgvClientes.CurrentRow.Cells["NumeroDocumento_Cliente"].Value);
                 TxtCliente.Text = Convert.ToString(DgvClientes.CurrentRow.Cells["Razon_Social_Cliente"].Value);
-                if (this.Codigo_Cliente == 4) //si es el cliente genérico
+                if (this.Codigo_Cliente == 1010) //si es el cliente genérico
                 {
                     TxtDocumentoCliente.ReadOnly = false;
                     TxtCliente.ReadOnly = false;
@@ -233,14 +252,16 @@ namespace PracticaProfesionalEstebanJimenez
 
         private void Formato_TipoVenta()
         {
+            //Se aplica un formato al datagridview de Tipo Venta
             DgvTipoVenta.Columns[0].Width = 400;
-            DgvTipoVenta.Columns[0].HeaderText = "Seleccione una Opción";
+            DgvTipoVenta.Columns[0].HeaderText = "SELECCIONE UNA OPCIÓN";
             DgvTipoVenta.Columns[1].Visible = false;
 
         }
 
         private void Listado_TipoVenta()
         {
+            //Se procede a cargar y listar la informacion en el datagridview
             try
             {
                 DgvTipoVenta.DataSource = N_SalidaProductos.Listado_TipoVenta();
@@ -255,6 +276,7 @@ namespace PracticaProfesionalEstebanJimenez
 
         private void Selecciona_TipoVenta()
         {
+            //Este metodo funcina para seleccionar la informacion del datagriview y mostrarla en los textbox correspondientes
             if (string.IsNullOrEmpty(Convert.ToString(DgvTipoVenta.CurrentRow.Cells["Codigo_TipoVenta"].Value)))
             {
                 MessageBox.Show("No se tiene información para Visualizar", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -270,6 +292,7 @@ namespace PracticaProfesionalEstebanJimenez
 
         private void Formato_pr()
         {
+            //Se aplica un formato al datagridview de Productos
             DgvProductos.Columns[0].Width = 220;
             DgvProductos.Columns[0].HeaderText = "PRODUCTO";
             DgvProductos.Columns[1].Width = 160;
@@ -280,7 +303,7 @@ namespace PracticaProfesionalEstebanJimenez
             DgvProductos.Columns[3].HeaderText = "CATEGORÍA";
             DgvProductos.Columns[4].Width = 200;
             DgvProductos.Columns[4].HeaderText = "STOCK ACTUAL";
-            DgvProductos.Columns[5].Width = 200;
+            DgvProductos.Columns[5].Width = 220;
             DgvProductos.Columns[5].HeaderText = "PU VENTA";
             DgvProductos.Columns[6].Visible = false;
 
@@ -290,6 +313,7 @@ namespace PracticaProfesionalEstebanJimenez
         {
             try
             {
+                //Se procede a cargar y listar la informacion en el datagridview
                 DgvProductos.DataSource = N_SalidaProductos.Listado_pr_sp(cTexto);
                 this.Formato_pr();
             }
@@ -302,6 +326,7 @@ namespace PracticaProfesionalEstebanJimenez
 
         private void Selecciona_pr()
         {
+            //Este metodo funcina para seleccionar la informacion del datagriview y mostrarla en los textbox correspondientes
             if (string.IsNullOrEmpty(Convert.ToString(DgvProductos.CurrentRow.Cells["Codigo_Producto"].Value)))
             {
                 MessageBox.Show("No se tiene información para Visualizar", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -319,6 +344,9 @@ namespace PracticaProfesionalEstebanJimenez
 
                 bool Agregar = true;
 
+                //Se utiliza un bucle foreach para verificar si el producto ya está en la tabla de detalle (TablaDetalle). Si el producto ya está presente,
+                //se establece el Agregar en falso y se muestra un mensaje de advertencia.
+
                 xCodigo_pr = Convert.ToInt32(DgvProductos.CurrentRow.Cells["Codigo_Producto"].Value);
                 foreach (DataRow Filatemp in TablaDetalle.Rows)
                 {
@@ -328,6 +356,9 @@ namespace PracticaProfesionalEstebanJimenez
                         MessageBox.Show("El producto ya se encuetra agregado", "Aviso del Sistema");
                     }
                 }
+                //Si el Agregar sigue siendo verdadera, se agrega la información del producto a la tabla de
+                //detalle llamando al método Agregar_item. Este método se encarga de agregar una nueva fila
+                //con la información del producto a la tabla de detalle.
 
                 if (Agregar == true)
                 {
@@ -354,6 +385,7 @@ namespace PracticaProfesionalEstebanJimenez
         }
         private void Estado_texto(bool lestado)
         {
+            //Este metodo se encarga de cambiar el estado de lectura (read-only) de varios controles TextBox
             TxtNumeroDocumento.ReadOnly = !lestado;
             TxtObservacion.ReadOnly = !lestado;
             Dtp_fecha.Enabled = lestado;
@@ -361,6 +393,7 @@ namespace PracticaProfesionalEstebanJimenez
 
         private void Limpia_texto()
         {
+            //Este metodo se encargara de limpiar el contenido de varios controles TextBox
             TxtNumeroDocumento.Text = "";
             TxtObservacion.Text = "";
             TxtSubTotal.Text = "";
@@ -371,6 +404,8 @@ namespace PracticaProfesionalEstebanJimenez
 
         private void Calcular_totales()
         {
+            //Este metodo se encargara de calcular y actualizar los totales (subtotal, IVA y total)
+            //en base a la información almacenada en una tabla de detalle 
 
             decimal nSubtotal = 0;
             decimal nIgv = 0;
@@ -402,11 +437,8 @@ namespace PracticaProfesionalEstebanJimenez
 
         private void Frm_Salida_Load(object sender, EventArgs e)
         {
-      
+            //Se carga la informacion en los formularios
 
-
-
-  
             this.Listado_cl("%");
             this.Listado_sp("%");
             this.Listado_TipoVenta();
@@ -477,10 +509,14 @@ namespace PracticaProfesionalEstebanJimenez
 
         private void BtnNuevo_Click(object sender, EventArgs e)
         {
+            //Se establece el estado de guardado en 1, indicando que se está creando un nuevo registro
             this.Estadoguarda = 1;
+            //Desactiva los botones principales.
             this.Estado_Botonesprincipales(false);
+            // Activa los botones de procesos.
             this.Estado_Botonesprocesos(true);
             this.Limpia_texto();
+            // Se habilita la edición en la columna 3 del DataGridView de detalle.
             Dgv_Detalle.Columns[3].ReadOnly = false;
             this.Estado_texto(true);
             TbpPrincipal.SelectedIndex = 0;
@@ -489,6 +525,7 @@ namespace PracticaProfesionalEstebanJimenez
 
         private void BtnCancelar_Click(object sender, EventArgs e)
         {
+            // Se restablece el código a cero.
             this.Codigo_Salida = 0;
             this.Codigo_TipoVenta= 0;
             this.Codigo_Cliente = 0;
@@ -505,6 +542,7 @@ namespace PracticaProfesionalEstebanJimenez
 
         private void Dgv_principal_DoubleClick(object sender, EventArgs e)
         {
+            //Al seleccionar 2 veces la informacion en el Dgv esta se mostrara en el textBox Correspondiente
             this.Selecciona_item();
             this.Estado_Botonesprocesos(false);
             TbpPrincipal.SelectedIndex = 0;
@@ -512,6 +550,8 @@ namespace PracticaProfesionalEstebanJimenez
 
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
+            //Este código está diseñado para permitir al usuario eliminar (anular) un registro de entrada.
+            //Realiza la eliminación en la capa de negocio y actualiza la interfaz de usuario
             if (string.IsNullOrEmpty(Convert.ToString(Dgv_principal.CurrentRow.Cells["Codigo_Salida"].Value)))
             {
                 MessageBox.Show("No se tiene información para Visualizar", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -543,11 +583,13 @@ namespace PracticaProfesionalEstebanJimenez
 
         private void BtnBuscar_Click(object sender, EventArgs e)
         {
+            //Se filtra la informacion del dataGridview Principal
             this.Listado_sp(TxtBuscar.Text.Trim());
         }
 
         private void BtnReporte_Click(object sender, EventArgs e)
         {
+            //Se crea una instancia del formulario de reporte
             Reportes.Frm_Rpt_Salida_Productos oRpt_sp = new Reportes.Frm_Rpt_Salida_Productos();
             oRpt_sp.txt_p1.Text = TxtBuscar.Text;
             oRpt_sp.ShowDialog();
@@ -555,6 +597,7 @@ namespace PracticaProfesionalEstebanJimenez
 
         private void BtnSalir_Click(object sender, EventArgs e)
         {
+            //Se cierra el formulario
             this.Close();
         }
 
@@ -566,27 +609,33 @@ namespace PracticaProfesionalEstebanJimenez
 
         private void BtnBuscar3_Click(object sender, EventArgs e)
         {
+
+            //Se filtra la informacion del dgv Usuarios
             this.Listado_cl(TxtBuscar3.Text);
         }
 
         private void BtnRetornar3_Click(object sender, EventArgs e)
         {
+            //Se oculta el formulario de clientes
             PnlClientes.Visible = false;
         }
 
         private void DgvClientes_DoubleClick(object sender, EventArgs e)
         {
+            //Al dar doble clik la informacion se muestra en el textBox
             this.Selecciona_cl();
             PnlClientes.Visible = false;
         }
 
         private void BtnBuscar5_Click(object sender, EventArgs e)
         {
+            //Se filtra la informacion del dgv productos
             this.Listado_pr(TxtBuscar5.Text);
         }
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
+            //Se despliega el formulario de Lista de Productos
             PnlProducto.Location = TxtTipoVenta.Location;
             PnlProducto.Visible = true;
             TxtBuscar5.Focus();
@@ -594,11 +643,14 @@ namespace PracticaProfesionalEstebanJimenez
 
         private void BtnRetornar5_Click(object sender, EventArgs e)
         {
+            //Se oculta el formulario de productos
             PnlProducto.Visible = false;
         }
 
         private void Dgv_Detalle_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
+            //Se actualiza  la columna "Total" en la tabla de detalle del DataGridView cuando el usuario hace clic en una celda. Este comportamiento puede ser útil
+            //para calcular automáticamente el total en función de la cantidad y el precio unitario al editar una fila.
             if (this.Estadoguarda == 1)
             {
                 DataRow yFila = (DataRow)TablaDetalle.Rows[e.RowIndex];
@@ -612,6 +664,7 @@ namespace PracticaProfesionalEstebanJimenez
 
         private void BtnDeshacer_Click(object sender, EventArgs e)
         {
+            //Se busca proporcionar una funcionalidad para deshacer la última acción realizada en el DataGridView de detalle.
             if (Dgv_Detalle.Rows.Count > 0)
             {
                 Dgv_Detalle.Rows.Remove(Dgv_Detalle.CurrentRow);
@@ -623,12 +676,15 @@ namespace PracticaProfesionalEstebanJimenez
 
         private void DgvProductos_DoubleClick(object sender, EventArgs e)
         {
+
+            //Al dar doble clik la informacion se muestra en el textBox
             this.Selecciona_pr();
             PnlProducto.Visible = false;
         }
 
         private void BtnRetornar_Click(object sender, EventArgs e)
         {
+            //Se regresa a la ventana principal
             TbpPrincipal.SelectedIndex = 0;
         }
 
@@ -639,36 +695,32 @@ namespace PracticaProfesionalEstebanJimenez
 
         private void Btn_lupa2_Click_1(object sender, EventArgs e)
         {
+            //Se despliega la ventana de clientes
             this.PnlClientes.Location = btn_lupa1.Location;
             this.PnlClientes.Visible = true;
         }
 
         private void btn_lupa1_Click(object sender, EventArgs e)
         {
+            //Se despliega la ventana de Tipo Venta
             this.PnlTipoVenta.Location = TxtTipoVenta.Location;
             this.PnlTipoVenta.Visible = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //Se oculta la ventana de Tipo Venta
             PnlTipoVenta.Visible = false;
         }
 
         private void DgvTipoVenta_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            //Al dar doble clik la informacion se muestra en el textBox
             this.Selecciona_TipoVenta();
             PnlTipoVenta.Visible = false;
         }
 
-        private void Dgv_Detalle_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void label13_Click(object sender, EventArgs e)
-        {
-
-        }
+    
     }
 
 }

@@ -8,6 +8,7 @@ using System.Security.Cryptography.X509Certificates;
 
 namespace PracticaProfesional.Datos
 {
+    //en esta clase se realiza la conexion con la base de datos
     public class Conexion
     {
 
@@ -22,6 +23,7 @@ namespace PracticaProfesional.Datos
 
         private Conexion()
         {
+            //se procede a llamar la base de datos correspondiente
             this.Base = "BD_PracticaProfesional";
             this.Servidor = "LAPTOP-HMNTIQK1\\SQLEXPRESS";
             this.Usuario = "InventarioCarniceria";

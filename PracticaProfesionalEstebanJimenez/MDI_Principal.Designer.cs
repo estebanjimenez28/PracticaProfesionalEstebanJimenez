@@ -63,6 +63,8 @@
             this.Tbar_Salida = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.Pnl_barra = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.lbl_hora = new System.Windows.Forms.Label();
             this.lbl_fecha = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -72,18 +74,18 @@
             this.lblcargo = new System.Windows.Forms.Label();
             this.lblnombreusuario = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.MiMenu.SuspendLayout();
             this.MiBarra.SuspendLayout();
             this.Pnl_barra.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // MiMenu
             // 
-            this.MiMenu.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.MiMenu.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.MiMenu.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MiMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.MiMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.BtnGestiones,
@@ -93,7 +95,7 @@
             this.salirToolStripMenuItem});
             this.MiMenu.Location = new System.Drawing.Point(0, 0);
             this.MiMenu.Name = "MiMenu";
-            this.MiMenu.Size = new System.Drawing.Size(1396, 28);
+            this.MiMenu.Size = new System.Drawing.Size(1396, 30);
             this.MiMenu.TabIndex = 1;
             this.MiMenu.Text = "menuStrip1";
             // 
@@ -104,9 +106,9 @@
             this.toolStripMenuItem1,
             this.clientesToolStripMenuItem,
             this.proveedoresToolStripMenuItem});
-            this.BtnGestiones.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnGestiones.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnGestiones.Name = "BtnGestiones";
-            this.BtnGestiones.Size = new System.Drawing.Size(107, 24);
+            this.BtnGestiones.Size = new System.Drawing.Size(102, 26);
             this.BtnGestiones.Text = "Gestiones";
             // 
             // productosToolStripMenuItem
@@ -118,14 +120,14 @@
             this.categoriasToolStripMenuItem});
             this.productosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("productosToolStripMenuItem.Image")));
             this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
-            this.productosToolStripMenuItem.Size = new System.Drawing.Size(196, 26);
+            this.productosToolStripMenuItem.Size = new System.Drawing.Size(191, 26);
             this.productosToolStripMenuItem.Text = "Productos";
             // 
             // productosToolStripMenuItem1
             // 
             this.productosToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("productosToolStripMenuItem1.Image")));
             this.productosToolStripMenuItem1.Name = "productosToolStripMenuItem1";
-            this.productosToolStripMenuItem1.Size = new System.Drawing.Size(265, 26);
+            this.productosToolStripMenuItem1.Size = new System.Drawing.Size(255, 26);
             this.productosToolStripMenuItem1.Text = "Productos";
             this.productosToolStripMenuItem1.Click += new System.EventHandler(this.productosToolStripMenuItem1_Click);
             // 
@@ -133,7 +135,7 @@
             // 
             this.marcasToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("marcasToolStripMenuItem.Image")));
             this.marcasToolStripMenuItem.Name = "marcasToolStripMenuItem";
-            this.marcasToolStripMenuItem.Size = new System.Drawing.Size(265, 26);
+            this.marcasToolStripMenuItem.Size = new System.Drawing.Size(255, 26);
             this.marcasToolStripMenuItem.Text = "Marcas";
             this.marcasToolStripMenuItem.Click += new System.EventHandler(this.marcasToolStripMenuItem_Click);
             // 
@@ -141,7 +143,7 @@
             // 
             this.unidadesDeMedidaToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("unidadesDeMedidaToolStripMenuItem.Image")));
             this.unidadesDeMedidaToolStripMenuItem.Name = "unidadesDeMedidaToolStripMenuItem";
-            this.unidadesDeMedidaToolStripMenuItem.Size = new System.Drawing.Size(265, 26);
+            this.unidadesDeMedidaToolStripMenuItem.Size = new System.Drawing.Size(255, 26);
             this.unidadesDeMedidaToolStripMenuItem.Text = "Unidades de Medida";
             this.unidadesDeMedidaToolStripMenuItem.Click += new System.EventHandler(this.unidadesDeMedidaToolStripMenuItem_Click);
             // 
@@ -149,7 +151,7 @@
             // 
             this.categoriasToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("categoriasToolStripMenuItem.Image")));
             this.categoriasToolStripMenuItem.Name = "categoriasToolStripMenuItem";
-            this.categoriasToolStripMenuItem.Size = new System.Drawing.Size(265, 26);
+            this.categoriasToolStripMenuItem.Size = new System.Drawing.Size(255, 26);
             this.categoriasToolStripMenuItem.Text = "Categorias";
             this.categoriasToolStripMenuItem.Click += new System.EventHandler(this.categoriasToolStripMenuItem_Click);
             // 
@@ -157,7 +159,7 @@
             // 
             this.toolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem1.Image")));
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(196, 26);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(191, 26);
             this.toolStripMenuItem1.Text = "Almacenes";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
@@ -165,7 +167,7 @@
             // 
             this.clientesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("clientesToolStripMenuItem.Image")));
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(196, 26);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(191, 26);
             this.clientesToolStripMenuItem.Text = "Clientes";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
@@ -173,7 +175,7 @@
             // 
             this.proveedoresToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("proveedoresToolStripMenuItem.Image")));
             this.proveedoresToolStripMenuItem.Name = "proveedoresToolStripMenuItem";
-            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(196, 26);
+            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(191, 26);
             this.proveedoresToolStripMenuItem.Text = "Proveedores";
             this.proveedoresToolStripMenuItem.Click += new System.EventHandler(this.proveedoresToolStripMenuItem_Click);
             // 
@@ -182,16 +184,16 @@
             this.BtnProcesos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.entradasDeProductosComprasToolStripMenuItem,
             this.salidaDeProductosVentasToolStripMenuItem});
-            this.BtnProcesos.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnProcesos.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnProcesos.Name = "BtnProcesos";
-            this.BtnProcesos.Size = new System.Drawing.Size(97, 24);
+            this.BtnProcesos.Size = new System.Drawing.Size(97, 26);
             this.BtnProcesos.Text = "Procesos";
             // 
             // entradasDeProductosComprasToolStripMenuItem
             // 
             this.entradasDeProductosComprasToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("entradasDeProductosComprasToolStripMenuItem.Image")));
             this.entradasDeProductosComprasToolStripMenuItem.Name = "entradasDeProductosComprasToolStripMenuItem";
-            this.entradasDeProductosComprasToolStripMenuItem.Size = new System.Drawing.Size(377, 26);
+            this.entradasDeProductosComprasToolStripMenuItem.Size = new System.Drawing.Size(359, 26);
             this.entradasDeProductosComprasToolStripMenuItem.Text = "Entradas de Productos(Compras)";
             this.entradasDeProductosComprasToolStripMenuItem.Click += new System.EventHandler(this.entradasDeProductosComprasToolStripMenuItem_Click);
             // 
@@ -199,7 +201,7 @@
             // 
             this.salidaDeProductosVentasToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("salidaDeProductosVentasToolStripMenuItem.Image")));
             this.salidaDeProductosVentasToolStripMenuItem.Name = "salidaDeProductosVentasToolStripMenuItem";
-            this.salidaDeProductosVentasToolStripMenuItem.Size = new System.Drawing.Size(377, 26);
+            this.salidaDeProductosVentasToolStripMenuItem.Size = new System.Drawing.Size(359, 26);
             this.salidaDeProductosVentasToolStripMenuItem.Text = "Salida de Productos(Ventas)";
             this.salidaDeProductosVentasToolStripMenuItem.Click += new System.EventHandler(this.salidaDeProductosVentasToolStripMenuItem_Click);
             // 
@@ -208,9 +210,9 @@
             this.BtnReportes.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ingresosToolStripMenuItem,
             this.salidasToolStripMenuItem});
-            this.BtnReportes.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnReportes.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnReportes.Name = "BtnReportes";
-            this.BtnReportes.Size = new System.Drawing.Size(99, 24);
+            this.BtnReportes.Size = new System.Drawing.Size(94, 26);
             this.BtnReportes.Text = "Reportes";
             // 
             // ingresosToolStripMenuItem
@@ -219,20 +221,20 @@
             this.ingresoDeComprasPorProductosToolStripMenuItem,
             this.ingresoAcumuladoPorProductosToolStripMenuItem});
             this.ingresosToolStripMenuItem.Name = "ingresosToolStripMenuItem";
-            this.ingresosToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
+            this.ingresosToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
             this.ingresosToolStripMenuItem.Text = "Ingresos";
             // 
             // ingresoDeComprasPorProductosToolStripMenuItem
             // 
             this.ingresoDeComprasPorProductosToolStripMenuItem.Name = "ingresoDeComprasPorProductosToolStripMenuItem";
-            this.ingresoDeComprasPorProductosToolStripMenuItem.Size = new System.Drawing.Size(391, 26);
+            this.ingresoDeComprasPorProductosToolStripMenuItem.Size = new System.Drawing.Size(369, 26);
             this.ingresoDeComprasPorProductosToolStripMenuItem.Text = "Ingreso de Compras por Productos";
             this.ingresoDeComprasPorProductosToolStripMenuItem.Click += new System.EventHandler(this.ingresoDeComprasPorProductosToolStripMenuItem_Click);
             // 
             // ingresoAcumuladoPorProductosToolStripMenuItem
             // 
             this.ingresoAcumuladoPorProductosToolStripMenuItem.Name = "ingresoAcumuladoPorProductosToolStripMenuItem";
-            this.ingresoAcumuladoPorProductosToolStripMenuItem.Size = new System.Drawing.Size(391, 26);
+            this.ingresoAcumuladoPorProductosToolStripMenuItem.Size = new System.Drawing.Size(369, 26);
             this.ingresoAcumuladoPorProductosToolStripMenuItem.Text = "Ingreso Acumulado por Productos";
             this.ingresoAcumuladoPorProductosToolStripMenuItem.Click += new System.EventHandler(this.ingresoAcumuladoPorProductosToolStripMenuItem_Click);
             // 
@@ -242,20 +244,20 @@
             this.salidasDeVentasPorProductosToolStripMenuItem,
             this.salidaAcumuladoPorProductosToolStripMenuItem});
             this.salidasToolStripMenuItem.Name = "salidasToolStripMenuItem";
-            this.salidasToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
+            this.salidasToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
             this.salidasToolStripMenuItem.Text = "Salidas";
             // 
             // salidasDeVentasPorProductosToolStripMenuItem
             // 
             this.salidasDeVentasPorProductosToolStripMenuItem.Name = "salidasDeVentasPorProductosToolStripMenuItem";
-            this.salidasDeVentasPorProductosToolStripMenuItem.Size = new System.Drawing.Size(371, 26);
+            this.salidasDeVentasPorProductosToolStripMenuItem.Size = new System.Drawing.Size(351, 26);
             this.salidasDeVentasPorProductosToolStripMenuItem.Text = "Salidas de Ventas por Productos";
             this.salidasDeVentasPorProductosToolStripMenuItem.Click += new System.EventHandler(this.salidasDeVentasPorProductosToolStripMenuItem_Click);
             // 
             // salidaAcumuladoPorProductosToolStripMenuItem
             // 
             this.salidaAcumuladoPorProductosToolStripMenuItem.Name = "salidaAcumuladoPorProductosToolStripMenuItem";
-            this.salidaAcumuladoPorProductosToolStripMenuItem.Size = new System.Drawing.Size(371, 26);
+            this.salidaAcumuladoPorProductosToolStripMenuItem.Size = new System.Drawing.Size(351, 26);
             this.salidaAcumuladoPorProductosToolStripMenuItem.Text = "Salida Acumulado por Productos";
             this.salidaAcumuladoPorProductosToolStripMenuItem.Click += new System.EventHandler(this.salidaAcumuladoPorProductosToolStripMenuItem_Click);
             // 
@@ -263,15 +265,15 @@
             // 
             this.BtnSistemas.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.usuariosToolStripMenuItem});
-            this.BtnSistemas.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSistemas.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSistemas.Name = "BtnSistemas";
-            this.BtnSistemas.Size = new System.Drawing.Size(102, 24);
+            this.BtnSistemas.Size = new System.Drawing.Size(96, 26);
             this.BtnSistemas.Text = "Sistemas";
             // 
             // usuariosToolStripMenuItem
             // 
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(165, 26);
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
             this.usuariosToolStripMenuItem.Text = "Usuarios";
             this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
@@ -279,24 +281,24 @@
             // 
             this.salirToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.salirDelSistemaToolStripMenuItem});
-            this.salirToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salirToolStripMenuItem.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(62, 24);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(58, 26);
             this.salirToolStripMenuItem.Text = "Salir";
             // 
             // salirDelSistemaToolStripMenuItem
             // 
             this.salirDelSistemaToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("salirDelSistemaToolStripMenuItem.Image")));
             this.salirDelSistemaToolStripMenuItem.Name = "salirDelSistemaToolStripMenuItem";
-            this.salirDelSistemaToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
+            this.salirDelSistemaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.salirDelSistemaToolStripMenuItem.Text = "Salir del Sistema";
             this.salirDelSistemaToolStripMenuItem.Click += new System.EventHandler(this.salirDelSistemaToolStripMenuItem_Click);
             // 
             // MiBarra
             // 
             this.MiBarra.AutoSize = false;
-            this.MiBarra.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.MiBarra.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MiBarra.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.MiBarra.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MiBarra.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.MiBarra.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Tbar_Producto,
@@ -306,29 +308,28 @@
             this.Tbar_Entrada,
             this.Tbar_Salida,
             this.toolStripSeparator2});
-            this.MiBarra.Location = new System.Drawing.Point(0, 28);
+            this.MiBarra.Location = new System.Drawing.Point(0, 30);
             this.MiBarra.Name = "MiBarra";
-            this.MiBarra.Size = new System.Drawing.Size(1396, 60);
+            this.MiBarra.Size = new System.Drawing.Size(1396, 64);
             this.MiBarra.TabIndex = 3;
             this.MiBarra.Text = "toolStrip1";
             // 
             // Tbar_Producto
             // 
             this.Tbar_Producto.AutoSize = false;
-            this.Tbar_Producto.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tbar_Producto.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tbar_Producto.Image = ((System.Drawing.Image)(resources.GetObject("Tbar_Producto.Image")));
             this.Tbar_Producto.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Tbar_Producto.Name = "Tbar_Producto";
             this.Tbar_Producto.Size = new System.Drawing.Size(97, 77);
             this.Tbar_Producto.Text = "Productos";
-            this.Tbar_Producto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Tbar_Producto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.Tbar_Producto.Click += new System.EventHandler(this.Tbar_Producto_Click);
             // 
             // Tbar_Clientes
             // 
             this.Tbar_Clientes.AutoSize = false;
-            this.Tbar_Clientes.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tbar_Clientes.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tbar_Clientes.Image = ((System.Drawing.Image)(resources.GetObject("Tbar_Clientes.Image")));
             this.Tbar_Clientes.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Tbar_Clientes.Name = "Tbar_Clientes";
@@ -339,11 +340,11 @@
             // 
             // Tbar_Proveedores
             // 
-            this.Tbar_Proveedores.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tbar_Proveedores.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tbar_Proveedores.Image = ((System.Drawing.Image)(resources.GetObject("Tbar_Proveedores.Image")));
             this.Tbar_Proveedores.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Tbar_Proveedores.Name = "Tbar_Proveedores";
-            this.Tbar_Proveedores.Size = new System.Drawing.Size(117, 57);
+            this.Tbar_Proveedores.Size = new System.Drawing.Size(111, 61);
             this.Tbar_Proveedores.Text = "Proveedores";
             this.Tbar_Proveedores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.Tbar_Proveedores.Click += new System.EventHandler(this.Tbar_Proveedores_Click);
@@ -351,12 +352,12 @@
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 60);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 64);
             // 
             // Tbar_Entrada
             // 
             this.Tbar_Entrada.AutoSize = false;
-            this.Tbar_Entrada.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tbar_Entrada.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tbar_Entrada.Image = ((System.Drawing.Image)(resources.GetObject("Tbar_Entrada.Image")));
             this.Tbar_Entrada.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Tbar_Entrada.Name = "Tbar_Entrada";
@@ -379,12 +380,13 @@
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 60);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 64);
             // 
             // Pnl_barra
             // 
-            this.Pnl_barra.BackColor = System.Drawing.Color.White;
+            this.Pnl_barra.BackColor = System.Drawing.SystemColors.MenuBar;
             this.Pnl_barra.Controls.Add(this.pictureBox1);
+            this.Pnl_barra.Controls.Add(this.label1);
             this.Pnl_barra.Controls.Add(this.lbl_hora);
             this.Pnl_barra.Controls.Add(this.lbl_fecha);
             this.Pnl_barra.Controls.Add(this.label4);
@@ -394,19 +396,37 @@
             this.Pnl_barra.Controls.Add(this.lblcargo);
             this.Pnl_barra.Controls.Add(this.lblnombreusuario);
             this.Pnl_barra.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.Pnl_barra.Location = new System.Drawing.Point(0, 482);
+            this.Pnl_barra.Location = new System.Drawing.Point(0, 545);
             this.Pnl_barra.Name = "Pnl_barra";
-            this.Pnl_barra.Size = new System.Drawing.Size(1396, 121);
+            this.Pnl_barra.Size = new System.Drawing.Size(1396, 96);
             this.Pnl_barra.TabIndex = 5;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(1034, 10);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(32, 34);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 25;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(995, 54);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 17);
+            this.label1.TabIndex = 24;
             // 
             // lbl_hora
             // 
             this.lbl_hora.AutoSize = true;
-            this.lbl_hora.Font = new System.Drawing.Font("Verdana", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_hora.Font = new System.Drawing.Font("Yu Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_hora.ForeColor = System.Drawing.Color.Black;
-            this.lbl_hora.Location = new System.Drawing.Point(1005, 67);
+            this.lbl_hora.Location = new System.Drawing.Point(1072, 10);
             this.lbl_hora.Name = "lbl_hora";
-            this.lbl_hora.Size = new System.Drawing.Size(119, 45);
+            this.lbl_hora.Size = new System.Drawing.Size(81, 36);
             this.lbl_hora.TabIndex = 23;
             this.lbl_hora.Text = "Hora";
             // 
@@ -415,31 +435,30 @@
             this.lbl_fecha.AutoSize = true;
             this.lbl_fecha.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_fecha.ForeColor = System.Drawing.Color.Black;
-            this.lbl_fecha.Location = new System.Drawing.Point(991, 14);
+            this.lbl_fecha.Location = new System.Drawing.Point(991, 15);
             this.lbl_fecha.Name = "lbl_fecha";
-            this.lbl_fecha.Size = new System.Drawing.Size(77, 22);
+            this.lbl_fecha.Size = new System.Drawing.Size(0, 22);
             this.lbl_fecha.TabIndex = 22;
-            this.lbl_fecha.Text = "Fecha:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Yu Gothic", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(380, 14);
+            this.label4.Location = new System.Drawing.Point(149, 15);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(140, 20);
+            this.label4.Size = new System.Drawing.Size(143, 23);
             this.label4.TabIndex = 21;
             this.label4.Text = "Sesión Iniciada";
             // 
             // ChkAdmin
             // 
             this.ChkAdmin.AutoSize = true;
-            this.ChkAdmin.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChkAdmin.Font = new System.Drawing.Font("Yu Gothic", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ChkAdmin.ForeColor = System.Drawing.Color.Black;
-            this.ChkAdmin.Location = new System.Drawing.Point(731, 85);
+            this.ChkAdmin.Location = new System.Drawing.Point(725, 63);
             this.ChkAdmin.Name = "ChkAdmin";
-            this.ChkAdmin.Size = new System.Drawing.Size(121, 20);
+            this.ChkAdmin.Size = new System.Drawing.Size(134, 23);
             this.ChkAdmin.TabIndex = 20;
             this.ChkAdmin.Text = "Administrador";
             this.ChkAdmin.UseVisualStyleBackColor = true;
@@ -448,9 +467,9 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(265, 78);
+            this.pictureBox3.Location = new System.Drawing.Point(25, 54);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox3.Size = new System.Drawing.Size(38, 34);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 19;
             this.pictureBox3.TabStop = false;
@@ -458,9 +477,9 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(265, 33);
+            this.pictureBox2.Location = new System.Drawing.Point(260, 54);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox2.Size = new System.Drawing.Size(32, 34);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 18;
             this.pictureBox2.TabStop = false;
@@ -468,22 +487,22 @@
             // lblcargo
             // 
             this.lblcargo.AutoSize = true;
-            this.lblcargo.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcargo.Font = new System.Drawing.Font("Yu Gothic Medium", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblcargo.ForeColor = System.Drawing.Color.Black;
-            this.lblcargo.Location = new System.Drawing.Point(313, 90);
+            this.lblcargo.Location = new System.Drawing.Point(80, 63);
             this.lblcargo.Name = "lblcargo";
-            this.lblcargo.Size = new System.Drawing.Size(52, 16);
+            this.lblcargo.Size = new System.Drawing.Size(59, 19);
             this.lblcargo.TabIndex = 17;
             this.lblcargo.Text = "Cargo:";
             // 
             // lblnombreusuario
             // 
             this.lblnombreusuario.AutoSize = true;
-            this.lblnombreusuario.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblnombreusuario.Font = new System.Drawing.Font("Yu Gothic Medium", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblnombreusuario.ForeColor = System.Drawing.Color.Black;
-            this.lblnombreusuario.Location = new System.Drawing.Point(313, 49);
+            this.lblnombreusuario.Location = new System.Drawing.Point(308, 63);
             this.lblnombreusuario.Name = "lblnombreusuario";
-            this.lblnombreusuario.Size = new System.Drawing.Size(65, 16);
+            this.lblnombreusuario.Size = new System.Drawing.Size(75, 19);
             this.lblnombreusuario.TabIndex = 16;
             this.lblnombreusuario.Text = "Nombre:";
             // 
@@ -492,36 +511,26 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(201, 118);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 24;
-            this.pictureBox1.TabStop = false;
-            // 
             // MDI_Principal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1396, 603);
+            this.ClientSize = new System.Drawing.Size(1396, 641);
             this.Controls.Add(this.Pnl_barra);
             this.Controls.Add(this.MiBarra);
             this.Controls.Add(this.MiMenu);
             this.DoubleBuffered = true;
-            this.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Yu Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.MiMenu;
             this.Name = "MDI_Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "SISTEMA DE INVENTARIO 1.0";
+            this.Text = "SISTEMA DE  CONTROL Y GESTIÓN DE INVENTARIO";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MDI_Principal_Load);
             this.MiMenu.ResumeLayout(false);
@@ -530,9 +539,9 @@
             this.MiBarra.PerformLayout();
             this.Pnl_barra.ResumeLayout(false);
             this.Pnl_barra.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -580,8 +589,9 @@
         public System.Windows.Forms.ToolStripMenuItem BtnSistemas;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label lbl_hora;
-        private System.Windows.Forms.Label lbl_fecha;
         private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
+        private System.Windows.Forms.Label lbl_fecha;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -11,6 +11,9 @@ namespace PracticaProfesional.Datos
 {
     public class D_Almacen
     {
+        //En la clase datos se procede a llamar los diferentes procedimientos almacenados
+        //que se encargaran de realizar las funciones dentro de los formularios, como por ejemplo,
+        //listar, guardar y eliminar
         public DataTable Listado_al(string cTexto)
         {
             SqlDataReader Resultado;

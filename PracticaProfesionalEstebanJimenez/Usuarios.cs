@@ -35,7 +35,6 @@ namespace PracticaProfesionalEstebanJimenez
             DgvPrincipal.Columns[2].HeaderText = "NOMBRE";
             DgvPrincipal.Columns[3].Width = 250;
             DgvPrincipal.Columns[3].HeaderText = "CARGO";
-            DgvPrincipal.Columns[4].Visible = false;
 
         }
 
@@ -81,7 +80,7 @@ namespace PracticaProfesionalEstebanJimenez
                 TxtUsuario.Text = Convert.ToString(DgvPrincipal.CurrentRow.Cells["Usuario"].Value);
                 TxtNombre.Text = Convert.ToString(DgvPrincipal.CurrentRow.Cells["NombreCompleto"].Value);
                 TxtCargo.Text = Convert.ToString(DgvPrincipal.CurrentRow.Cells["Cargo_Usuario"].Value);
-                Chk_admin.Checked =Convert.ToBoolean(DgvPrincipal.CurrentRow.Cells["Administrador"].Value);
+
               
             }
 

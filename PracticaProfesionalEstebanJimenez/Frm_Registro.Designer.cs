@@ -43,40 +43,41 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-39, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(105, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(499, 237);
+            this.pictureBox1.Size = new System.Drawing.Size(270, 247);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
             // TxtUsuario
             // 
-            this.TxtUsuario.Font = new System.Drawing.Font("Yu Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtUsuario.Location = new System.Drawing.Point(79, 352);
+            this.TxtUsuario.BackColor = System.Drawing.Color.White;
+            this.TxtUsuario.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtUsuario.Location = new System.Drawing.Point(79, 321);
             this.TxtUsuario.Name = "TxtUsuario";
-            this.TxtUsuario.Size = new System.Drawing.Size(286, 28);
+            this.TxtUsuario.Size = new System.Drawing.Size(286, 35);
             this.TxtUsuario.TabIndex = 2;
             this.TxtUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtContrasennia
             // 
-            this.TxtContrasennia.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtContrasennia.BackColor = System.Drawing.Color.White;
+            this.TxtContrasennia.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtContrasennia.Location = new System.Drawing.Point(79, 477);
             this.TxtContrasennia.Name = "TxtContrasennia";
-            this.TxtContrasennia.Size = new System.Drawing.Size(286, 32);
+            this.TxtContrasennia.Size = new System.Drawing.Size(286, 35);
             this.TxtContrasennia.TabIndex = 3;
             this.TxtContrasennia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.TxtContrasennia.UseSystemPasswordChar = true;
             // 
             // BtnIngresar
             // 
-            this.BtnIngresar.BackColor = System.Drawing.Color.Blue;
+            this.BtnIngresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.BtnIngresar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.BtnIngresar.FlatAppearance.BorderSize = 0;
             this.BtnIngresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.BtnIngresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.BtnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnIngresar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnIngresar.ForeColor = System.Drawing.Color.White;
             this.BtnIngresar.Location = new System.Drawing.Point(64, 570);
@@ -89,12 +90,11 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.BackColor = System.Drawing.Color.Gray;
+            this.btnSalir.BackColor = System.Drawing.Color.Maroon;
             this.btnSalir.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnSalir.FlatAppearance.BorderSize = 0;
             this.btnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.ForeColor = System.Drawing.Color.White;
             this.btnSalir.Location = new System.Drawing.Point(253, 570);
@@ -109,27 +109,27 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(197, 316);
+            this.label1.Location = new System.Drawing.Point(158, 279);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 22);
+            this.label1.Size = new System.Drawing.Size(157, 22);
             this.label1.TabIndex = 7;
-            this.label1.Text = " Usuario";
+            this.label1.Text = "Ingrese su Usuario";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(183, 438);
+            this.label2.Location = new System.Drawing.Point(147, 442);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 22);
+            this.label2.Size = new System.Drawing.Size(186, 22);
             this.label2.TabIndex = 8;
-            this.label2.Text = "Contraseña";
+            this.label2.Text = "Ingrese su Contraseña";
             // 
             // BtnMostrar
             // 
             this.BtnMostrar.BackColor = System.Drawing.Color.White;
             this.BtnMostrar.Image = ((System.Drawing.Image)(resources.GetObject("BtnMostrar.Image")));
-            this.BtnMostrar.Location = new System.Drawing.Point(371, 477);
+            this.BtnMostrar.Location = new System.Drawing.Point(375, 477);
             this.BtnMostrar.Name = "BtnMostrar";
             this.BtnMostrar.Size = new System.Drawing.Size(51, 35);
             this.BtnMostrar.TabIndex = 9;
@@ -141,7 +141,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.SystemColors.MenuBar;
             this.ClientSize = new System.Drawing.Size(466, 665);
             this.ControlBox = false;
             this.Controls.Add(this.BtnMostrar);

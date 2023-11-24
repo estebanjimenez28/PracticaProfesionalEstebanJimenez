@@ -7,8 +7,8 @@
     <ProjectGuid>{1CE5E553-3259-416C-9024-7D2A4B7158DB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PracticaProfesional.Datos</RootNamespace>
-    <AssemblyName>PracticaProfesional.Datos</AssemblyName>
+    <RootNamespace>Datos</RootNamespace>
+    <AssemblyName>Datos</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>

@@ -9,9 +9,7 @@ namespace PracticaProfesionalEstebanJimenez
 {
     internal static class Program
     {
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
+        //Se procede a llamar el formulario que ejecutara la aplicacion
         [STAThread]
         static void Main()
         {

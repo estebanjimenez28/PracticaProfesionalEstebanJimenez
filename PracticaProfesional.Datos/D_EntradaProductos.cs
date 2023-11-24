@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 
 namespace PracticaProfesional.Datos
 {
+    //En la clase datos se procede a llamar los diferentes procedimientos almacenados
+    //que se encargaran de realizar las funciones dentro de los formularios, como por ejemplo,
+    //listar, guardar y eliminar
     public class D_EntradaProductos
     {
         public DataTable Listado_Entrada(string cTexto)
@@ -38,7 +41,7 @@ namespace PracticaProfesional.Datos
                 if (SQLCon.State == ConnectionState.Open) SQLCon.Close();
             }
         }
-
+        //Se procede a llamar el procedimiento almacenado encargado de mostra el detalle de los productos
         public DataTable Listado_detalle_Entrada(int nCodigo_Entrada)
         {
             SqlDataReader Resultado;
@@ -73,6 +76,7 @@ namespace PracticaProfesional.Datos
             SqlConnection SqlCon = new SqlConnection();
             try
             {
+                //Se procede a invocar las variables que se desean guardar dentro de la base de datos
                 SqlCon = Conexion.getInstancia().CrearConexion();
                 SqlCommand Comando = new SqlCommand("USP_Guardar_Entrada", SqlCon);
                 Comando.CommandType = CommandType.StoredProcedure;
@@ -129,7 +133,7 @@ namespace PracticaProfesional.Datos
 
 
 
-
+        //Procedimeinto almacenado para listar los almacenes
         public DataTable Listado_al_tm()
         {
             SqlDataReader Resultado;
@@ -158,6 +162,7 @@ namespace PracticaProfesional.Datos
         }
 
   
+        //Procedimiento almacenado para listar los proveedores 
         public DataTable Listado_pv_tm(string cTexto)
         {
             SqlDataReader Resultado;
@@ -186,6 +191,7 @@ namespace PracticaProfesional.Datos
             }
         }
 
+        //Procedimiento almacenado para listar los usuarios disponibles
         public DataTable Listado_us_tm(string cTexto)
         {
             SqlDataReader Resultado;
@@ -213,6 +219,8 @@ namespace PracticaProfesional.Datos
                 if (SQLCon.State == ConnectionState.Open) SQLCon.Close();
             }
         }
+
+        //Procedimiento almacenado para mostrar los productos agregados en una ventana
 
         public DataTable Listado_pr_tm(string cTexto)
         {

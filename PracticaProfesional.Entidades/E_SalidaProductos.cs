@@ -8,6 +8,7 @@ namespace PracticaProfesional.Entidades
 {
     public class E_SalidaProductos
     {
+        //Se definen las propiedades simples
         public int Codigo_Salida { get; set; }
         public int Codigo_TipoVenta { get; set; }
         public string NumeroDocumento { get; set; }

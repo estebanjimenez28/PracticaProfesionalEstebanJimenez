@@ -7,8 +7,8 @@
     <ProjectGuid>{AC00999B-68FB-46F3-A6AA-5CABBD4E9180}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PracticaProfesional.Entidades</RootNamespace>
-    <AssemblyName>PracticaProfesional.Entidades</AssemblyName>
+    <RootNamespace>Entidades</RootNamespace>
+    <AssemblyName>Entidades</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>

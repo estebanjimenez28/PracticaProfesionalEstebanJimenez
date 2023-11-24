@@ -11,6 +11,9 @@ namespace PracticaProfesional.Datos
 {
     public class D_Proveedores
     {
+        //En la clase datos se procede a llamar los diferentes procedimientos almacenados
+        //que se encargaran de realizar las funciones dentro de los formularios, como por ejemplo,
+        //listar, guardar y eliminar
         public DataTable Listado_pv(string cTexto)
         {
             SqlDataReader Resultado;
@@ -41,6 +44,8 @@ namespace PracticaProfesional.Datos
         }
         public string Guardar_pv(int nOpcion, E_Proveedores oPv)
         {
+            //Se crea un objeto SqlCommand llamado Comando que representa un comando SQL
+            //que se ejecutará en la base de datos.
             string Rpta = "";
             SqlConnection SqlCon = new SqlConnection();
             try
@@ -74,6 +79,8 @@ namespace PracticaProfesional.Datos
             }
             return Rpta;
         }
+        //Se ejecuta el comando (Comando.ExecuteNonQuery()) y se verifica si al menos una fila fue afectada en la base de datos. Si es así, se establece Rpta como "OK";
+        //de lo contrario, se establece como "No se pudo registrar los datos".
 
         public string Eliminar_pv(int Codigo_Proveedor)
         {

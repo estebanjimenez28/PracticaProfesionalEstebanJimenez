@@ -9,10 +9,8 @@ namespace PracticaProfesional.Entidades {
 
     public class E_TipoVenta
     {
+        //Se definen las propiedades simples
         public int Codigo_TipoVenta { get; set; }
-
-
-
         public string DescripcionVenta { get; set; }
 
     }

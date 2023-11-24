@@ -33,13 +33,13 @@ namespace PracticaProfesionalEstebanJimenez
             DgvPrincipal.Columns[1].HeaderText = "TIPO";
             DgvPrincipal.Columns[2].Width = 150;
             DgvPrincipal.Columns[2].HeaderText = "CEDULA";
-            DgvPrincipal.Columns[3].Width = 320;
+            DgvPrincipal.Columns[3].Width = 270;
             DgvPrincipal.Columns[3].HeaderText = "NOMBRE";
             DgvPrincipal.Columns[4].Width = 250;
             DgvPrincipal.Columns[4].HeaderText = "APELLIDOS";
             DgvPrincipal.Columns[5].Width = 210;
             DgvPrincipal.Columns[5].HeaderText = "RAZON SOCIAL";
-            DgvPrincipal.Columns[6].Width = 230;
+            DgvPrincipal.Columns[6].Width = 250;
             DgvPrincipal.Columns[6].HeaderText = "CORREO";
             DgvPrincipal.Columns[7].Visible = false;
             DgvPrincipal.Columns[8].Visible = false;
@@ -103,7 +103,7 @@ namespace PracticaProfesionalEstebanJimenez
 
         private void Formato_TipoIdentificacion_cl()
         {
-            DgvIdentificacion.Columns[0].Width = 410;
+            DgvIdentificacion.Columns[0].Width = 610;
             DgvIdentificacion.Columns[0].HeaderText = "SELECCIONE UNA OPCIÓN";
             DgvIdentificacion.Columns[1].Visible = false;
 
@@ -177,7 +177,7 @@ namespace PracticaProfesionalEstebanJimenez
               TxtTelefono.Text == String.Empty ||
               TxtDireccion.Text == String.Empty)
             {
-                MessageBox.Show("Falta ingresa datos requeridos (*)", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Falta ingresar datos requeridos (*)", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else //Se procedería a registrar la información
             {
