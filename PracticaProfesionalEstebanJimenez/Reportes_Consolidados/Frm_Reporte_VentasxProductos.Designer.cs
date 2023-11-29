@@ -39,13 +39,12 @@
             // 
             // BtnSalir
             // 
-            this.BtnSalir.BackColor = System.Drawing.Color.Red;
-            this.BtnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSalir.BackColor = System.Drawing.Color.Maroon;
             this.BtnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSalir.ForeColor = System.Drawing.Color.White;
-            this.BtnSalir.Location = new System.Drawing.Point(540, 176);
+            this.BtnSalir.Location = new System.Drawing.Point(538, 171);
             this.BtnSalir.Name = "BtnSalir";
-            this.BtnSalir.Size = new System.Drawing.Size(138, 61);
+            this.BtnSalir.Size = new System.Drawing.Size(138, 41);
             this.BtnSalir.TabIndex = 11;
             this.BtnSalir.Text = "Salir";
             this.BtnSalir.UseVisualStyleBackColor = false;
@@ -53,13 +52,12 @@
             // 
             // BtnVista
             // 
-            this.BtnVista.BackColor = System.Drawing.Color.ForestGreen;
-            this.BtnVista.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnVista.BackColor = System.Drawing.Color.DarkGreen;
             this.BtnVista.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnVista.ForeColor = System.Drawing.Color.White;
-            this.BtnVista.Location = new System.Drawing.Point(540, 92);
+            this.BtnVista.Location = new System.Drawing.Point(538, 112);
             this.BtnVista.Name = "BtnVista";
-            this.BtnVista.Size = new System.Drawing.Size(138, 59);
+            this.BtnVista.Size = new System.Drawing.Size(138, 44);
             this.BtnVista.TabIndex = 10;
             this.BtnVista.Text = "Vista Previa";
             this.BtnVista.UseVisualStyleBackColor = false;
@@ -69,7 +67,7 @@
             // 
             this.Dtp_Fecha_fin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Dtp_Fecha_fin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.Dtp_Fecha_fin.Location = new System.Drawing.Point(284, 176);
+            this.Dtp_Fecha_fin.Location = new System.Drawing.Point(315, 176);
             this.Dtp_Fecha_fin.Name = "Dtp_Fecha_fin";
             this.Dtp_Fecha_fin.Size = new System.Drawing.Size(155, 27);
             this.Dtp_Fecha_fin.TabIndex = 9;
@@ -78,7 +76,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(174, 176);
+            this.label2.Location = new System.Drawing.Point(205, 176);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(88, 20);
             this.label2.TabIndex = 8;
@@ -88,7 +86,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(174, 123);
+            this.label1.Location = new System.Drawing.Point(205, 123);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(104, 20);
             this.label1.TabIndex = 7;
@@ -98,7 +96,7 @@
             // 
             this.Dtp_Fecha_Ini.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Dtp_Fecha_Ini.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.Dtp_Fecha_Ini.Location = new System.Drawing.Point(284, 121);
+            this.Dtp_Fecha_Ini.Location = new System.Drawing.Point(315, 121);
             this.Dtp_Fecha_Ini.Name = "Dtp_Fecha_Ini";
             this.Dtp_Fecha_Ini.Size = new System.Drawing.Size(155, 27);
             this.Dtp_Fecha_Ini.TabIndex = 6;

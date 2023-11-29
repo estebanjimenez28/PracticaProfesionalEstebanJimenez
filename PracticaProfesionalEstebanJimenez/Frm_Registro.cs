@@ -24,8 +24,13 @@ namespace PracticaProfesionalEstebanJimenez
         {
             try
             {
+                //Se declara y inicializa una variable DataTable llamada data_login.
                 DataTable data_login = new DataTable();
+                //Luego, se llama a un método Login_us de la clase N_Usuarios (supongo que es una clase que maneja operaciones relacionadas con usuarios)
+                //y se le pasa el nombre de usuario (cLogin) y la contraseña (cContrasennia).
                 data_login = N_Usuarios.Login_us(cLogin, cContrasennia);
+                //Se verifica si hay al menos una fila en el resultado (data_login.Rows.Count > 0),
+                //lo que indica que las credenciales son válidas y se encontró al menos un usuario.
                 if (data_login.Rows.Count>0)
                 {
                     string cNombre="";

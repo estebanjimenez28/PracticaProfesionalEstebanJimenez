@@ -877,9 +877,9 @@
           </Paragraphs>
           <rd:DefaultName>Textbox24</rd:DefaultName>
           <Top>3.75039cm</Top>
-          <Left>0.41953cm</Left>
+          <Left>0.52351cm</Left>
           <Height>0.45184cm</Height>
-          <Width>2.20367cm</Width>
+          <Width>2.96567cm</Width>
           <ZIndex>8</ZIndex>
           <Style>
             <Border>
@@ -908,8 +908,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>NumeroDocumento</rd:DefaultName>
-          <Top>3.68187cm</Top>
-          <Left>2.86488cm</Left>
+          <Top>3.75039cm</Top>
+          <Left>3.92321cm</Left>
           <Height>0.6cm</Height>
           <Width>2.24414cm</Width>
           <ZIndex>9</ZIndex>

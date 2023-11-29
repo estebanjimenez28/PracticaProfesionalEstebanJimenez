@@ -12,6 +12,8 @@ namespace PracticaProfesionalEstebanJimenez
 {
     public partial class MDI_Principal : Form
     {
+        //En esta clase se procede a llamar cada uno de los formularios realizados
+        //para que se ejecuten dentro del menu principal(MDI)
         public MDI_Principal()
         {
             InitializeComponent();
@@ -94,10 +96,7 @@ namespace PracticaProfesionalEstebanJimenez
             this.Close();
         }
 
-        private void MDI_Principal_Load(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void Tbar_Producto_Click(object sender, EventArgs e)
         {

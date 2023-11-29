@@ -58,11 +58,8 @@
             this.label14 = new System.Windows.Forms.Label();
             this.TxtEmail = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.TxtApellidos = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.TxtNombre = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.TxtRazonSocial = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.Btn_lupa2 = new System.Windows.Forms.Button();
             this.TxtProducto = new System.Windows.Forms.TextBox();
@@ -81,6 +78,9 @@
             this.BtnNuevo = new System.Windows.Forms.Button();
             this.Pnl_Titulo = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
+            this.TxtRazonSocial = new System.Windows.Forms.TextBox();
+            this.TxtNombre = new System.Windows.Forms.TextBox();
+            this.TxtApellidos = new System.Windows.Forms.TextBox();
             this.TbpPrincipal.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvPrincipal)).BeginInit();
@@ -142,14 +142,14 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DgvPrincipal.DefaultCellStyle = dataGridViewCellStyle3;
             this.DgvPrincipal.EnableHeadersVisualStyles = false;
-            this.DgvPrincipal.Location = new System.Drawing.Point(29, 174);
+            this.DgvPrincipal.Location = new System.Drawing.Point(31, 112);
             this.DgvPrincipal.Name = "DgvPrincipal";
             this.DgvPrincipal.ReadOnly = true;
             this.DgvPrincipal.RowHeadersVisible = false;
             this.DgvPrincipal.RowHeadersWidth = 51;
             this.DgvPrincipal.RowTemplate.Height = 24;
             this.DgvPrincipal.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.DgvPrincipal.Size = new System.Drawing.Size(1758, 235);
+            this.DgvPrincipal.Size = new System.Drawing.Size(1758, 359);
             this.DgvPrincipal.TabIndex = 3;
             this.DgvPrincipal.DoubleClick += new System.EventHandler(this.DgvPrincipal_DoubleClick);
             // 
@@ -196,6 +196,9 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.White;
+            this.tabPage2.Controls.Add(this.TxtApellidos);
+            this.tabPage2.Controls.Add(this.TxtNombre);
+            this.tabPage2.Controls.Add(this.TxtRazonSocial);
             this.tabPage2.Controls.Add(this.PnlProductos);
             this.tabPage2.Controls.Add(this.TxtObservacion);
             this.tabPage2.Controls.Add(this.label15);
@@ -205,11 +208,8 @@
             this.tabPage2.Controls.Add(this.label14);
             this.tabPage2.Controls.Add(this.TxtEmail);
             this.tabPage2.Controls.Add(this.label3);
-            this.tabPage2.Controls.Add(this.TxtApellidos);
             this.tabPage2.Controls.Add(this.label13);
-            this.tabPage2.Controls.Add(this.TxtNombre);
             this.tabPage2.Controls.Add(this.label12);
-            this.tabPage2.Controls.Add(this.TxtRazonSocial);
             this.tabPage2.Controls.Add(this.label11);
             this.tabPage2.Controls.Add(this.Btn_lupa2);
             this.tabPage2.Controls.Add(this.TxtProducto);
@@ -222,7 +222,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1855, 441);
+            this.tabPage2.Size = new System.Drawing.Size(1855, 515);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Mantenimiento";
             // 
@@ -319,20 +319,19 @@
             this.DgvProductoProveedor.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.DgvProductoProveedor.Size = new System.Drawing.Size(843, 260);
             this.DgvProductoProveedor.TabIndex = 20;
-            this.DgvProductoProveedor.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvProductoProveedor_CellContentClick);
             this.DgvProductoProveedor.DoubleClick += new System.EventHandler(this.DgvProductoProveedor_DoubleClick);
             // 
             // TxtObservacion
             // 
-            this.TxtObservacion.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.TxtObservacion.BackColor = System.Drawing.Color.White;
             this.TxtObservacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtObservacion.Location = new System.Drawing.Point(923, 375);
             this.TxtObservacion.MaxLength = 100;
             this.TxtObservacion.Multiline = true;
             this.TxtObservacion.Name = "TxtObservacion";
-            this.TxtObservacion.ReadOnly = true;
             this.TxtObservacion.Size = new System.Drawing.Size(382, 62);
             this.TxtObservacion.TabIndex = 10;
+            this.TxtObservacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtObservacion_KeyPress);
             // 
             // label15
             // 
@@ -346,15 +345,15 @@
             // 
             // TxtDireccion
             // 
-            this.TxtDireccion.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.TxtDireccion.BackColor = System.Drawing.Color.White;
             this.TxtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtDireccion.Location = new System.Drawing.Point(923, 232);
             this.TxtDireccion.MaxLength = 100;
             this.TxtDireccion.Multiline = true;
             this.TxtDireccion.Name = "TxtDireccion";
-            this.TxtDireccion.ReadOnly = true;
             this.TxtDireccion.Size = new System.Drawing.Size(382, 62);
             this.TxtDireccion.TabIndex = 9;
+            this.TxtDireccion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtDireccion_KeyPress);
             // 
             // label4
             // 
@@ -368,14 +367,14 @@
             // 
             // TxtTelefono
             // 
-            this.TxtTelefono.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.TxtTelefono.BackColor = System.Drawing.Color.White;
             this.TxtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtTelefono.Location = new System.Drawing.Point(923, 152);
             this.TxtTelefono.MaxLength = 100;
             this.TxtTelefono.Name = "TxtTelefono";
-            this.TxtTelefono.ReadOnly = true;
             this.TxtTelefono.Size = new System.Drawing.Size(240, 24);
             this.TxtTelefono.TabIndex = 8;
+            this.TxtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTelefono_KeyPress);
             // 
             // label14
             // 
@@ -389,14 +388,15 @@
             // 
             // TxtEmail
             // 
-            this.TxtEmail.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.TxtEmail.BackColor = System.Drawing.Color.White;
             this.TxtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtEmail.Location = new System.Drawing.Point(923, 56);
             this.TxtEmail.MaxLength = 100;
             this.TxtEmail.Name = "TxtEmail";
-            this.TxtEmail.ReadOnly = true;
             this.TxtEmail.Size = new System.Drawing.Size(382, 24);
             this.TxtEmail.TabIndex = 7;
+            this.TxtEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtEmail_KeyPress);
+            this.TxtEmail.Leave += new System.EventHandler(this.TxtEmail_Leave);
             // 
             // label3
             // 
@@ -408,17 +408,6 @@
             this.label3.TabIndex = 33;
             this.label3.Text = "Correo Electrónico ";
             // 
-            // TxtApellidos
-            // 
-            this.TxtApellidos.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.TxtApellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtApellidos.Location = new System.Drawing.Point(365, 255);
-            this.TxtApellidos.MaxLength = 100;
-            this.TxtApellidos.Name = "TxtApellidos";
-            this.TxtApellidos.ReadOnly = true;
-            this.TxtApellidos.Size = new System.Drawing.Size(177, 24);
-            this.TxtApellidos.TabIndex = 5;
-            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -429,18 +418,6 @@
             this.label13.TabIndex = 31;
             this.label13.Text = "Apellidos ";
             // 
-            // TxtNombre
-            // 
-            this.TxtNombre.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.TxtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtNombre.Location = new System.Drawing.Point(163, 255);
-            this.TxtNombre.MaxLength = 100;
-            this.TxtNombre.Name = "TxtNombre";
-            this.TxtNombre.ReadOnly = true;
-            this.TxtNombre.Size = new System.Drawing.Size(177, 24);
-            this.TxtNombre.TabIndex = 4;
-            this.TxtNombre.TextChanged += new System.EventHandler(this.TxtNombre_TextChanged);
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -450,18 +427,6 @@
             this.label12.Size = new System.Drawing.Size(78, 22);
             this.label12.TabIndex = 29;
             this.label12.Text = "Nombre ";
-            // 
-            // TxtRazonSocial
-            // 
-            this.TxtRazonSocial.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.TxtRazonSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtRazonSocial.Location = new System.Drawing.Point(262, 124);
-            this.TxtRazonSocial.MaxLength = 100;
-            this.TxtRazonSocial.Name = "TxtRazonSocial";
-            this.TxtRazonSocial.ReadOnly = true;
-            this.TxtRazonSocial.Size = new System.Drawing.Size(289, 24);
-            this.TxtRazonSocial.TabIndex = 3;
-            this.TxtRazonSocial.TextChanged += new System.EventHandler(this.TxtRazonSocial_TextChanged);
             // 
             // label11
             // 
@@ -475,7 +440,7 @@
             // 
             // Btn_lupa2
             // 
-            this.Btn_lupa2.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.Btn_lupa2.BackColor = System.Drawing.Color.White;
             this.Btn_lupa2.ImageKey = "consulta.png";
             this.Btn_lupa2.ImageList = this.imageList2;
             this.Btn_lupa2.Location = new System.Drawing.Point(550, 339);
@@ -507,7 +472,7 @@
             // 
             // BtnRetornar
             // 
-            this.BtnRetornar.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.BtnRetornar.BackColor = System.Drawing.Color.White;
             this.BtnRetornar.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnRetornar.ForeColor = System.Drawing.Color.White;
             this.BtnRetornar.ImageKey = "volver-flecha.png";
@@ -529,7 +494,7 @@
             // 
             // BtnGuardar
             // 
-            this.BtnGuardar.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.BtnGuardar.BackColor = System.Drawing.Color.White;
             this.BtnGuardar.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnGuardar.ForeColor = System.Drawing.Color.White;
             this.BtnGuardar.ImageKey = "guardar-el-archivo.png";
@@ -543,7 +508,7 @@
             // 
             // BtnCancelar
             // 
-            this.BtnCancelar.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.BtnCancelar.BackColor = System.Drawing.Color.White;
             this.BtnCancelar.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.BtnCancelar.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCancelar.ForeColor = System.Drawing.Color.White;
@@ -558,14 +523,14 @@
             // 
             // TxtCedula
             // 
-            this.TxtCedula.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.TxtCedula.BackColor = System.Drawing.Color.White;
             this.TxtCedula.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtCedula.Location = new System.Drawing.Point(262, 42);
             this.TxtCedula.MaxLength = 100;
             this.TxtCedula.Name = "TxtCedula";
             this.TxtCedula.Size = new System.Drawing.Size(196, 24);
             this.TxtCedula.TabIndex = 2;
-            this.TxtCedula.TextChanged += new System.EventHandler(this.TxtCedula_TextChanged);
+            this.TxtCedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCedula_KeyPress);
             // 
             // label2
             // 
@@ -684,6 +649,30 @@
             this.label7.TabIndex = 0;
             this.label7.Text = "GESTIÓN DE PROVEEDORES";
             // 
+            // TxtRazonSocial
+            // 
+            this.TxtRazonSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtRazonSocial.Location = new System.Drawing.Point(262, 126);
+            this.TxtRazonSocial.Name = "TxtRazonSocial";
+            this.TxtRazonSocial.Size = new System.Drawing.Size(289, 24);
+            this.TxtRazonSocial.TabIndex = 40;
+            // 
+            // TxtNombre
+            // 
+            this.TxtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtNombre.Location = new System.Drawing.Point(154, 270);
+            this.TxtNombre.Name = "TxtNombre";
+            this.TxtNombre.Size = new System.Drawing.Size(177, 24);
+            this.TxtNombre.TabIndex = 41;
+            // 
+            // TxtApellidos
+            // 
+            this.TxtApellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtApellidos.Location = new System.Drawing.Point(374, 270);
+            this.TxtApellidos.Name = "TxtApellidos";
+            this.TxtApellidos.Size = new System.Drawing.Size(177, 24);
+            this.TxtApellidos.TabIndex = 42;
+            // 
             // FrmProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -744,11 +733,8 @@
         private System.Windows.Forms.Button BtnActualizar;
         private System.Windows.Forms.Button BtnEliminar;
         private System.Windows.Forms.Button BtnNuevo;
-        private System.Windows.Forms.TextBox TxtNombre;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox TxtRazonSocial;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox TxtApellidos;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox TxtDireccion;
         private System.Windows.Forms.Label label4;
@@ -763,5 +749,8 @@
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.ImageList imageList2;
         private System.Windows.Forms.ImageList imageList3;
+        private System.Windows.Forms.TextBox TxtNombre;
+        private System.Windows.Forms.TextBox TxtRazonSocial;
+        private System.Windows.Forms.TextBox TxtApellidos;
     }
 }

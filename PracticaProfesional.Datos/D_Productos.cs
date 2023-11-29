@@ -42,7 +42,11 @@ namespace PracticaProfesional.Datos
                 if (SQLCon.State == ConnectionState.Open) SQLCon.Close();
             }
         }
-        public string Guardar_pr(int nOpcion, E_Productos oPr)
+
+       
+
+
+            public string Guardar_pr(int nOpcion, E_Productos oPr)
         {
             //Se crea un objeto SqlCommand llamado Comando que representa un comando SQL
             //que se ejecutará en la base de datos.

@@ -67,7 +67,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_hora = new System.Windows.Forms.Label();
             this.lbl_fecha = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.ChkAdmin = new System.Windows.Forms.CheckBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -106,9 +105,9 @@
             this.toolStripMenuItem1,
             this.clientesToolStripMenuItem,
             this.proveedoresToolStripMenuItem});
-            this.BtnGestiones.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnGestiones.Font = new System.Drawing.Font("Yu Gothic Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnGestiones.Name = "BtnGestiones";
-            this.BtnGestiones.Size = new System.Drawing.Size(102, 26);
+            this.BtnGestiones.Size = new System.Drawing.Size(97, 26);
             this.BtnGestiones.Text = "Gestiones";
             // 
             // productosToolStripMenuItem
@@ -127,7 +126,7 @@
             // 
             this.productosToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("productosToolStripMenuItem1.Image")));
             this.productosToolStripMenuItem1.Name = "productosToolStripMenuItem1";
-            this.productosToolStripMenuItem1.Size = new System.Drawing.Size(255, 26);
+            this.productosToolStripMenuItem1.Size = new System.Drawing.Size(246, 26);
             this.productosToolStripMenuItem1.Text = "Productos";
             this.productosToolStripMenuItem1.Click += new System.EventHandler(this.productosToolStripMenuItem1_Click);
             // 
@@ -184,9 +183,9 @@
             this.BtnProcesos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.entradasDeProductosComprasToolStripMenuItem,
             this.salidaDeProductosVentasToolStripMenuItem});
-            this.BtnProcesos.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnProcesos.Font = new System.Drawing.Font("Yu Gothic Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnProcesos.Name = "BtnProcesos";
-            this.BtnProcesos.Size = new System.Drawing.Size(97, 26);
+            this.BtnProcesos.Size = new System.Drawing.Size(92, 26);
             this.BtnProcesos.Text = "Procesos";
             // 
             // entradasDeProductosComprasToolStripMenuItem
@@ -210,9 +209,9 @@
             this.BtnReportes.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ingresosToolStripMenuItem,
             this.salidasToolStripMenuItem});
-            this.BtnReportes.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnReportes.Font = new System.Drawing.Font("Yu Gothic Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnReportes.Name = "BtnReportes";
-            this.BtnReportes.Size = new System.Drawing.Size(94, 26);
+            this.BtnReportes.Size = new System.Drawing.Size(90, 26);
             this.BtnReportes.Text = "Reportes";
             // 
             // ingresosToolStripMenuItem
@@ -265,9 +264,9 @@
             // 
             this.BtnSistemas.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.usuariosToolStripMenuItem});
-            this.BtnSistemas.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSistemas.Font = new System.Drawing.Font("Yu Gothic Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSistemas.Name = "BtnSistemas";
-            this.BtnSistemas.Size = new System.Drawing.Size(96, 26);
+            this.BtnSistemas.Size = new System.Drawing.Size(91, 26);
             this.BtnSistemas.Text = "Sistemas";
             // 
             // usuariosToolStripMenuItem
@@ -281,9 +280,9 @@
             // 
             this.salirToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.salirDelSistemaToolStripMenuItem});
-            this.salirToolStripMenuItem.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salirToolStripMenuItem.Font = new System.Drawing.Font("Yu Gothic Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(58, 26);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(57, 26);
             this.salirToolStripMenuItem.Text = "Salir";
             // 
             // salirDelSistemaToolStripMenuItem
@@ -317,7 +316,7 @@
             // Tbar_Producto
             // 
             this.Tbar_Producto.AutoSize = false;
-            this.Tbar_Producto.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tbar_Producto.Font = new System.Drawing.Font("Yu Gothic Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tbar_Producto.Image = ((System.Drawing.Image)(resources.GetObject("Tbar_Producto.Image")));
             this.Tbar_Producto.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Tbar_Producto.Name = "Tbar_Producto";
@@ -329,22 +328,23 @@
             // Tbar_Clientes
             // 
             this.Tbar_Clientes.AutoSize = false;
-            this.Tbar_Clientes.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tbar_Clientes.Font = new System.Drawing.Font("Yu Gothic Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tbar_Clientes.Image = ((System.Drawing.Image)(resources.GetObject("Tbar_Clientes.Image")));
             this.Tbar_Clientes.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Tbar_Clientes.Name = "Tbar_Clientes";
-            this.Tbar_Clientes.Size = new System.Drawing.Size(100, 77);
+            this.Tbar_Clientes.Size = new System.Drawing.Size(97, 77);
             this.Tbar_Clientes.Text = "Clientes";
             this.Tbar_Clientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.Tbar_Clientes.Click += new System.EventHandler(this.Tbar_Clientes_Click);
             // 
             // Tbar_Proveedores
             // 
-            this.Tbar_Proveedores.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tbar_Proveedores.AutoSize = false;
+            this.Tbar_Proveedores.Font = new System.Drawing.Font("Yu Gothic Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tbar_Proveedores.Image = ((System.Drawing.Image)(resources.GetObject("Tbar_Proveedores.Image")));
             this.Tbar_Proveedores.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Tbar_Proveedores.Name = "Tbar_Proveedores";
-            this.Tbar_Proveedores.Size = new System.Drawing.Size(111, 61);
+            this.Tbar_Proveedores.Size = new System.Drawing.Size(120, 77);
             this.Tbar_Proveedores.Text = "Proveedores";
             this.Tbar_Proveedores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.Tbar_Proveedores.Click += new System.EventHandler(this.Tbar_Proveedores_Click);
@@ -357,11 +357,11 @@
             // Tbar_Entrada
             // 
             this.Tbar_Entrada.AutoSize = false;
-            this.Tbar_Entrada.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tbar_Entrada.Font = new System.Drawing.Font("Yu Gothic Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tbar_Entrada.Image = ((System.Drawing.Image)(resources.GetObject("Tbar_Entrada.Image")));
             this.Tbar_Entrada.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Tbar_Entrada.Name = "Tbar_Entrada";
-            this.Tbar_Entrada.Size = new System.Drawing.Size(100, 77);
+            this.Tbar_Entrada.Size = new System.Drawing.Size(97, 77);
             this.Tbar_Entrada.Text = "Compras";
             this.Tbar_Entrada.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.Tbar_Entrada.Click += new System.EventHandler(this.Tbar_Entrada_Click);
@@ -369,10 +369,11 @@
             // Tbar_Salida
             // 
             this.Tbar_Salida.AutoSize = false;
+            this.Tbar_Salida.Font = new System.Drawing.Font("Yu Gothic Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tbar_Salida.Image = ((System.Drawing.Image)(resources.GetObject("Tbar_Salida.Image")));
             this.Tbar_Salida.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Tbar_Salida.Name = "Tbar_Salida";
-            this.Tbar_Salida.Size = new System.Drawing.Size(100, 77);
+            this.Tbar_Salida.Size = new System.Drawing.Size(97, 77);
             this.Tbar_Salida.Text = "Ventas";
             this.Tbar_Salida.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.Tbar_Salida.Click += new System.EventHandler(this.Tbar_Salida_Click);
@@ -384,27 +385,26 @@
             // 
             // Pnl_barra
             // 
-            this.Pnl_barra.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.Pnl_barra.BackColor = System.Drawing.Color.LightGray;
             this.Pnl_barra.Controls.Add(this.pictureBox1);
             this.Pnl_barra.Controls.Add(this.label1);
             this.Pnl_barra.Controls.Add(this.lbl_hora);
             this.Pnl_barra.Controls.Add(this.lbl_fecha);
-            this.Pnl_barra.Controls.Add(this.label4);
             this.Pnl_barra.Controls.Add(this.ChkAdmin);
             this.Pnl_barra.Controls.Add(this.pictureBox3);
             this.Pnl_barra.Controls.Add(this.pictureBox2);
             this.Pnl_barra.Controls.Add(this.lblcargo);
             this.Pnl_barra.Controls.Add(this.lblnombreusuario);
             this.Pnl_barra.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.Pnl_barra.Location = new System.Drawing.Point(0, 545);
+            this.Pnl_barra.Location = new System.Drawing.Point(0, 585);
             this.Pnl_barra.Name = "Pnl_barra";
-            this.Pnl_barra.Size = new System.Drawing.Size(1396, 96);
+            this.Pnl_barra.Size = new System.Drawing.Size(1396, 56);
             this.Pnl_barra.TabIndex = 5;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1034, 10);
+            this.pictureBox1.Location = new System.Drawing.Point(1256, 13);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(32, 34);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -414,7 +414,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(995, 54);
+            this.label1.Location = new System.Drawing.Point(986, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 17);
             this.label1.TabIndex = 24;
@@ -424,7 +424,7 @@
             this.lbl_hora.AutoSize = true;
             this.lbl_hora.Font = new System.Drawing.Font("Yu Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_hora.ForeColor = System.Drawing.Color.Black;
-            this.lbl_hora.Location = new System.Drawing.Point(1072, 10);
+            this.lbl_hora.Location = new System.Drawing.Point(1294, 13);
             this.lbl_hora.Name = "lbl_hora";
             this.lbl_hora.Size = new System.Drawing.Size(81, 36);
             this.lbl_hora.TabIndex = 23;
@@ -435,28 +435,17 @@
             this.lbl_fecha.AutoSize = true;
             this.lbl_fecha.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_fecha.ForeColor = System.Drawing.Color.Black;
-            this.lbl_fecha.Location = new System.Drawing.Point(991, 15);
+            this.lbl_fecha.Location = new System.Drawing.Point(1213, 26);
             this.lbl_fecha.Name = "lbl_fecha";
             this.lbl_fecha.Size = new System.Drawing.Size(0, 22);
             this.lbl_fecha.TabIndex = 22;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Yu Gothic", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(149, 15);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(143, 23);
-            this.label4.TabIndex = 21;
-            this.label4.Text = "Sesión Iniciada";
             // 
             // ChkAdmin
             // 
             this.ChkAdmin.AutoSize = true;
             this.ChkAdmin.Font = new System.Drawing.Font("Yu Gothic", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ChkAdmin.ForeColor = System.Drawing.Color.Black;
-            this.ChkAdmin.Location = new System.Drawing.Point(725, 63);
+            this.ChkAdmin.Location = new System.Drawing.Point(716, 30);
             this.ChkAdmin.Name = "ChkAdmin";
             this.ChkAdmin.Size = new System.Drawing.Size(134, 23);
             this.ChkAdmin.TabIndex = 20;
@@ -467,7 +456,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(25, 54);
+            this.pictureBox3.Location = new System.Drawing.Point(27, 13);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(38, 34);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -477,7 +466,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(260, 54);
+            this.pictureBox2.Location = new System.Drawing.Point(249, 12);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(32, 34);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -489,7 +478,7 @@
             this.lblcargo.AutoSize = true;
             this.lblcargo.Font = new System.Drawing.Font("Yu Gothic Medium", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblcargo.ForeColor = System.Drawing.Color.Black;
-            this.lblcargo.Location = new System.Drawing.Point(80, 63);
+            this.lblcargo.Location = new System.Drawing.Point(82, 22);
             this.lblcargo.Name = "lblcargo";
             this.lblcargo.Size = new System.Drawing.Size(59, 19);
             this.lblcargo.TabIndex = 17;
@@ -500,7 +489,7 @@
             this.lblnombreusuario.AutoSize = true;
             this.lblnombreusuario.Font = new System.Drawing.Font("Yu Gothic Medium", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblnombreusuario.ForeColor = System.Drawing.Color.Black;
-            this.lblnombreusuario.Location = new System.Drawing.Point(308, 63);
+            this.lblnombreusuario.Location = new System.Drawing.Point(297, 21);
             this.lblnombreusuario.Name = "lblnombreusuario";
             this.lblnombreusuario.Size = new System.Drawing.Size(75, 19);
             this.lblnombreusuario.TabIndex = 16;
@@ -532,7 +521,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "SISTEMA DE  CONTROL Y GESTIÓN DE INVENTARIO";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.MDI_Principal_Load);
             this.MiMenu.ResumeLayout(false);
             this.MiMenu.PerformLayout();
             this.MiBarra.ResumeLayout(false);
@@ -577,7 +565,6 @@
         private System.Windows.Forms.ToolStripMenuItem ingresoAcumuladoPorProductosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salidaAcumuladoPorProductosToolStripMenuItem;
         private System.Windows.Forms.Panel Pnl_barra;
-        private System.Windows.Forms.Label label4;
         public System.Windows.Forms.CheckBox ChkAdmin;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;

@@ -3,6 +3,7 @@ using PracticaProfesional.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,6 +19,8 @@ namespace PracticaProfesional.Negocio
             D_Productos Datos = new D_Productos();
             return Datos.Listado_pr(cTexto);
         }
+
+   
 
         public static string Guadar_pr(int nOpcion, E_Productos oPr)
         {

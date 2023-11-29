@@ -81,11 +81,10 @@
             // 
             // BtnVista
             // 
-            this.BtnVista.BackColor = System.Drawing.Color.ForestGreen;
-            this.BtnVista.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnVista.BackColor = System.Drawing.Color.DarkGreen;
             this.BtnVista.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnVista.ForeColor = System.Drawing.Color.White;
-            this.BtnVista.Location = new System.Drawing.Point(467, 94);
+            this.BtnVista.Location = new System.Drawing.Point(467, 98);
             this.BtnVista.Name = "BtnVista";
             this.BtnVista.Size = new System.Drawing.Size(137, 47);
             this.BtnVista.TabIndex = 4;
@@ -95,8 +94,7 @@
             // 
             // BtnSalir
             // 
-            this.BtnSalir.BackColor = System.Drawing.Color.Red;
-            this.BtnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSalir.BackColor = System.Drawing.Color.Maroon;
             this.BtnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSalir.ForeColor = System.Drawing.Color.White;
             this.BtnSalir.Location = new System.Drawing.Point(467, 161);

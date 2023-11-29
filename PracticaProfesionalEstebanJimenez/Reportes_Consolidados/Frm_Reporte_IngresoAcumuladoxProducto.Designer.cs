@@ -39,8 +39,7 @@
             // 
             // BtnSalir
             // 
-            this.BtnSalir.BackColor = System.Drawing.Color.Red;
-            this.BtnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSalir.BackColor = System.Drawing.Color.Maroon;
             this.BtnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSalir.ForeColor = System.Drawing.Color.White;
             this.BtnSalir.Location = new System.Drawing.Point(529, 148);
@@ -53,13 +52,12 @@
             // 
             // BtnVista
             // 
-            this.BtnVista.BackColor = System.Drawing.Color.ForestGreen;
-            this.BtnVista.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnVista.BackColor = System.Drawing.Color.DarkGreen;
             this.BtnVista.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnVista.ForeColor = System.Drawing.Color.White;
             this.BtnVista.Location = new System.Drawing.Point(529, 85);
             this.BtnVista.Name = "BtnVista";
-            this.BtnVista.Size = new System.Drawing.Size(143, 45);
+            this.BtnVista.Size = new System.Drawing.Size(143, 49);
             this.BtnVista.TabIndex = 10;
             this.BtnVista.Text = "Vista Previa";
             this.BtnVista.UseVisualStyleBackColor = false;

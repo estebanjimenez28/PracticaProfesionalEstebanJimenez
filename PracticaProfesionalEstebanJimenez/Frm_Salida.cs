@@ -16,7 +16,8 @@ namespace PracticaProfesionalEstebanJimenez
 {
     public partial class Frm_Salida : Form
     {
-        
+        SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-HMNTIQK1\SQLEXPRESS;Initial Catalog=BD_PracticaProfesional;Integrated Security=True;");
+
         public Frm_Salida()
         {
             InitializeComponent();
@@ -107,11 +108,11 @@ namespace PracticaProfesionalEstebanJimenez
                 this.Codigo_Salida = Convert.ToInt32(Dgv_principal.CurrentRow.Cells["Codigo_Salida"].Value);
                 this.Codigo_TipoVenta = Convert.ToInt32(Dgv_principal.CurrentRow.Cells["Codigo_TipoVenta"].Value);
                 this.Codigo_Cliente = Convert.ToInt32(Dgv_principal.CurrentRow.Cells["Codigo_Cliente"].Value);
-                TxtTipoVenta.Text =Dgv_principal.CurrentRow.Cells["DescripcionVenta"].Value.ToString();
                 TxtNumeroDocumento.Text = Dgv_principal.CurrentRow.Cells["NumeroDocumento"].Value.ToString();
                 Dtp_fecha.Value = Convert.ToDateTime(Dgv_principal.CurrentRow.Cells["Fecha_Salida"].Value);
                 TxtCliente.Text = Dgv_principal.CurrentRow.Cells["RazonSocial_Cliente"].Value.ToString();
                 TxtDocumentoCliente.Text = Dgv_principal.CurrentRow.Cells["NumeroDocumento_Cliente"].Value.ToString();
+                CbxVenta.Text = Dgv_principal.CurrentRow.Cells["DescripcionVenta"].Value.ToString();
                 TxtObservacion.Text = Dgv_principal.CurrentRow.Cells["Observacion"].Value.ToString();
                 TxtSubTotal.Text = Dgv_principal.CurrentRow.Cells["Subtotal"].Value.ToString();
                 TxtIva.Text = Dgv_principal.CurrentRow.Cells["Iva"].Value.ToString();
@@ -250,43 +251,25 @@ namespace PracticaProfesionalEstebanJimenez
             }
         }
 
-        private void Formato_TipoVenta()
+        public void cargar_datosTipoVenta()
         {
-            //Se aplica un formato al datagridview de Tipo Venta
-            DgvTipoVenta.Columns[0].Width = 400;
-            DgvTipoVenta.Columns[0].HeaderText = "SELECCIONE UNA OPCIÓN";
-            DgvTipoVenta.Columns[1].Visible = false;
+            con.Open();
+            SqlCommand cmd = new SqlCommand("SELECT Codigo_TipoVenta,DescripcionVenta FROM TipoVenta", con);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            con.Close();
+
+            DataRow fila = dt.NewRow();
+            fila["DescripcionVenta"] = "";
+            dt.Rows.InsertAt(fila, 0);
+
+            CbxVenta.ValueMember = "Codigo_TipoVenta";
+            CbxVenta.DisplayMember = "DescripcionVenta";
+            CbxVenta.DataSource = dt;
 
         }
 
-        private void Listado_TipoVenta()
-        {
-            //Se procede a cargar y listar la informacion en el datagridview
-            try
-            {
-                DgvTipoVenta.DataSource = N_SalidaProductos.Listado_TipoVenta();
-                this.Formato_TipoVenta();
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.Message + ex.StackTrace);
-            }
-        }
-
-        private void Selecciona_TipoVenta()
-        {
-            //Este metodo funcina para seleccionar la informacion del datagriview y mostrarla en los textbox correspondientes
-            if (string.IsNullOrEmpty(Convert.ToString(DgvTipoVenta.CurrentRow.Cells["Codigo_TipoVenta"].Value)))
-            {
-                MessageBox.Show("No se tiene información para Visualizar", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                this.Codigo_TipoVenta = Convert.ToInt32(DgvTipoVenta.CurrentRow.Cells["Codigo_TipoVenta"].Value);
-                TxtTipoVenta.Text = Convert.ToString(DgvTipoVenta.CurrentRow.Cells["DescripcionVenta"].Value);
-            }
-        }
 
 
 
@@ -353,7 +336,7 @@ namespace PracticaProfesionalEstebanJimenez
                     if (Convert.ToInt32(Filatemp["Codigo_Producto"]) == xCodigo_pr)
                     {
                         Agregar = false;
-                        MessageBox.Show("El producto ya se encuetra agregado", "Aviso del Sistema");
+                        MessageBox.Show("El producto ya se encuentra agregado", "Aviso del Sistema");
                     }
                 }
                 //Si el Agregar sigue siendo verdadera, se agrega la información del producto a la tabla de
@@ -441,12 +424,12 @@ namespace PracticaProfesionalEstebanJimenez
 
             this.Listado_cl("%");
             this.Listado_sp("%");
-            this.Listado_TipoVenta();
+            this.cargar_datosTipoVenta();
         }
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
-       
+
 
 
             if (
@@ -458,51 +441,78 @@ namespace PracticaProfesionalEstebanJimenez
             }
             else //Se procedería a registrar la información
             {
+                string NumeroDocumento = TxtNumeroDocumento.Text.Trim();
+                bool agregar = true; // Asumimos que inicialmente está bien agregar el producto.
 
-                string Rpta = "";
-                E_SalidaProductos oSp = new E_SalidaProductos();
-                oSp.Codigo_Salida = this.Codigo_Salida;
-                oSp.Codigo_TipoVenta = this.Codigo_TipoVenta;
-                oSp.NumeroDocumento = TxtNumeroDocumento.Text.Trim();
-                oSp.Codigo_Ciente= this.Codigo_Cliente;
-                oSp.nDocumentoCliente = TxtDocumentoCliente.Text.Trim();
-                oSp.RazonSocial_Cliente = TxtCliente.Text.Trim();
-                oSp.Fecha_Salida = Dtp_fecha.Value;
-                oSp.Observacion = TxtObservacion.Text.Trim();
-                oSp.Subtotal = Convert.ToDecimal(TxtSubTotal.Text.Trim());
-                oSp.Iva = Convert.ToDecimal(TxtIva.Text.Trim());
-                oSp.Total = Convert.ToDecimal(TxtTotal.Text.Trim());
-
-                this.TablaDetalle.AcceptChanges();
-
-                Rpta = N_SalidaProductos.Guardar_Salida(oSp, TablaDetalle);
-                if (Rpta != String.Empty)
+                foreach (DataGridViewRow fila in Dgv_principal.Rows)
                 {
-                    int codigoSalida;
-                    if (int.TryParse(Rpta, out codigoSalida))
+                    if (fila.Cells["NumeroDocumento"].Value != null &&
+                        fila.Cells["NumeroDocumento"].Value.ToString().Trim().Equals(NumeroDocumento, StringComparison.OrdinalIgnoreCase))
                     {
-                        this.Codigo_Salida = codigoSalida;
+                        agregar = false;
+                        MessageBox.Show("La venta con este numero de factura ya se encuentra agregada en el sistema", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        break; // No es necesario seguir verificando si ya se encontró una coincidencia.
                     }
-                    MessageBox.Show("Los datos han sido guardados correctamente # " + this.Codigo_Salida, "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    //Generando el ticket de la venta
-                    Reportes.Frm_Rpt_Imprimir_VentaGeneral oRpt_print = new Reportes.Frm_Rpt_Imprimir_VentaGeneral();
-                    oRpt_print.txt_p1.Text = Convert.ToString(this.Codigo_Salida);
-                    oRpt_print.ShowDialog();
-                    //fin del proceso del ticket para imprimir
-
-                    this.Estado_Botonesprincipales(true);
-                    this.Estado_Botonesprocesos(false);
-                    this.Estado_texto(false);
-                    Dgv_Detalle.Columns[3].ReadOnly = true;
-                    TbpPrincipal.SelectedIndex = 0;
-                    this.Codigo_Salida = 0;
-                    this.Estadoguarda = 0;
-
                 }
-                else
+
+                if (agregar)
                 {
-                    MessageBox.Show(Rpta, "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Si agregar es true, significa que no se encontró una coincidencia en el DataGridView,
+                    // por lo que procedemos a registrar el producto.
+
+
+
+                    string Rpta = "";
+                    E_SalidaProductos oSp = new E_SalidaProductos();
+
+                    // Obtener el valor seleccionado del ComboBox y asignarlo al objeto oCl
+                    if (CbxVenta.SelectedItem != null)
+                    {
+                        // Aquí asumimos que la propiedad "Value" del ComboBox contiene el código del tipo de identificación.
+                        oSp.Codigo_TipoVenta = Convert.ToInt32(CbxVenta.SelectedValue);
+                    }
+                    oSp.Codigo_Salida = this.Codigo_Salida;
+                    oSp.NumeroDocumento = TxtNumeroDocumento.Text.Trim();
+                    oSp.Codigo_Ciente = this.Codigo_Cliente;
+                    oSp.nDocumentoCliente = TxtDocumentoCliente.Text.Trim();
+                    oSp.RazonSocial_Cliente = TxtCliente.Text.Trim();
+                    oSp.Fecha_Salida = Dtp_fecha.Value;
+                    oSp.Observacion = TxtObservacion.Text.Trim();
+                    oSp.Subtotal = Convert.ToDecimal(TxtSubTotal.Text.Trim());
+                    oSp.Iva = Convert.ToDecimal(TxtIva.Text.Trim());
+                    oSp.Total = Convert.ToDecimal(TxtTotal.Text.Trim());
+
+                    this.TablaDetalle.AcceptChanges();
+
+                    Rpta = N_SalidaProductos.Guardar_Salida(oSp, TablaDetalle);
+                    if (Rpta != String.Empty)
+                    {
+                        int codigoSalida;
+                        if (int.TryParse(Rpta, out codigoSalida))
+                        {
+                            this.Codigo_Salida = codigoSalida;
+                        }
+                        MessageBox.Show("Los datos han sido guardados correctamente # " + this.Codigo_Salida, "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        //Generando el ticket de la venta
+                        Reportes.Frm_Rpt_Imprimir_VentaGeneral oRpt_print = new Reportes.Frm_Rpt_Imprimir_VentaGeneral();
+                        oRpt_print.txt_p1.Text = Convert.ToString(this.Codigo_Salida);
+                        oRpt_print.ShowDialog();
+                        //fin del proceso del ticket para imprimir
+
+                        this.Estado_Botonesprincipales(true);
+                        this.Estado_Botonesprocesos(false);
+                        this.Estado_texto(false);
+                        Dgv_Detalle.Columns[3].ReadOnly = true;
+                        TbpPrincipal.SelectedIndex = 0;
+                        this.Codigo_Salida = 0;
+                        this.Estadoguarda = 0;
+
+                    }
+                    else
+                    {
+                        MessageBox.Show(Rpta, "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
         }
@@ -636,7 +646,7 @@ namespace PracticaProfesionalEstebanJimenez
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
             //Se despliega el formulario de Lista de Productos
-            PnlProducto.Location = TxtTipoVenta.Location;
+            PnlProducto.Location = CbxVenta.Location;
             PnlProducto.Visible = true;
             TxtBuscar5.Focus();
         }
@@ -688,39 +698,23 @@ namespace PracticaProfesionalEstebanJimenez
             TbpPrincipal.SelectedIndex = 0;
         }
 
-       
-     
-
-   
 
         private void Btn_lupa2_Click_1(object sender, EventArgs e)
         {
             //Se despliega la ventana de clientes
-            this.PnlClientes.Location = btn_lupa1.Location;
+            this.PnlClientes.Location = CbxVenta.Location;
             this.PnlClientes.Visible = true;
         }
 
-        private void btn_lupa1_Click(object sender, EventArgs e)
+        private void TxtNumeroDocumento_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //Se despliega la ventana de Tipo Venta
-            this.PnlTipoVenta.Location = TxtTipoVenta.Location;
-            this.PnlTipoVenta.Visible = true;
+            e.Handled = Validaciones.CaracteresTexto(e, true);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void TxtObservacion_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //Se oculta la ventana de Tipo Venta
-            PnlTipoVenta.Visible = false;
+            e.Handled = Validaciones.CaracteresTexto(e, true);
         }
-
-        private void DgvTipoVenta_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //Al dar doble clik la informacion se muestra en el textBox
-            this.Selecciona_TipoVenta();
-            PnlTipoVenta.Visible = false;
-        }
-
-    
     }
 
 }

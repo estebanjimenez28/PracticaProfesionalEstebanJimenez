@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion.cs" />
+    <Compile Include="Crypto.cs" />
     <Compile Include="D_Almacen.cs" />
     <Compile Include="D_Categorias.cs" />
     <Compile Include="D_Clientes.cs" />

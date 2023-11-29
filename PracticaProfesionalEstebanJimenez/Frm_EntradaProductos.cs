@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
@@ -16,6 +17,7 @@ namespace PracticaProfesionalEstebanJimenez
 {
     public partial class Frm_EntradaProductos : Form
     {
+        SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-HMNTIQK1\SQLEXPRESS;Initial Catalog=BD_PracticaProfesional;Integrated Security=True;");
         public Frm_EntradaProductos()
         {
             InitializeComponent();
@@ -96,8 +98,6 @@ namespace PracticaProfesionalEstebanJimenez
             this.BtnDeshacer.Visible = lEstado;
 
             this.Btn_lupa1.Visible = lEstado;
-            this.Btn_lupa2.Visible = lEstado;
-            this.Btn_Lupa3.Visible = lEstado;
         }
 
         private void Selecciona_item()
@@ -117,9 +117,9 @@ namespace PracticaProfesionalEstebanJimenez
                 TxtNumeroDocumento.Text = Dgv_principal.CurrentRow.Cells["NumeroDocumento"].Value.ToString();
                 Dtp_fecha.Value = Convert.ToDateTime(Dgv_principal.CurrentRow.Cells["Fecha_Entrada"].Value);
                 TxtProveedor.Text = Dgv_principal.CurrentRow.Cells["Razon_Social"].Value.ToString();
-                TxtAlmacen.Text = Dgv_principal.CurrentRow.Cells["Descripcion"].Value.ToString();
+                CbxUsuario.Text = Dgv_principal.CurrentRow.Cells["NombreCompleto"].Value.ToString();
+                Cbx_Almacen.Text = Dgv_principal.CurrentRow.Cells["Descripcion"].Value.ToString();
                 TxtObservacion.Text = Dgv_principal.CurrentRow.Cells["Observacion"].Value.ToString();
-                TxtDescripcionUsuario.Text = Dgv_principal.CurrentRow.Cells["NombreCompleto"].Value.ToString();
                 TxtIva.Text = Dgv_principal.CurrentRow.Cells["Iva"].Value.ToString();
                 TxtSubTotal.Text = Dgv_principal.CurrentRow.Cells["Subtotal"].Value.ToString();
                 TxtTotal.Text = Dgv_principal.CurrentRow.Cells["Total"].Value.ToString();
@@ -197,44 +197,8 @@ namespace PracticaProfesionalEstebanJimenez
 
        
 
-        private void Formato_al()
-        {
-            
-            //Se aplica un formato al datagridview de almacenes
-            DgvAlmacen.Columns[0].Width = 320;
-            DgvAlmacen.Columns[0].HeaderText = "SELECCIONE UNA OPCIÓN";
-            DgvAlmacen.Columns[1].Visible = false;
 
-        }
-
-        private void Listado_al()
-        {
-            //Se procede a cargar y listar la informacion en el datagridview
-            try
-            {
-                DgvAlmacen.DataSource = N_EntradaProductos.Listado_al_tm();
-                this.Formato_al();
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.Message + ex.StackTrace);
-            }
-        }
-
-        private void Selecciona_al()
-        {
-            //Este metodo funcina para seleccionar la informacion del datagriview y mostrarla en los textbox correspondientes
-            if (string.IsNullOrEmpty(Convert.ToString(DgvAlmacen.CurrentRow.Cells["Codigo_Almacen"].Value)))
-            {
-                MessageBox.Show("No se tiene información para Visualizar", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                this.Codigo_Almacen = Convert.ToInt32(DgvAlmacen.CurrentRow.Cells["Codigo_Almacen"].Value);
-                TxtAlmacen.Text = Convert.ToString(DgvAlmacen.CurrentRow.Cells["Descripcion"].Value);
-            }
-        }
+     
 
         private void Formato_pv()
         {
@@ -278,48 +242,47 @@ namespace PracticaProfesionalEstebanJimenez
             }
         }
 
-        private void Formato_us()
-        {
-            //Se aplica un formato al datagridview de usuarios
-            DgvUsuarios.Columns[0].Width = 320;
-            DgvUsuarios.Columns[0].HeaderText = "USUARIO.";
-            DgvUsuarios.Columns[1].Width = 300;
-            DgvUsuarios.Columns[1].HeaderText = "NOMBRE.";
-            DgvUsuarios.Columns[2].Width = 220;
-            DgvUsuarios.Columns[2].HeaderText = "CARGO.";
-            DgvUsuarios.Columns[3].Visible = false;
 
+        public void cargar_datosAlmacen()
+        {
+            con.Open();
+            SqlCommand cmd = new SqlCommand("SELECT Codigo_Almacen,Descripcion FROM Almacenes", con);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            con.Close();
+
+            DataRow fila = dt.NewRow();
+            fila["Descripcion"] = "";
+            dt.Rows.InsertAt(fila, 0);
+
+            Cbx_Almacen.ValueMember = "Codigo_Almacen";
+            Cbx_Almacen.DisplayMember = "Descripcion";
+            Cbx_Almacen.DataSource = dt;
 
         }
 
-        private void Listado_us(string cTexto)
+        public void cargar_datosUsuario()
         {
-            //Se procede a cargar y listar la informacion en el datagridview
-            try
-            {
-                DgvUsuarios.DataSource = N_EntradaProductos.Listado_us_tm(cTexto);
-                this.Formato_us();
-            }
-            catch (Exception ex)
-            {
+            con.Open();
+            SqlCommand cmd = new SqlCommand("SELECT Codigo_Usuario,NombreCompleto FROM Usuarios", con);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            con.Close();
 
-                MessageBox.Show(ex.Message + ex.StackTrace);
-            }
+            DataRow fila = dt.NewRow();
+            fila["NombreCompleto"] = "";
+            dt.Rows.InsertAt(fila, 0);
+
+            CbxUsuario.ValueMember = "Codigo_Usuario";
+            CbxUsuario.DisplayMember = "NombreCompleto";
+            CbxUsuario.DataSource = dt;
+
         }
 
-        private void Selecciona_us()
-        {
-            //Este metodo funcina para seleccionar la informacion del datagriview y mostrarla en los textbox correspondientes
-            if (string.IsNullOrEmpty(Convert.ToString(DgvUsuarios.CurrentRow.Cells["Codigo_Usuario"].Value)))
-            {
-                MessageBox.Show("No se tiene información para Visualizar", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                this.Codigo_Usuario = Convert.ToInt32(DgvUsuarios.CurrentRow.Cells["Codigo_Usuario"].Value);
-                TxtDescripcionUsuario.Text = Convert.ToString(DgvUsuarios.CurrentRow.Cells["NombreCompleto"].Value);
-            }
-        }
+
+
 
         private void Formato_pr()
         {
@@ -467,9 +430,10 @@ namespace PracticaProfesionalEstebanJimenez
         {
             //Se carga la informacion en los formularios
             this.Listado_ep("%");
-            this.Listado_us("%");
             this.Listado_pv("%");
-            this.Listado_al();
+            this.cargar_datosAlmacen();
+            this.cargar_datosUsuario(); 
+    
         }
 
         private void BtnGuardar_Click(object sender, EventArgs e)
@@ -477,49 +441,80 @@ namespace PracticaProfesionalEstebanJimenez
             if (
                 TxtNumeroDocumento.Text == string.Empty ||
                 TxtProveedor.Text == String.Empty ||
-                TxtAlmacen.Text == String.Empty ||
                 Dgv_Detalle.Rows.Count == 0)
             {
                 MessageBox.Show("Falta ingresa datos requeridos (*)", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else //Se procede a registrar la información
             {
+                string NumeroDocumento = TxtNumeroDocumento.Text.Trim();
+                bool agregar = true; // Asumimos que inicialmente está bien agregar el producto.
 
-                string Rpta = "";
-                E_EntradaProductos oEp = new E_EntradaProductos();
-                oEp.Codigo_Entrada = this.Codigo_Entrada;
-                oEp.NumeroDocumento = TxtNumeroDocumento.Text.Trim();
-                oEp.Fecha = Dtp_fecha.Value;
-                oEp.Codigo_Usuario = this.Codigo_Usuario;
-                oEp.Codigo_Almacen = this.Codigo_Almacen;
-                oEp.Codigo_Proveedor = this.Codigo_Proveedor;
-                oEp.Observacion = TxtObservacion.Text.Trim();
-                oEp.Subtotal = Convert.ToDecimal(TxtSubTotal.Text.Trim());
-                oEp.Iva = Convert.ToDecimal(TxtIva.Text.Trim());
-                oEp.Total = Convert.ToDecimal(TxtTotal.Text.Trim());
-
-                this.TablaDetalle.AcceptChanges();
-
-                Rpta = N_EntradaProductos.Guadar_Entrada(oEp, TablaDetalle);
-                if (Rpta.Equals("OK"))
+                foreach (DataGridViewRow fila in Dgv_principal.Rows)
                 {
-                    this.Listado_ep("%");
-                    MessageBox.Show("La compra se ha guardado correctamente", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    this.Estado_Botonesprincipales(true);
-                    this.Estado_Botonesprocesos(false);
-                    this.Estado_texto(false);
-                    Dgv_Detalle.Columns[3].ReadOnly = true;
-                    Dgv_Detalle.Columns[4].ReadOnly = true;
-
-                    TbpPrincipal.SelectedIndex = 0;
-                    this.Codigo_Entrada = 0;
-                    this.Estadoguarda = 0;
-
+                    if (fila.Cells["NumeroDocumento"].Value != null &&
+                        fila.Cells["NumeroDocumento"].Value.ToString().Trim().Equals(NumeroDocumento, StringComparison.OrdinalIgnoreCase))
+                    {
+                        agregar = false;
+                        MessageBox.Show("La compra con este numero de factura ya se encuentra agregada en el sistema", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        break; // No es necesario seguir verificando si ya se encontró una coincidencia.
+                    }
                 }
-                else
+                if (agregar)
                 {
-                    MessageBox.Show(Rpta, "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Si agregar es true, significa que no se encontró una coincidencia en el DataGridView,
+                    // por lo que procedemos a registrar el producto.
+
+                    string Rpta = "";
+                    E_EntradaProductos oEp = new E_EntradaProductos();
+
+
+                    // Obtener el valor seleccionado del ComboBox y asignarlo al objeto oCl
+                    if (Cbx_Almacen.SelectedItem != null)
+                    {
+                        // Aquí asumimos que la propiedad "Value" del ComboBox contiene el código del tipo de identificación.
+                        oEp.Codigo_Almacen = Convert.ToInt32(Cbx_Almacen.SelectedValue);
+                    }
+
+                    // Obtener el valor seleccionado del ComboBox y asignarlo al objeto oCl
+                    if (CbxUsuario.SelectedItem != null)
+                    {
+                        // Aquí asumimos que la propiedad "Value" del ComboBox contiene el código del tipo de identificación.
+                        oEp.Codigo_Usuario = Convert.ToInt32(CbxUsuario.SelectedValue);
+                    }
+
+                    oEp.Codigo_Entrada = this.Codigo_Entrada;
+                    oEp.NumeroDocumento = TxtNumeroDocumento.Text.Trim();
+                    oEp.Fecha = Dtp_fecha.Value;
+                    oEp.Codigo_Proveedor = this.Codigo_Proveedor;
+                    oEp.Observacion = TxtObservacion.Text.Trim();
+                    oEp.Subtotal = Convert.ToDecimal(TxtSubTotal.Text.Trim());
+                    oEp.Iva = Convert.ToDecimal(TxtIva.Text.Trim());
+                    oEp.Total = Convert.ToDecimal(TxtTotal.Text.Trim());
+
+                    this.TablaDetalle.AcceptChanges();
+
+                    Rpta = N_EntradaProductos.Guadar_Entrada(oEp, TablaDetalle);
+                    if (Rpta.Equals("OK"))
+                    {
+                        this.Listado_ep("%");
+                        MessageBox.Show("La compra se ha guardado correctamente", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        this.Estado_Botonesprincipales(true);
+                        this.Estado_Botonesprocesos(false);
+                        this.Estado_texto(false);
+                        Dgv_Detalle.Columns[3].ReadOnly = true;
+                        Dgv_Detalle.Columns[4].ReadOnly = true;
+
+                        TbpPrincipal.SelectedIndex = 0;
+                        this.Codigo_Entrada = 0;
+                        this.Estadoguarda = 0;
+
+                    }
+                    else
+                    {
+                        MessageBox.Show(Rpta, "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
         }
@@ -636,48 +631,7 @@ namespace PracticaProfesionalEstebanJimenez
             this.PnlProveedor.Visible = true;
         }
 
-      
-
-        private void Btn_lupa2_Click(object sender, EventArgs e)
-        {
-            //Se despliega la ventana de Usuario
-            this.PnlUs.Location = TxtNumeroDocumento.Location;
-            this.PnlUs.Visible = true;
-        }
-
-   
-
-        private void Btn_Lupa3_Click(object sender, EventArgs e)
-        {
-            //Se despliega la ventana de Almacen
-            this.PnlAlmacen.Location = TxtAlmacen.Location;
-            this.PnlAlmacen.Visible = true;
-        }
-
-        private void DgvUsuarios_DoubleClick(object sender, EventArgs e)
-        {
-            //Al dar doble clik la informacion se muestra en el textBox
-            this.Selecciona_us();
-            PnlUs.Visible = false;
-        }
-
-        private void DgvAlmacen_DoubleClick(object sender, EventArgs e)
-        {
-            //Al dar doble clik la informacion se muestra en el textBox
-            this.Selecciona_al();
-            PnlAlmacen.Visible = false;
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            PnlUs.Visible = false;
-        }
-
-        private void BtnBuscar6_Click(object sender, EventArgs e)
-        {
-            //Se filtra la informacion del dgv Usuarios
-            this.Listado_us(TxtBuscar6.Text);
-        }
+     
 
       
 
@@ -708,13 +662,6 @@ namespace PracticaProfesionalEstebanJimenez
         private void BtnBuscar5_Click(object sender, EventArgs e)
         {
             this.Listado_pr(TxtBuscar5.Text);
-        }
-
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //Se oculta el formulario de almacen
-            PnlAlmacen.Visible = false;
         }
 
         private void BtnRetornar5_Click(object sender, EventArgs e)
@@ -763,6 +710,15 @@ namespace PracticaProfesionalEstebanJimenez
             PnlProveedor.Visible = false;
         }
 
-       
+        private void TxtNumeroDocumento_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = Validaciones.CaracteresTexto(e, true);
+        }
+
+        private void TxtObservacion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            e.Handled = Validaciones.CaracteresTexto(e, true);
+        }
     }
 }

@@ -33,9 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.BtnSalir = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.BtnReporte = new System.Windows.Forms.Button();
@@ -50,13 +47,8 @@
             this.TxtBuscar = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.PnlIdentificacion = new System.Windows.Forms.Panel();
-            this.DgvIdentificacion = new System.Windows.Forms.DataGridView();
             this.label8 = new System.Windows.Forms.Label();
-            this.TxtRazonSocial = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.BtnBuscarIdentificacion = new System.Windows.Forms.Button();
-            this.TxtTipoIdentificacion = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.TxtObservacion = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -66,9 +58,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.TxtEmail = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.TxtApellidos = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.TxtNombre = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.BtnRetornar = new System.Windows.Forms.Button();
             this.imageList3 = new System.Windows.Forms.ImageList(this.components);
@@ -76,14 +66,16 @@
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.TxtCedula = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.Cbx_Identificacion = new System.Windows.Forms.ComboBox();
             this.Pnl_Titulo = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
+            this.TxtRazonSocial = new System.Windows.Forms.TextBox();
+            this.TxtNombre = new System.Windows.Forms.TextBox();
+            this.TxtApellidos = new System.Windows.Forms.TextBox();
             this.TbpPrincipal.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvPrincipal)).BeginInit();
             this.tabPage2.SuspendLayout();
-            this.PnlIdentificacion.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvIdentificacion)).BeginInit();
             this.Pnl_Titulo.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -276,12 +268,11 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.PnlIdentificacion);
-            this.tabPage2.Controls.Add(this.label8);
+            this.tabPage2.Controls.Add(this.TxtApellidos);
+            this.tabPage2.Controls.Add(this.TxtNombre);
             this.tabPage2.Controls.Add(this.TxtRazonSocial);
+            this.tabPage2.Controls.Add(this.label8);
             this.tabPage2.Controls.Add(this.label6);
-            this.tabPage2.Controls.Add(this.BtnBuscarIdentificacion);
-            this.tabPage2.Controls.Add(this.TxtTipoIdentificacion);
             this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Controls.Add(this.TxtObservacion);
             this.tabPage2.Controls.Add(this.label15);
@@ -291,15 +282,14 @@
             this.tabPage2.Controls.Add(this.label14);
             this.tabPage2.Controls.Add(this.TxtEmail);
             this.tabPage2.Controls.Add(this.label3);
-            this.tabPage2.Controls.Add(this.TxtApellidos);
             this.tabPage2.Controls.Add(this.label13);
-            this.tabPage2.Controls.Add(this.TxtNombre);
             this.tabPage2.Controls.Add(this.label12);
             this.tabPage2.Controls.Add(this.BtnRetornar);
             this.tabPage2.Controls.Add(this.BtnGuardar);
             this.tabPage2.Controls.Add(this.BtnCancelar);
             this.tabPage2.Controls.Add(this.TxtCedula);
             this.tabPage2.Controls.Add(this.label2);
+            this.tabPage2.Controls.Add(this.Cbx_Identificacion);
             this.tabPage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
@@ -308,55 +298,6 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Mantenimiento";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // PnlIdentificacion
-            // 
-            this.PnlIdentificacion.BackColor = System.Drawing.Color.White;
-            this.PnlIdentificacion.Controls.Add(this.DgvIdentificacion);
-            this.PnlIdentificacion.Location = new System.Drawing.Point(689, 107);
-            this.PnlIdentificacion.Name = "PnlIdentificacion";
-            this.PnlIdentificacion.Size = new System.Drawing.Size(629, 105);
-            this.PnlIdentificacion.TabIndex = 43;
-            this.PnlIdentificacion.Visible = false;
-            // 
-            // DgvIdentificacion
-            // 
-            this.DgvIdentificacion.AllowUserToAddRows = false;
-            this.DgvIdentificacion.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.DgvIdentificacion.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.DgvIdentificacion.BackgroundColor = System.Drawing.Color.White;
-            this.DgvIdentificacion.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvIdentificacion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.DgvIdentificacion.ColumnHeadersHeight = 35;
-            this.DgvIdentificacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DgvIdentificacion.DefaultCellStyle = dataGridViewCellStyle6;
-            this.DgvIdentificacion.EnableHeadersVisualStyles = false;
-            this.DgvIdentificacion.Location = new System.Drawing.Point(3, 0);
-            this.DgvIdentificacion.Name = "DgvIdentificacion";
-            this.DgvIdentificacion.ReadOnly = true;
-            this.DgvIdentificacion.RowHeadersVisible = false;
-            this.DgvIdentificacion.RowHeadersWidth = 51;
-            this.DgvIdentificacion.RowTemplate.Height = 24;
-            this.DgvIdentificacion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.DgvIdentificacion.Size = new System.Drawing.Size(623, 102);
-            this.DgvIdentificacion.TabIndex = 20;
-            this.DgvIdentificacion.DoubleClick += new System.EventHandler(this.DgvIdentificacion_DoubleClick);
             // 
             // label8
             // 
@@ -368,17 +309,6 @@
             this.label8.TabIndex = 46;
             this.label8.Text = " Identificación ";
             // 
-            // TxtRazonSocial
-            // 
-            this.TxtRazonSocial.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.TxtRazonSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtRazonSocial.Location = new System.Drawing.Point(222, 190);
-            this.TxtRazonSocial.MaxLength = 100;
-            this.TxtRazonSocial.Name = "TxtRazonSocial";
-            this.TxtRazonSocial.Size = new System.Drawing.Size(369, 24);
-            this.TxtRazonSocial.TabIndex = 45;
-            this.TxtRazonSocial.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -389,33 +319,11 @@
             this.label6.TabIndex = 44;
             this.label6.Text = "Razon Social ";
             // 
-            // BtnBuscarIdentificacion
-            // 
-            this.BtnBuscarIdentificacion.ImageKey = "consulta.png";
-            this.BtnBuscarIdentificacion.ImageList = this.imageList2;
-            this.BtnBuscarIdentificacion.Location = new System.Drawing.Point(612, 35);
-            this.BtnBuscarIdentificacion.Name = "BtnBuscarIdentificacion";
-            this.BtnBuscarIdentificacion.Size = new System.Drawing.Size(48, 39);
-            this.BtnBuscarIdentificacion.TabIndex = 42;
-            this.BtnBuscarIdentificacion.UseCompatibleTextRendering = true;
-            this.BtnBuscarIdentificacion.UseVisualStyleBackColor = true;
-            this.BtnBuscarIdentificacion.Click += new System.EventHandler(this.BtnBuscarIdentificacion_Click);
-            // 
-            // TxtTipoIdentificacion
-            // 
-            this.TxtTipoIdentificacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtTipoIdentificacion.Location = new System.Drawing.Point(222, 42);
-            this.TxtTipoIdentificacion.Name = "TxtTipoIdentificacion";
-            this.TxtTipoIdentificacion.ReadOnly = true;
-            this.TxtTipoIdentificacion.Size = new System.Drawing.Size(369, 24);
-            this.TxtTipoIdentificacion.TabIndex = 40;
-            this.TxtTipoIdentificacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Yu Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(56, 42);
+            this.label5.Location = new System.Drawing.Point(50, 34);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(160, 22);
             this.label5.TabIndex = 41;
@@ -428,9 +336,9 @@
             this.TxtObservacion.MaxLength = 100;
             this.TxtObservacion.Multiline = true;
             this.TxtObservacion.Name = "TxtObservacion";
-            this.TxtObservacion.ReadOnly = true;
             this.TxtObservacion.Size = new System.Drawing.Size(355, 83);
             this.TxtObservacion.TabIndex = 10;
+            this.TxtObservacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtObservacion_KeyPress);
             // 
             // label15
             // 
@@ -449,10 +357,10 @@
             this.TxtDireccion.MaxLength = 100;
             this.TxtDireccion.Multiline = true;
             this.TxtDireccion.Name = "TxtDireccion";
-            this.TxtDireccion.ReadOnly = true;
             this.TxtDireccion.Size = new System.Drawing.Size(355, 86);
             this.TxtDireccion.TabIndex = 9;
             this.TxtDireccion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TxtDireccion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtDireccion_KeyPress);
             // 
             // label4
             // 
@@ -470,10 +378,10 @@
             this.TxtTelefono.Location = new System.Drawing.Point(963, 42);
             this.TxtTelefono.MaxLength = 100;
             this.TxtTelefono.Name = "TxtTelefono";
-            this.TxtTelefono.ReadOnly = true;
             this.TxtTelefono.Size = new System.Drawing.Size(247, 24);
             this.TxtTelefono.TabIndex = 8;
             this.TxtTelefono.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TxtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTelefono_KeyPress);
             // 
             // label14
             // 
@@ -491,10 +399,10 @@
             this.TxtEmail.Location = new System.Drawing.Point(161, 387);
             this.TxtEmail.MaxLength = 100;
             this.TxtEmail.Name = "TxtEmail";
-            this.TxtEmail.ReadOnly = true;
             this.TxtEmail.Size = new System.Drawing.Size(358, 24);
             this.TxtEmail.TabIndex = 7;
             this.TxtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TxtEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtEmail_KeyPress);
             // 
             // label3
             // 
@@ -506,17 +414,6 @@
             this.label3.TabIndex = 33;
             this.label3.Text = "Correo";
             // 
-            // TxtApellidos
-            // 
-            this.TxtApellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtApellidos.Location = new System.Drawing.Point(369, 306);
-            this.TxtApellidos.MaxLength = 100;
-            this.TxtApellidos.Name = "TxtApellidos";
-            this.TxtApellidos.ReadOnly = true;
-            this.TxtApellidos.Size = new System.Drawing.Size(222, 24);
-            this.TxtApellidos.TabIndex = 5;
-            this.TxtApellidos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -526,17 +423,6 @@
             this.label13.Size = new System.Drawing.Size(86, 22);
             this.label13.TabIndex = 31;
             this.label13.Text = "Apellidos ";
-            // 
-            // TxtNombre
-            // 
-            this.TxtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtNombre.Location = new System.Drawing.Point(64, 306);
-            this.TxtNombre.MaxLength = 100;
-            this.TxtNombre.Name = "TxtNombre";
-            this.TxtNombre.ReadOnly = true;
-            this.TxtNombre.Size = new System.Drawing.Size(191, 24);
-            this.TxtNombre.TabIndex = 4;
-            this.TxtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label12
             // 
@@ -601,14 +487,15 @@
             // 
             // TxtCedula
             // 
-            this.TxtCedula.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.TxtCedula.BackColor = System.Drawing.Color.White;
             this.TxtCedula.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtCedula.Location = new System.Drawing.Point(222, 112);
             this.TxtCedula.MaxLength = 100;
             this.TxtCedula.Name = "TxtCedula";
-            this.TxtCedula.Size = new System.Drawing.Size(211, 24);
+            this.TxtCedula.Size = new System.Drawing.Size(256, 24);
             this.TxtCedula.TabIndex = 2;
             this.TxtCedula.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TxtCedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCedula_KeyPress);
             // 
             // label2
             // 
@@ -618,6 +505,14 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 18);
             this.label2.TabIndex = 0;
+            // 
+            // Cbx_Identificacion
+            // 
+            this.Cbx_Identificacion.FormattingEnabled = true;
+            this.Cbx_Identificacion.Location = new System.Drawing.Point(235, 30);
+            this.Cbx_Identificacion.Name = "Cbx_Identificacion";
+            this.Cbx_Identificacion.Size = new System.Drawing.Size(243, 26);
+            this.Cbx_Identificacion.TabIndex = 47;
             // 
             // Pnl_Titulo
             // 
@@ -639,6 +534,27 @@
             this.label7.Size = new System.Drawing.Size(239, 24);
             this.label7.TabIndex = 0;
             this.label7.Text = "GESTIÓN DE CLIENTES";
+            // 
+            // TxtRazonSocial
+            // 
+            this.TxtRazonSocial.Location = new System.Drawing.Point(222, 189);
+            this.TxtRazonSocial.Name = "TxtRazonSocial";
+            this.TxtRazonSocial.Size = new System.Drawing.Size(256, 24);
+            this.TxtRazonSocial.TabIndex = 48;
+            // 
+            // TxtNombre
+            // 
+            this.TxtNombre.Location = new System.Drawing.Point(64, 306);
+            this.TxtNombre.Name = "TxtNombre";
+            this.TxtNombre.Size = new System.Drawing.Size(194, 24);
+            this.TxtNombre.TabIndex = 49;
+            // 
+            // TxtApellidos
+            // 
+            this.TxtApellidos.Location = new System.Drawing.Point(369, 306);
+            this.TxtApellidos.Name = "TxtApellidos";
+            this.TxtApellidos.Size = new System.Drawing.Size(222, 24);
+            this.TxtApellidos.TabIndex = 50;
             // 
             // FrmClientes
             // 
@@ -663,8 +579,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.DgvPrincipal)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            this.PnlIdentificacion.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DgvIdentificacion)).EndInit();
             this.Pnl_Titulo.ResumeLayout(false);
             this.Pnl_Titulo.PerformLayout();
             this.ResumeLayout(false);
@@ -693,9 +607,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox TxtEmail;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox TxtApellidos;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox TxtNombre;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button BtnRetornar;
         private System.Windows.Forms.Button BtnGuardar;
@@ -703,17 +615,16 @@
         private System.Windows.Forms.TextBox TxtCedula;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.Button BtnBuscarIdentificacion;
-        private System.Windows.Forms.TextBox TxtTipoIdentificacion;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Panel PnlIdentificacion;
-        private System.Windows.Forms.DataGridView DgvIdentificacion;
-        private System.Windows.Forms.TextBox TxtRazonSocial;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel Pnl_Titulo;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ImageList imageList2;
         private System.Windows.Forms.ImageList imageList3;
+        private System.Windows.Forms.ComboBox Cbx_Identificacion;
+        private System.Windows.Forms.TextBox TxtRazonSocial;
+        private System.Windows.Forms.TextBox TxtApellidos;
+        private System.Windows.Forms.TextBox TxtNombre;
     }
 }
