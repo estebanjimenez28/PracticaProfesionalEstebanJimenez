@@ -25,24 +25,7 @@ namespace PracticaProfesionalEstebanJimenez
            
         }
 
-        public void cargar_datos()
-        {
-            con.Open();
-            SqlCommand cmd = new SqlCommand("SELECT Codigo_TipoIdentificacion,DescripcionIdentificacion FROM TipoIdentificacion",con);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);    
-            con.Close();    
 
-            DataRow fila = dt.NewRow();
-            fila["DescripcionIdentificacion"] = "";
-            dt.Rows.InsertAt(fila, 0);
-
-            Cbx_Identificacion.ValueMember = "Codigo_TipoIdentificacion";
-            Cbx_Identificacion.DisplayMember = "DescripcionIdentificacion";
-            Cbx_Identificacion.DataSource = dt; 
-
-        }
 
 
         #region "Mis Variables"
@@ -92,6 +75,21 @@ namespace PracticaProfesionalEstebanJimenez
 
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
+        }
+
+        public void cargar_datos()
+        {
+            con.Open();
+            SqlCommand cmd = new SqlCommand("SELECT Codigo_TipoIdentificacion,DescripcionIdentificacion FROM TipoIdentificacion", con);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            con.Close();
+
+            Cbx_Identificacion.ValueMember = "Codigo_TipoIdentificacion";
+            Cbx_Identificacion.DisplayMember = "DescripcionIdentificacion";
+            Cbx_Identificacion.DataSource = dt;
+
         }
         //Se procede a habilitar los botones en la Interfaz Grafica
         private void Estado_Botonesprincipales(bool lEstado)

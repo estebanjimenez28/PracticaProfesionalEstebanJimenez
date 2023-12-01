@@ -252,9 +252,6 @@ namespace PracticaProfesionalEstebanJimenez
             da.Fill(dt);
             con.Close();
 
-            DataRow fila = dt.NewRow();
-            fila["Descripcion"] = "";
-            dt.Rows.InsertAt(fila, 0);
 
             Cbx_Almacen.ValueMember = "Codigo_Almacen";
             Cbx_Almacen.DisplayMember = "Descripcion";
@@ -270,10 +267,6 @@ namespace PracticaProfesionalEstebanJimenez
             DataTable dt = new DataTable();
             da.Fill(dt);
             con.Close();
-
-            DataRow fila = dt.NewRow();
-            fila["NombreCompleto"] = "";
-            dt.Rows.InsertAt(fila, 0);
 
             CbxUsuario.ValueMember = "Codigo_Usuario";
             CbxUsuario.DisplayMember = "NombreCompleto";

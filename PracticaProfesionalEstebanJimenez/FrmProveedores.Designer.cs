@@ -44,6 +44,9 @@
             this.TxtBuscar = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.TxtApellidos = new System.Windows.Forms.TextBox();
+            this.TxtNombre = new System.Windows.Forms.TextBox();
+            this.TxtRazonSocial = new System.Windows.Forms.TextBox();
             this.PnlProductos = new System.Windows.Forms.Panel();
             this.BtnBuscar3 = new System.Windows.Forms.Button();
             this.BtnRetornar3 = new System.Windows.Forms.Button();
@@ -78,9 +81,6 @@
             this.BtnNuevo = new System.Windows.Forms.Button();
             this.Pnl_Titulo = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.TxtRazonSocial = new System.Windows.Forms.TextBox();
-            this.TxtNombre = new System.Windows.Forms.TextBox();
-            this.TxtApellidos = new System.Windows.Forms.TextBox();
             this.TbpPrincipal.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvPrincipal)).BeginInit();
@@ -196,10 +196,10 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.White;
+            this.tabPage2.Controls.Add(this.PnlProductos);
             this.tabPage2.Controls.Add(this.TxtApellidos);
             this.tabPage2.Controls.Add(this.TxtNombre);
             this.tabPage2.Controls.Add(this.TxtRazonSocial);
-            this.tabPage2.Controls.Add(this.PnlProductos);
             this.tabPage2.Controls.Add(this.TxtObservacion);
             this.tabPage2.Controls.Add(this.label15);
             this.tabPage2.Controls.Add(this.TxtDireccion);
@@ -226,6 +226,30 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Mantenimiento";
             // 
+            // TxtApellidos
+            // 
+            this.TxtApellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtApellidos.Location = new System.Drawing.Point(374, 270);
+            this.TxtApellidos.Name = "TxtApellidos";
+            this.TxtApellidos.Size = new System.Drawing.Size(177, 24);
+            this.TxtApellidos.TabIndex = 42;
+            // 
+            // TxtNombre
+            // 
+            this.TxtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtNombre.Location = new System.Drawing.Point(154, 270);
+            this.TxtNombre.Name = "TxtNombre";
+            this.TxtNombre.Size = new System.Drawing.Size(177, 24);
+            this.TxtNombre.TabIndex = 41;
+            // 
+            // TxtRazonSocial
+            // 
+            this.TxtRazonSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtRazonSocial.Location = new System.Drawing.Point(262, 126);
+            this.TxtRazonSocial.Name = "TxtRazonSocial";
+            this.TxtRazonSocial.Size = new System.Drawing.Size(289, 24);
+            this.TxtRazonSocial.TabIndex = 40;
+            // 
             // PnlProductos
             // 
             this.PnlProductos.BackColor = System.Drawing.SystemColors.MenuBar;
@@ -235,7 +259,7 @@
             this.PnlProductos.Controls.Add(this.label9);
             this.PnlProductos.Controls.Add(this.DgvProductoProveedor);
             this.PnlProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PnlProductos.Location = new System.Drawing.Point(876, 443);
+            this.PnlProductos.Location = new System.Drawing.Point(897, 103);
             this.PnlProductos.Name = "PnlProductos";
             this.PnlProductos.Size = new System.Drawing.Size(884, 370);
             this.PnlProductos.TabIndex = 26;
@@ -648,30 +672,6 @@
             this.label7.Size = new System.Drawing.Size(292, 24);
             this.label7.TabIndex = 0;
             this.label7.Text = "GESTIÓN DE PROVEEDORES";
-            // 
-            // TxtRazonSocial
-            // 
-            this.TxtRazonSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtRazonSocial.Location = new System.Drawing.Point(262, 126);
-            this.TxtRazonSocial.Name = "TxtRazonSocial";
-            this.TxtRazonSocial.Size = new System.Drawing.Size(289, 24);
-            this.TxtRazonSocial.TabIndex = 40;
-            // 
-            // TxtNombre
-            // 
-            this.TxtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtNombre.Location = new System.Drawing.Point(154, 270);
-            this.TxtNombre.Name = "TxtNombre";
-            this.TxtNombre.Size = new System.Drawing.Size(177, 24);
-            this.TxtNombre.TabIndex = 41;
-            // 
-            // TxtApellidos
-            // 
-            this.TxtApellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtApellidos.Location = new System.Drawing.Point(374, 270);
-            this.TxtApellidos.Name = "TxtApellidos";
-            this.TxtApellidos.Size = new System.Drawing.Size(177, 24);
-            this.TxtApellidos.TabIndex = 42;
             // 
             // FrmProveedores
             // 

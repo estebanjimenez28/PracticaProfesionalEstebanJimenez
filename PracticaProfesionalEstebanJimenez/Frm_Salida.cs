@@ -260,9 +260,7 @@ namespace PracticaProfesionalEstebanJimenez
             da.Fill(dt);
             con.Close();
 
-            DataRow fila = dt.NewRow();
-            fila["DescripcionVenta"] = "";
-            dt.Rows.InsertAt(fila, 0);
+     
 
             CbxVenta.ValueMember = "Codigo_TipoVenta";
             CbxVenta.DisplayMember = "DescripcionVenta";
