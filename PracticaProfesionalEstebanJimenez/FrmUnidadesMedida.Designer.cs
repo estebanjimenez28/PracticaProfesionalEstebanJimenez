@@ -369,7 +369,7 @@
             this.Pnl_Titulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.Pnl_Titulo.Location = new System.Drawing.Point(0, 0);
             this.Pnl_Titulo.Name = "Pnl_Titulo";
-            this.Pnl_Titulo.Size = new System.Drawing.Size(1919, 54);
+            this.Pnl_Titulo.Size = new System.Drawing.Size(2114, 54);
             this.Pnl_Titulo.TabIndex = 64;
             // 
             // label12
@@ -388,7 +388,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1919, 751);
+            this.ClientSize = new System.Drawing.Size(2114, 763);
             this.Controls.Add(this.Pnl_Titulo);
             this.Controls.Add(this.BtnSalir);
             this.Controls.Add(this.BtnReporte);
@@ -396,6 +396,7 @@
             this.Controls.Add(this.BtnEliminar);
             this.Controls.Add(this.BtnNuevo);
             this.Controls.Add(this.TbpPrincipal);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmUnidadesMedida";
             this.ShowIcon = false;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

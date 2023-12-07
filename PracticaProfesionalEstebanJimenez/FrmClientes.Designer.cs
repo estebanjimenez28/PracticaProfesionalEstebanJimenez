@@ -47,6 +47,9 @@
             this.TxtBuscar = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.TxtApellidos = new System.Windows.Forms.TextBox();
+            this.TxtNombre = new System.Windows.Forms.TextBox();
+            this.TxtRazonSocial = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -69,9 +72,6 @@
             this.Cbx_Identificacion = new System.Windows.Forms.ComboBox();
             this.Pnl_Titulo = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.TxtRazonSocial = new System.Windows.Forms.TextBox();
-            this.TxtNombre = new System.Windows.Forms.TextBox();
-            this.TxtApellidos = new System.Windows.Forms.TextBox();
             this.TbpPrincipal.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvPrincipal)).BeginInit();
@@ -299,6 +299,27 @@
             this.tabPage2.Text = "Mantenimiento";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // TxtApellidos
+            // 
+            this.TxtApellidos.Location = new System.Drawing.Point(369, 306);
+            this.TxtApellidos.Name = "TxtApellidos";
+            this.TxtApellidos.Size = new System.Drawing.Size(222, 24);
+            this.TxtApellidos.TabIndex = 50;
+            // 
+            // TxtNombre
+            // 
+            this.TxtNombre.Location = new System.Drawing.Point(64, 306);
+            this.TxtNombre.Name = "TxtNombre";
+            this.TxtNombre.Size = new System.Drawing.Size(194, 24);
+            this.TxtNombre.TabIndex = 49;
+            // 
+            // TxtRazonSocial
+            // 
+            this.TxtRazonSocial.Location = new System.Drawing.Point(222, 189);
+            this.TxtRazonSocial.Name = "TxtRazonSocial";
+            this.TxtRazonSocial.Size = new System.Drawing.Size(256, 24);
+            this.TxtRazonSocial.TabIndex = 48;
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -521,7 +542,7 @@
             this.Pnl_Titulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.Pnl_Titulo.Location = new System.Drawing.Point(0, 0);
             this.Pnl_Titulo.Name = "Pnl_Titulo";
-            this.Pnl_Titulo.Size = new System.Drawing.Size(1924, 54);
+            this.Pnl_Titulo.Size = new System.Drawing.Size(2114, 54);
             this.Pnl_Titulo.TabIndex = 52;
             // 
             // label7
@@ -535,33 +556,12 @@
             this.label7.TabIndex = 0;
             this.label7.Text = "GESTIÓN DE CLIENTES";
             // 
-            // TxtRazonSocial
-            // 
-            this.TxtRazonSocial.Location = new System.Drawing.Point(222, 189);
-            this.TxtRazonSocial.Name = "TxtRazonSocial";
-            this.TxtRazonSocial.Size = new System.Drawing.Size(256, 24);
-            this.TxtRazonSocial.TabIndex = 48;
-            // 
-            // TxtNombre
-            // 
-            this.TxtNombre.Location = new System.Drawing.Point(64, 306);
-            this.TxtNombre.Name = "TxtNombre";
-            this.TxtNombre.Size = new System.Drawing.Size(194, 24);
-            this.TxtNombre.TabIndex = 49;
-            // 
-            // TxtApellidos
-            // 
-            this.TxtApellidos.Location = new System.Drawing.Point(369, 306);
-            this.TxtApellidos.Name = "TxtApellidos";
-            this.TxtApellidos.Size = new System.Drawing.Size(222, 24);
-            this.TxtApellidos.TabIndex = 50;
-            // 
             // FrmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1924, 751);
+            this.ClientSize = new System.Drawing.Size(2114, 763);
             this.Controls.Add(this.Pnl_Titulo);
             this.Controls.Add(this.BtnSalir);
             this.Controls.Add(this.BtnReporte);
@@ -569,6 +569,7 @@
             this.Controls.Add(this.BtnEliminar);
             this.Controls.Add(this.BtnNuevo);
             this.Controls.Add(this.TbpPrincipal);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmClientes";
             this.ShowIcon = false;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

@@ -8,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using PracticaProfesional.Negocio;
 
 namespace PracticaProfesionalEstebanJimenez
 {
@@ -43,11 +42,11 @@ namespace PracticaProfesionalEstebanJimenez
                     bAdmin = Convert.ToBoolean(data_login.Rows[0][5]);
 
                     MDI_Principal oMDI = new MDI_Principal();
-                    oMDI.lblnombreusuario.Text = "Nombre:" + cNombre;
-                    oMDI.lblcargo.Text = "Cargo:" + cCargo;
+                    oMDI.Lbl_Nombre.Text= "Nombre:" + cNombre;
+                    oMDI.LblCargo.Text = "Cargo:" + cCargo;
                     oMDI.ChkAdmin.Checked = bAdmin;
 
-                    if(bAdmin==true)//Administrador
+                    if (bAdmin == true)//Administrador
                     {
                         oMDI.BtnProcesos.Enabled = true;
                         oMDI.BtnReportes.Enabled = true;
@@ -62,6 +61,9 @@ namespace PracticaProfesionalEstebanJimenez
                         oMDI.BtnSistemas.Enabled = false;
 
                     }
+
+
+
 
 
                     oMDI.Show();

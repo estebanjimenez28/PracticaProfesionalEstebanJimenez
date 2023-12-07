@@ -23,5 +23,10 @@ namespace PracticaProfesionalEstebanJimenez.Reportes
 
             this.reportViewer1.RefreshReport();
         }
+
+        private void txt_p1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
